@@ -78,5 +78,5 @@ You can start the development server by running:
 ```
 
 See example landing screen.
-![Landing Page]("https://github.com/amadiify/centurion/pages/App/Static/images/promo/First-preview.png")
+![Landing Page]("https://github.com/amadiify/centurion/blob/master/pages/App/Static/images/promo/First-preview.png")
 
