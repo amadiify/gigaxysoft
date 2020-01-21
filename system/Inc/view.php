@@ -1194,6 +1194,7 @@ class View extends Bootloader
 		$this->unpackRequire($requireCss, $liveCss);
 
 		$bundle = 'stylesheet@bundle';
+		$offloadCss = true;
 
 		// check bundle
 		if (isset($this->bundle->{$bundle}))
@@ -1202,13 +1203,18 @@ class View extends Bootloader
 
 			if (count($bundles) > 0)
 			{
+				$offloadCss = false;
+				
 				foreach ($bundles as $bundle)
 				{
 					View::$cssfiles[] = $assets->css($bundle);
 				}
 			}
+
+			
 		}
-		else
+		
+		if ($offloadCss)
 		{
 			if(isset($Css[0]) && !empty($Css[0]))
 			{
