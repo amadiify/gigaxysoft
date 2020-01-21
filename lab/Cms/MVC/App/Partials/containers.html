@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+                <th>Container Name</th>
+                <th>Container Body</th>
+                <th>Action</th>
+            </thead>
+            
+            <tbody>
+                {$containers = Query::getContainers();}
+                @fetch($containers, 'container')
+                    <tr class="tr-row">
+                        <td>{$container->container_name}</td>
+                        <td>{substr(strip_tags($container->container_body), 0, 250)}</td>
+                        <td>
+                            @component('table-button', ['links' => CMS::loadButton(['edit', 'delete' => 'container/delete'], $container->containerid)]);
+                        </td>
+                    </tr>
+                @endfetch
+            </tbody>
+        </table>
+    </div>
+</div>

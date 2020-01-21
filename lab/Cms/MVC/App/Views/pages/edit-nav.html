@@ -1,0 +1,93 @@
+@component('header');
+@alert;
+
+<div class="card">
+	<div class="card-header">
+		<h3 class="card-title">Edit Navigation</h3>
+	</div>
+	<div class="card-body">
+		<!-- edit container -->
+		<div class="table-responsive">
+			<form action="" method="POST">
+				@csrf;
+				<table class="table">
+					<tr>
+						<td>Page Name</td>
+						<td>
+							<input name="page_name" value="{$page->page_name}" class="form-control" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Page Link</td>
+						<td>
+							<input name="page_link" value="{$page->page_link}" class="form-control" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Page Title</td>
+						<td>
+							<input name="page_title" value="{$page->page_title}" class="form-control">
+						</td>
+					</tr>
+
+					<tr>
+						<td>Page Keywords</td>
+						<td>
+							<input name="keyword" value="{$page->keyword}" class="form-control">
+						</td>
+					</tr>
+
+					<tr>
+						<td>Page Description</td>
+						<td>
+							<textarea name="description" class="form-control">{$page->description}</textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Page Parent</td>
+						<td>
+							<select name="parentid" class="form-control">
+								<option value="0">None</option>
+								@fetch ('navigation', 'nav')
+									@if ($nav->navigationid == $page->parentid)
+										<option value="{$nav->navigationid}" selected>{$nav->page_name}</option>
+									@else
+										<option value="{$nav->navigationid}">{$nav->page_name}</option>
+									@endif
+								@endfetch
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Breadcum Title</td>
+						<td>
+							<input name="breadcum_title" value="{$page->breadcum_title}" class="form-control">
+						</td>
+					</tr>
+
+					<tr>
+						<td>Position</td>
+						<td>
+							<input name="position" value="{$page->position}" class="form-control" type="number">
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-success">Update</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h3 class="card-title">Showing Navigations</h3>
+@partial('navigation');
+@component('footer');

@@ -1,0 +1,49 @@
+<div class="banner banner-s4 has-slider">
+    <div class="has-carousel" data-effect="true" data-items="1" data-loop="true" data-dots="false" data-auto="true" data-navs="true">
+        <?php $slides = db('slides')->get('slide_group = ?', 'homescreen');?>
+
+        <?php
+$slides = $slides;if ($slides->rows > 0){
+while ($slide = $slides->obj())
+{ ?>
+            <div class="banner-block tc-light d-flex">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-xl-8">
+                            <div class="banner-content">
+                                <?php $slideContent = db('slidesAnimation')->get('slideid=?', $slide->slideid);?>
+
+                                <?php
+$slideContent = $slideContent;if ($slideContent->rows > 0){
+while ($content = $slideContent->obj())
+{ ?>
+                                    <?php 
+ // PHP starts here 
+
+                                        $data = $content->contentWrapper;
+                                        // replace {content} with $content->content
+                                        $data = str_replace('{content}', $content->content, $data);
+                                        // replace {slide_btn} with $slide->slide_btn
+                                        $data = str_replace('{slide_btn}', url($slide->slide_btn), $data);
+                                    
+ // PHP ends here 
+ ?>
+                                    <?=$data?>
+                                <?php }} ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- bg -->
+                <div class="bg-image change-bg">
+                    <img src="<?=image($slide->slide_image)?>" alt="<?=$slide->slide_title?>">
+                </div>
+                <!-- end bg -->
+            </div>
+        <?php }} ?>
+    </div>
+    <div class="tes-arrow">
+        <a class="slick-prev slick-arrow"><i class="icon ti ti-angle-left"></i></a>
+        <a class="slick-next slick-arrow"><i class="icon ti ti-angle-right"></i></a>
+    </div>
+</div>

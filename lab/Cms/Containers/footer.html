@@ -1,0 +1,88 @@
+<!-- footer -->
+	<footer class="section footer footer-alt">
+		<div class="container">
+			<div class="row gutter-vr-30px">
+				<div class="col-lg-4 col-sm-6">
+					<div class="wgs">
+						<div class="wgs-content">
+							<div class="wgs-logo">
+								<a href="./">
+									<img src="<?=\Moorexa\Rexa::runDirective(true,'image','app-logo')?>" srcset="<?=\Moorexa\Rexa::runDirective(true,'image','app-logo')?>" alt="logo">
+								</a>
+							</div>
+							<p><?=\Moorexa\Rexa::runDirective(true,'container','footer-text')?></p>	
+						</div>
+					</div><!-- .wgs -->
+				</div><!-- .col -->
+				<div class="col-lg-2 offset-lg-1 col-sm-6">
+					<div class="wgs">
+						<div class="wgs-content">
+							<h3 class="wgs-title">Company</h3>
+							<ul class="wgs-menu">
+								<li><a href="<?=\Moorexa\Rexa::runDirective(true,'goto','about')?>">About us</a></li>
+								<li><a href="<?=\Moorexa\Rexa::runDirective(true,'goto','about')?>">Why ABRDI?</a></li>
+								<li><a href="<?=\Moorexa\Rexa::runDirective(true,'goto','about')?>">Meet the team</a></li>
+							</ul>
+						</div>
+					</div><!-- .wgs -->
+				</div><!-- .col -->
+				<div class="col-lg-2 col-sm-6">
+					<div class="wgs">
+						<div class="wgs-content">
+							<h3 class="wgs-title">Services</h3>
+							<ul class="wgs-menu">
+								<li><a href="texas-service-single.html">Digital Media</a></li>
+								<li><a href="texas-service-single.html">Strategy</a></li>
+								<li><a href="texas-service-single.html">Development</a></li>
+							</ul>
+						</div>
+					</div><!-- .wgs -->
+				</div><!-- .col -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="wgs">
+						<div class="wgs-content">
+							<h3 class="wgs-title">Get our staff</h3>
+							<form class="genox-form" action="" method="POST">
+<?=\Moorexa\Rexa::runDirective(true,'csrf')?>
+<?=\Moorexa\Rexa::runDirective(true,'method','subcribe')?>
+								<div class="form-results"></div>
+								<div class="field-group btn-inline">
+									<input name="s_email" type="email" class="input" placeholder="Your  Email">
+									<input type="text" class="d-none" name="form-anti-honeypot" value="">
+									<button type="submit"  class="far fa-paper-plane button"></button>
+								</div>
+							</form>
+						</div>
+					</div><!-- .wgs -->
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
+	<!-- .footer -->
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container bdr-copyright">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-md-6">
+					<div class="copyright-content">
+						<p>© <?=date('Y')?>. All rights reserved. Powered by <a href="http://moorexa.com" target="_blank">Moorexa</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 text-md-right">
+					<div class="copyright-content">
+						<ul class="social social-style-icon">
+							<li><a href="" class="fab fa-facebook-f"></a></li>
+							<li><a href="" class="fab fa-twitter"></a></li>
+							<li><a href="" class="fab fa-dribbble"></a></li>
+							<li><a href="" class="fab fa-behance"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- .copyright -->
+		
+	<!-- preloader -->
+	<div class="preloader preloader-light preloader-texas no-split"><span class="spinner spinner-alt"><img class="spinner-brand" src="<?=\Moorexa\Rexa::runDirective(true,'image','app-logo')?>" alt=""></span></div>

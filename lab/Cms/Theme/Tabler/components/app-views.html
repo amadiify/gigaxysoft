@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+                <th>Controller</th>
+                <th>View</th>
+                <th>Action</th>
+            </thead>
+            
+            <tbody>
+                @foreach ($controllerViews as $controller => $views)
+                    @foreach ($views as $view)
+                        <tr>
+                            <td>{$controller}</td>
+                            <td>{$view}</td>
+                            <td>
+                                @component('table-button', ['links' => CMS::loadButton(['edit' => 'pages/edit-view?path=' . $view, 'delete' => 'pages/trigger-confirm/delete-view?path=' . $view])]);
+                            </td>
+                        </tr>
+                    @endforeach
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>

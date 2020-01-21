@@ -1,0 +1,74 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
+<?=\Moorexa\Rexa::runDirective(true,'component','alert-confirm', $deleteConfig)?>
+
+<div class="card">
+	<!-- create container -->
+	<div class="card-header">
+		<div class="card-title">Add a user</div>
+	</div>
+
+	<div class="card-body">
+		<div class="table-responsive">
+			<form action="" method="POST">
+				<?=\Moorexa\Rexa::runDirective(true,'csrf')?>
+				<table class="table">
+					<tr>
+						<td>User Name</td>
+						<td>
+							<input type="text" name="username" class="form-control" placeholder="Enter a user name" value="<?=$model->username?>" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Fullname</td>
+						<td>
+							<input type="text" name="fullname" class="form-control" placeholder="Enter user fullname" value="<?=$model->fullname?>" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Password</td>
+						<td>
+							<input type="password" name="password" class="form-control" placeholder="Enter user password" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Password Again</td>
+						<td>
+							<input type="password" name="password2" class="form-control" placeholder="Enter user password again" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Permission</td>
+						<td>
+							<select name="permissionid" id="select-beast" class="form-control custom-select">
+								<?php
+$permission = \Moorexa\DB::sql('SELECT * FROM permission ');if ($permission->rows > 0){
+while ($perm = $permission->obj())
+{ ?>
+									<?php $selected = $perm->permissionid == $model->permissionid ? 'selected' : '';?>
+									<option value="<?=$perm->permissionid?>" <?=$selected?>><?=$perm->permission?></option>
+								<?php }} ?>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-success">Create</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h3 class="card-title">All Users</h3>
+<?=\Moorexa\Rexa::runDirective(true,'partial','all-users')?>
+
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

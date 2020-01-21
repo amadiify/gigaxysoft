@@ -1,0 +1,17 @@
+{
+    "stylesheet": [
+        "moorexa.css"
+    ],
+
+    "stylesheet@bundle" : [
+
+    ],
+    
+    "scripts": [
+        "moorexa.min.js"
+    ],
+
+    "scripts@bundle" : [
+        
+    ]
+}

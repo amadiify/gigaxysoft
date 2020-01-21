@@ -1,0 +1,5 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<p>Showing images published. <?=\Moorexa\Rexa::runDirective(true,'component','create-button', ['button' => CMS::loadButton(['upload' => 'plugins/gallery/create'])])?> </p>
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
+<?=\Moorexa\Rexa::runDirective(true,'imageTable')?>
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

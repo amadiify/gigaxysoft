@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+                <th>Event Name</th>
+                <th>Event Date</th>
+                <th>About Event</th>
+                <th>Date Created</th>
+                <th>Action</th>
+            </thead>
+            
+            <tbody>
+                {$events = @@getEvents(100);}
+
+                @fetch($events, 'event')
+                    <tr class="tr-row">
+                        <td>{$event->event_title}</td>
+                        <td>{$event->event_date}</td>
+                        <td>{substr(strip_tags($event->event_body), 0, 50)}</td>
+                        <td>{get_time_ago($event->date_created)}</td>
+                        <td>
+                            @component('table-button', ['links' => CMS::loadButton(['edit' => 'plugins/events/edit', 'delete' => 'plugins/events/delete'], $event->eventid)]);
+                        </td>
+                    </tr>
+                @endfetch
+            </tbody>
+        </table>
+    </div>
+</div>

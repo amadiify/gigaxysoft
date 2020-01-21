@@ -1,0 +1,3 @@
+<?php if(isset($button[0])) { ?>
+    <a href="<?=$button[0]['link']?>" class="btn btn-<?=$type?>"><?=$name?></a>
+<?php } ?>

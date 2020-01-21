@@ -1,0 +1,15 @@
+[2019-12-29 8:52 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/uzip/kernel/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 11
+[2019-12-31 9:50 am] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 11
+[2019-12-31 12:22 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 10
+[2020-01-03 9:49 am] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 22
+[2020-01-08 6:57 am] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 40
+[2020-01-15 8:31 am] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/system/Lib/funcLib.php, [error]: simplexml_load_file(): I/O warning : failed to load external entity &quot;./config.xml&quot;, [line]: 2620
+[2020-01-15 12:21 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 49
+[2020-01-15 12:34 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 54
+[2020-01-15 12:39 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 53
+[2020-01-15 12:45 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 56
+[2020-01-15 12:51 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 58
+[2020-01-15 12:52 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 60
+[2020-01-15 12:53 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 62
+[2020-01-15 12:58 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 60
+[2020-01-15 1:01 pm] [file]: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php, [error]: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, [line]: 70

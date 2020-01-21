@@ -1,0 +1,24 @@
+@setdefault;
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head> 
+	<title>{$package->name}</title>
+
+	<!-- meta tags -->
+	@partial('meta-tags.md')
+
+	<!-- load theme meta tags -->
+	@component('meta-tags');
+
+	<!-- link tags -->
+	<link rel="canonical" href="{url($package->url)}">
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="{$package->icon}" sizes="32x32">
+	
+	<!-- css -->
+	{$assets->loadCss($__css)}
+  
+</head>
+	
+<body>

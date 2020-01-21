@@ -1,0 +1,5 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<p>Showing events created. <?=\Moorexa\Rexa::runDirective(true,'component','create-button', ['button' => CMS::loadButton(['create' => 'plugins/events/create'])])?> </p>
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
+<?=\Moorexa\Rexa::runDirective(true,'eventTable')?>
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

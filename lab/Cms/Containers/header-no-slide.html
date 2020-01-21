@@ -1,0 +1,41 @@
+<!-- Header -->
+<header class="is-transparent is-sticky is-shrink" id="header">
+	<div class="header-main">
+		<div class="header-container container">
+			<div class="header-wrap">
+				<!-- Logo  -->
+				<div class="header-logo logo">
+					<a href="./" class="logo-link">
+						<img class="logo-dark" src="images/logo.png" srcset="images/logo2x.png 2x" alt="logo">
+						<img class="logo-light" src="images/logo-white.png" srcset="images/logo-white2x.png 2x" alt="logo">
+					</a>
+				</div>
+				
+				<!-- Menu Toogle -->
+				<div class="header-nav-toggle">
+					<a href="#" class="search search-mobile search-trigger"><i class="icon ti-search "></i></a>
+					<a href="#" class="navbar-toggle" data-menu-toggle="header-menu">
+						<div class="toggle-line">
+							<span></span>
+						</div>
+					</a>
+				</div>
+				<!-- Menu Toogle -->
+				
+				<?=\Moorexa\Rexa::runDirective(true,'container','public-nav')?>
+
+				<!-- header-search -->
+				<div class="header-search">
+					<form role="search" method="POST" class="search-form" action="#">
+						<div class="search-group">
+							<input type="text" class="input-search" placeholder="Search ...">
+							<button class="search-submit" type="submit"><i class="icon ti-search"></i></button>
+						</div>
+					</form>
+				</div>
+				<!-- . header-search -->
+			</div>
+		</div>
+	</div> 
+</header>
+<!-- end header --

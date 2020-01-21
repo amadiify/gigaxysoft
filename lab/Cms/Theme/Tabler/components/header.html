@@ -1,0 +1,79 @@
+<div class="page">
+    <div class="flex-fill">
+      <div class="header py-4">
+        <div class="container">
+          <div class="d-flex">
+            <a class="header-brand" href="{url('zema')}">
+              <img src="{$tabler->getImage('zema-logo.png')}" class="header-brand-img" alt="zema logo">
+            </a>
+            <div class="d-flex order-lg-2 ml-auto">
+              <div class="nav-item d-none d-md-flex">
+                <a href="https://github.com/amadiify/zemacms" class="btn btn-sm btn-outline-primary" target="_blank">Source code</a>
+              </div>
+              <div class="dropdown d-none d-md-flex">
+                <a class="nav-link icon" data-toggle="dropdown">
+                  <i class="fe fe-bell"></i>
+                  <span class="nav-unread"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                  
+                </div>
+              </div>
+              <div class="dropdown">
+                <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                    {$image = $tabler->getImage('user-4.png');}
+                  <span class="avatar" style="background-image: url({$image})"></span>
+                  <span class="ml-2 d-none d-lg-block">
+                    <span class="text-default">{Query::getUserDataFromSession()->fullname}</span>
+                    <small class="text-muted d-block mt-1">{Query::getUserPermissionFromSession()}</small>
+                  </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                  <a class="dropdown-item" $href="zema/users">
+                    <i class="dropdown-icon fe fe-user"></i> Users
+                  </a>
+                  <a class="dropdown-item" $href="zema/sign-out">
+                    <i class="dropdown-icon fe fe-log-out"></i> Sign out
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+              <span class="header-toggler-icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-3 ml-auto">
+              <form class="input-icon my-3 my-lg-0">
+                <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
+                <div class="input-icon-addon">
+                  <i class="fe fe-search"></i>
+                </div>
+              </form>
+            </div>
+            <div class="col-lg order-lg-first">
+              <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                @foreach ($navigation as $title => $config)
+                    {$isActive = $config['link'] == 'zema/' . uri()->view ? 'active' : '';}
+                    <li class="nav-item">
+                        <a href="{url($config['link'])}" class="nav-link {$isActive}"><i class="fe {$config['icon']}"></i> {ucwords($title)}</a>
+                    </li>
+                @endforeach
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-3 my-md-5">
+        <div class="container">
+          <div class="page-header">
+            <h1 class="page-title">
+              {ucwords($pageTitle)}
+            </h1>
+          </div>

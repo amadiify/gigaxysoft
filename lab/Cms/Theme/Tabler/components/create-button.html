@@ -1,0 +1,5 @@
+@if (isset($button[0]))
+    {$getButton = $button[0];}
+    <!-- create button -->
+    <a href="{$getButton['link']}" class="btn btn-success"><i class="fe {$getButton['icon']}"></i> {ucwords($getButton['name'])}</a>
+@endif

@@ -1,0 +1,65 @@
+@component('header');
+
+@alert;
+<div class="card">
+	<!-- create container -->
+	<div class="card-header">
+		<div class="card-title">Add an event</div>
+	</div>
+
+	<div class="card-body">
+		<div class="table-responsive">
+			<form action="" method="POST" enctype="multipart/form-data">
+				@csrf;
+				<table class="table">
+					<tr>
+						<td>Event Title</td>
+						<td>
+							<input type="text" name="event_title" class="form-control" placeholder="Enter event title" value="{$model->event_title}" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Event Date</td>
+						<td>
+							<input type="date" name="event_date" class="form-control" placeholder="Enter event date" value="{$model->event_date}" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Event Link</td>
+						<td>
+							<input type="text" name="event_button" class="form-control" placeholder="Enter read more link">
+						</td>
+                    </tr>
+                    
+                    <tr>
+						<td>Event Image</td>
+						<td>
+							<input type="file" data-accept=".png,.jpg,.jpeg,.gif" name="event_image" class="form-control">
+						</td>
+					</tr>
+
+					<tr>
+						<td>About Event</td>
+						<td>
+							<textarea name="event_body" class="form-control" placeholder="About this event">{$model->event_body}</textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-success">Create</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h3 class="card-title">All Events</h3>
+@eventTable;
+
+@component('footer');

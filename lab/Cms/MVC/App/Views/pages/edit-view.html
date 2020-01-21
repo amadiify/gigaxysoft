@@ -1,0 +1,38 @@
+@component('header');
+@alert;
+
+@php
+	$get = boot()->get('Moorexa\HttpGet');
+@endphp
+<div class="card">
+	<div class="card-header">
+		<h3 class="card-title">Edit {$get->path}</h3>
+	</div>
+	<div class="card-body">
+		<!-- edit container -->
+		<div class="table-responsive">
+			<form action="" method="POST">
+				@csrf;
+				<table class="table">
+					<tr>
+						<td>View Body</td>
+						<td>
+							<textarea name="view_body" class="form-control" rows="10" required>{$this->model('Container')->renderPlain(file_get_contents($get->path))}</textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<button name="edit" type="submit" class="btn btn-success">Update</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h3 class="card-title">Showing Views</h3>
+@component('app-views');
+@component('footer');

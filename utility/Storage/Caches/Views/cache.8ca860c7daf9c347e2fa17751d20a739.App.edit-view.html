@@ -1,0 +1,42 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
+
+<?php 
+ // PHP starts here 
+
+	$get = boot()->get('Moorexa\HttpGet');
+
+ // PHP ends here 
+ ?>
+<div class="card">
+	<div class="card-header">
+		<h3 class="card-title">Edit <?=$get->path?></h3>
+	</div>
+	<div class="card-body">
+		<!-- edit container -->
+		<div class="table-responsive">
+			<form action="" method="POST">
+				<?=\Moorexa\Rexa::runDirective(true,'csrf')?>
+				<table class="table">
+					<tr>
+						<td>View Body</td>
+						<td>
+							<textarea name="view_body" class="form-control" rows="10" required><?=$thisModel->model('Container')->renderPlain(file_get_contents($get->path))?></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<button name="edit" type="submit" class="btn btn-success">Update</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h3 class="card-title">Showing Views</h3>
+<?=\Moorexa\Rexa::runDirective(true,'component','app-views')?>
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

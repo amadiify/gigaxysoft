@@ -1,0 +1,4 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<p>Your images uploaded. <?=\Moorexa\Rexa::runDirective(true,'component','create-button', ['button' => CMS::loadButton(['upload'])])?></p>
+<?=\Moorexa\Rexa::runDirective(true,'partial','images')?>
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

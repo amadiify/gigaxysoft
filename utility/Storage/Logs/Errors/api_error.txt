@@ -1,0 +1,1 @@
+[2019-12-31 5:29 pm] Api Error: Non-static method utility\Classes\BootMgr\Manager::onLoad() should not be called statically, on line 10, in /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/boot.php

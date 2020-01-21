@@ -1,0 +1,47 @@
+<!-- section/blog -->
+	<div class="section blog section-xx">
+		<div class="container">
+			<div class="row gutter-vr-30px">
+            <?php $events = \Moorexa\Rexa::runDirective(true,'getEvents',50);?>
+            
+            <?php
+$events = $events;if ($events->rows > 0){
+while ($event = $events->obj())
+{ ?>
+				<div class="col-md-6">
+					<div class="post post-full">
+						<div class="post-thumb">
+							<a href="<?=url("$event->event_button")?>">
+								<div class="event-big-thumb" style="background-image:url('<?=$assets->image("$event->event_image")?>');"></div>
+							</a>
+						</div>
+						<div class="post-entry d-sm-flex d-block align-items-start">
+							<div class="post-date">
+                            <?php 
+ // PHP starts here 
+
+                                $month = date('M', strtotime($event->event_date));
+                                $day = date('d', strtotime($event->event_date));
+                            
+ // PHP ends here 
+ ?>
+								<p><?=$month?> <strong><?=$day?></strong></p>
+							</div>
+							<div class="post-content">
+								<div class="post-author d-flex align-items-center">
+									<?=strtoupper(date('F jS Y ', strtotime($event->event_date)))?>
+								</div>
+								<h3><a href="<?=url("$event->event_button")?>" target="_blank"><?=ucwords($event->event_title)?></a></h3>
+								<div class="content">
+									<p><?=substr($event->event_body, 0, 250)?>..</p>
+								</div>
+							</div>
+						</div>
+					</div><!-- .post -->
+				</div><!-- .col -->
+            <?php }} ?>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div>
+	<!-- end section/blog -->

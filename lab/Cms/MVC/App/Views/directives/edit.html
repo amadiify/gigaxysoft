@@ -1,0 +1,50 @@
+@component('header');
+@alert;
+
+<div class="card">
+	<!-- create container -->
+	<div class="card-header">
+		<h3 class="card-title">Edit Directive</h3>
+	</div>
+
+	<div class="card-body">
+		<div class="table-responsive">
+			<form action="" method="POST">
+				@csrf;
+				<table class="table">
+					<tr class="table-row">
+						<td>Directive Name</td>
+						<td>
+							<input name="directive" value="{$directive->directive}" class="form-control">
+						</td>
+					</tr>
+
+					<tr class="table-row">
+						<td>Directive Class</td>
+						<td>
+							<input name="directive_class" value="{$directive->directive_class}" class="form-control">
+						</td>
+					</tr>
+
+					<tr class="table-row">
+						<td>Directive Method</td>
+						<td>
+							<input name="directive_method" value="{$directive->directive_method}" class="form-control">
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<button name="update" type="submit" class="btn btn-success">Update</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h3 class="card-title">Your directives.</h3>
+@partial('directive');
+@component('footer');

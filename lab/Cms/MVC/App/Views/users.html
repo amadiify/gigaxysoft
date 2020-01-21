@@ -1,0 +1,7 @@
+@component('header');
+<p>Showing users created to manage application. @component('create-button', ['button' => CMS::loadButton(['create'])]); </p>
+@alert;
+@component('alert-confirm', $deleteConfig);
+@partial('all-users');
+
+@component('footer');

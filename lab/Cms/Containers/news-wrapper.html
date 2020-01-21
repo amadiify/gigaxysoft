@@ -1,0 +1,59 @@
+<!-- section-news -->
+	<div class="section section-x section-news">
+		<div class="container">
+			<div class="row justify-content-center gutter-vr-60px">
+				<div class="col-lg-6">
+					<div class="row justify-content-center justify-content-md-start no-gutter">
+						<div class="col-10 col-lg-7 text-center text-md-left">
+							<div class="section-head section-sm">
+								<h5 class="heading-xs dash">Events</h5>
+								<h2>From the ABRDI news room</h2>
+							</div>
+						</div>
+					</div><!-- .row -->
+					<div class="row justify-content-center justify-content-md-start gutter-vr-30px">
+                        <?php $events = \Moorexa\Rexa::runDirective(true,'getEvents',5);?>
+
+                        <?php
+$events = $events;if ($events->rows > 0){
+while ($event = $events->obj())
+{ ?>
+						<div class="col-md-12">
+							<div class="post post-v1 align-items-center">
+								<div class="post-thumb">
+									<a href="<?=url("$event->event_button")?>"><div style="background-image:url('<?=$assets->image("$event->event_image")?>');" class="event_image"></div></a>
+								</div>
+								<div class="post-content text-center text-md-left">
+									<p class="post-tag post-date"><?=strtoupper(date('F jS Y ', strtotime($event->event_date)))?></p>
+									<h4><a href="<?=url("$event->event_button")?>"><?=$event->event_title?></a></h4>
+									<a href="<?=url("$event->event_button")?>" class="btn btn-arrow">Read More</a>
+								</div>
+							</div><!-- .post -->
+						</div><!-- .col -->
+                        <?php }} ?>
+
+						<div class="col-12 text-center text-md-left">
+							<div class="text-box">
+								<a href="<?=\Moorexa\Rexa::runDirective(true,'goto','events')?>" class="btn btn-post">View all blog</a>
+							</div>
+						</div>
+					</div>
+				</div><!-- .col -->
+				<div class="col-lg-6">
+					<div class="block bdr feed ml-lg-4">
+						<div class="feed-block d-flex">
+							<div class="feed-icon">
+								<i class="icon fab fa-twitter"></i>
+							</div>
+							<div class="feed-content">
+								<h4>ABRDI Feeds</h4>
+								<a href="#"> @ abrdiOfficial</a>
+							</div>
+						</div>
+						<div class="feed-block" id="tweets_feed"></div>
+					</div>
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div>
+	<!-- .section-news -->

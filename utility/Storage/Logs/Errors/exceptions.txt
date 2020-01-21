@@ -1,0 +1,10 @@
+[2019-12-31 9:24 am] ParseError: syntax error, unexpected ';' in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/system/Core/coreModule.php on Line 270
+[2019-12-31 12:21 pm] ParseError: syntax error, unexpected ')', expecting '{' in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/boot.php on Line 10
+[2019-12-31 5:14 pm] ParseError: syntax error, unexpected 'class' (T_CLASS), expecting variable (T_VARIABLE) or '$' in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/system/Core/coreApp.php on Line 655
+[2020-01-03 10:21 am] Error: Class 'Exceptions\Autoloader\AutoloaderException' not found in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/system/Inc/autoloader.php on Line 396
+[2020-01-03 10:22 am] ReflectionException: Class \Cms\Config does not exist in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/utility/Classes/BootMgr/Manager.php on Line 79
+[2020-01-15 2:14 pm] Error: Class 'Moorexa\CmsGlobal\Cms' not found in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php on Line 11
+[2020-01-15 2:15 pm] Error: Class 'CmsGlobal\Cms' not found in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php on Line 11
+[2020-01-15 2:16 pm] Error: Class 'Cms\Config' not found in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/kernel/Services/boot.php on Line 11
+[2020-01-19 10:14 pm] ParseError: syntax error, unexpected ';' in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/system/Inc/view.php on Line 771
+[2020-01-19 10:15 pm] ParseError: syntax error, unexpected '}' in File: /Users/amadiify/Desktop/workspace/PHP/abrdi/system/Inc/view.php on Line 772
