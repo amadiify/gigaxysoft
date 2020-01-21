@@ -35,7 +35,7 @@ All static files have been autoloaded in 'kernel/loadStatic.json'. Before produc
     ],
 
     "stylesheet@bundle" : [
-        // bundle would be added here before production
+        
     ],
     
     "scripts": [
@@ -63,7 +63,7 @@ All static files have been autoloaded in 'kernel/loadStatic.json'. Before produc
     ],
 
     "scripts@bundle" : [
-         // bundle would be added here before production
+         
     ]
 }
 ```
