@@ -465,8 +465,11 @@ spl_autoload_register(function($class) use ($alias, $tables){
 						{
 							return false;
 						}
-
-						throw new \Exceptions\Autoloader\AutoloaderException("Class: $class doesn't exists. Autoload failed!");
+						
+						if (!defined('CLI_ENV'))
+						{
+							throw new \Exceptions\Autoloader\AutoloaderException("Class: $class doesn't exists. Autoload failed!");
+						}
 					}
 				}
 			}

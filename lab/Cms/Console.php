@@ -40,4 +40,16 @@ class Console extends Assist
         // ok call parent new method now
         parent::_new($arg);
     }
+
+    // migrate command 
+    public static function migrate($arg)
+    {
+        parent::$assistPath = HOME;
+        
+        // apply from
+        array_push($arg, '-from='.HOME.'lab/Cms/Tables/', '-prefix=Zema_');
+
+        // call migrate method
+        parent::migrate($arg);
+    }
 }

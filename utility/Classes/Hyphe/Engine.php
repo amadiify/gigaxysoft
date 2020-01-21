@@ -1278,7 +1278,7 @@ class Engine
             {
                 if (!is_array($val))
                 {
-                    $arr[] = $val;
+                     $arr[] = $val;
                 }
                 else
                 {

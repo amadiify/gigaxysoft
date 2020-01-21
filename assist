@@ -6609,7 +6609,7 @@ class Assist
 
             if ($usingFrom)
             {
-                $directory = $fromDir;
+                $directory = $fromDir . '/';
             }
 
             if (is_dir($directory))
@@ -6618,6 +6618,7 @@ class Assist
                 {
                     // get all files
                     $all = glob($directory . '*');
+
                     foreach ($all as $i => $f)
                     {
                         if (is_file($f))

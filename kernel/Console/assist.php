@@ -6,7 +6,7 @@ return [
         'path' => 'lab/VCSManager/',
         'assist' => 'lab/VCSManager/launcher.php'
     ],
-    'GDI' => [
+    'Zema' => [
         'path' => 'lab/Cms/',
         'assist' => 'lab/Cms/Console.php'
     ]
