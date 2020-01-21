@@ -38,21 +38,6 @@ class Images
     // promise during migration
     public function promise($status, $db)
     {
-        if ($status == 'complete')
-        {
-            $db->insert(
-            [
-                'image_path' => 'CMS/ABRDI-Logo.png',
-                'image_name' => 'app-logo'
-            ],
-            [
-                'image_path' => 'CMS/mmexport1543478758695.jpg',
-                'image_name' => 'we-believe'
-            ],
-            [
-                'image_path' => 'CMS/better-roads.png',
-                'image_name' => 'home-banner'
-            ])->go();
-        }
+        
     }
 }

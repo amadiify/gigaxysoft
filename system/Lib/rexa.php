@@ -59,6 +59,9 @@ class Rexa
     // for binding
     public static function _for($arguments, $attrLine) : string
     {
+        $attrLine = str_replace(' then', ';', $attrLine);
+        $attrLine = str_replace(' and', ';', $attrLine);
+        
         return "<?php for ($attrLine) { ?>";
     }
 

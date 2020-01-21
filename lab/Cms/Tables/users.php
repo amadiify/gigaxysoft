@@ -39,12 +39,18 @@ class Users
     }
 
     // promise during migration
-    public function promise($status)
+    public function promise($status, $db)
     {
-        if ($status == 'waiting' || $status == 'complete')
+        if ($status == 'complete')
         {
             // do some cool stuffs.
-            // $this->table => for ORM operations to this table.
+            $db->insert([
+                'username' => 'admin',
+                'password' => \Moorexa\Hash::digest('1234'),
+                'fullname' => 'John Duo',
+                'permissionid' => 4,
+                'siteid' => boot()->singleton('CmsGlobal\Cms')->siteID
+            ])->go();
         }
     }
 }

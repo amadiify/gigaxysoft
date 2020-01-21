@@ -4958,3 +4958,71 @@ function saveNamespaceInAutoloader(string $namespace, string $filepath)
 	// save now
 	save_json(PATH_TO_STORAGE . 'Caches/autoloadercache.json', $autoloaderCache);
 }
+
+
+// return page path
+function pagepath(string $directory,  $filepath = null)
+{
+	// seen path
+	$seenpath = null;
+
+	// get base path
+	$basepath = HOME . 'pages/';
+
+	// get current controller
+	$controller = isset(\Moorexa\Bootloader::$helper['active_c']) ? \Moorexa\Bootloader::$helper['active_c'] : null;
+
+	// build directory
+	$basePath = $basepath . $controller . '/' . $directory;
+
+	// check if it's a directory
+	if (is_dir($basePath))
+	{
+		// check file exists in base path
+		$seenpath = $basePath;
+	}
+
+	// build basepath again
+	$basePath = $basepath . $directory . '/';
+
+	if (is_dir($basePath) && is_null($seenpath))
+	{
+		$seenpath = $basePath;
+	}
+
+	return new class($seenpath, $filepath)
+	{
+		private $basepath;
+		private $filepath;
+
+		// load construtor
+		public function __construct($basePath, $filepath)
+		{
+			$this->basepath = $basePath;
+			$this->filepath = $filepath;
+		}
+
+		// to string magic method
+		public function __toString()
+		{
+			return $this->find($this->filepath);
+		}
+
+		// find file
+		public function find($filename)
+		{
+			if (!is_null($filename))
+			{
+				$path = deepScan($this->basepath, $filename);
+
+				if ($path != '')
+				{
+					return url($path);
+				}
+			}
+
+			return '';
+		}
+	};
+	
+}

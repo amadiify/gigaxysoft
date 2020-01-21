@@ -44,18 +44,7 @@ class Config
     {
         if ($status == 'complete')
         {
-            // do some cool stuffs.
-            $db->insert(
-                [
-                    'sitename' => 'Welcome to ABRDI',
-                    'default_controller' => 'App',
-                    'default_view' => 'home',
-                    'favicon' => 'CMS/favicon.png',
-                    'keywords' => '',
-                    'description' => '',
-                    'developer' => 'ABRDI Team'
-                ]
-            )->go();
+            
         }
     }
 }

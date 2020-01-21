@@ -47,5 +47,6 @@
     "Hyphe\/Compile": ".\/utility\/Classes\/Hyphe\/Compile.php",
     "Moorexa\/File": "system\/Inc\/files.php",
     "Installations\/Plugins\/Gallery\/Query": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Query.php",
-    "Moorexa\/HttpGet": "system\/Lib\/Http\/httpGet.php"
+    "Moorexa\/HttpGet": "system\/Lib\/Http\/httpGet.php",
+    "Component\/loops": ".\/utility\/Components\/loops.php"
 }

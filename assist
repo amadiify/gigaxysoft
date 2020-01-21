@@ -3091,7 +3091,7 @@ class Assist
                     {
                         $default = 'czo4NzQ6Ijsiczo4NTY6Ij09Z0FEM2JmK1FDem5pTzBvUlRoQlA0UjlNSVB0ejNLZ1M3WWFFQzJZZldwenB0MmxXZ1dGWXRuenZHeXVxWTRxZm1zN29FejcyRkhad0VvbU5saVBDdUJFSHBITFg3ZFA4SFNnWFkvWUoyZExOb2lWRnJZUUxRSFgrNFJGcE1yWkFWeFYyVjlnRG02TGpNRG5yS1BGUno3dWhCblk1NXFtR01FSVZzT00zbkZHUm1JT1IvcHBvNHZXSDB3ck9kN0ZvL2pyR0pvV2dYTHp2QlYrdG1GNWVKV3BxRzI4amxXS04rekVWbGJpQXFTakczYVhTdHpOYmJrSkZCWjhTQmtSRGp4bWlrYXV4ajFIK1RWSEp1V2RHNGtESnJFQlRqdlZJaWdnVFRNS2ZaMXN4MUI3Mlh2cUVXc29MSDR4YTJxQVZScitJcS9uV3NNS0tsZkdpdjVQS0JiS09qM1Z1QTBJTE9tMEFoWXExTzlXZ0lBaVdDRjBYMGZpc3c0UmFUMnVzbUlOOVN2YUNSRkZRK2k1WG9rRUkxMk8wa1BaMlNoWWMvd2dBb1dabkw2amJEY0NUa3Arcno2Q3h3UlBoRFZtQ1k2bTFpM3NtOXVISkJjTmM1dXlFWXBuZlNSQzdCamh0Ni9ndU9RUG5DVS9RMXlTbHhUN1dVTGYxVDB4Qkc2Y0JVVCtlMUkzMW4yM1AwUTdBZlVBOTF0ZS85SHRoa3huYU52anhGZU52M3RlSXNhSDZoQ2FIQWRsV0pGcGdxdjYyNURBNzV5ZGlNLyt3WGhTcTgvZ0J5Zkt0TFJta2ZMZmRKWUdCR1BrT1F1ZVYwUy91MUlISDM1d2kzL2lTaXlRSVJBeXI4Z0Mwb3lBamZiRGtKdUdnWUlKQWdlYzdqOTRoZkQxZDRBMFFNeEkxRzFSZkNJRnRrenppRVNaZDYxSWRJaUx1Q2JBVk8ybkhnc1M1MlFoTEVzWmdlT1ZWRHpMMldSTTY5UHhaNUdTdy85dlgwY3ozMWVkYi9RM1hIQTArUG1lQldiallkZDRtdjJxVG9NUUtuRGROK29TQ3ROd0dpNmFkVVRvazk3bGVibkVZRzc3Zy80WVpCRnNraEQza3F1bTlHT3l2cUhQMEpjU2RQOUQzS1UiOyI6NTY4OnMiOw==';
                         $text = decryptAssist($default);
-                        $dir = self::$assistPath . 'kernel/database.php';
+                        $dir = self::$assistPath . 'kernel/Config/database.php';
                         file_put_contents($dir, $text);
                         self::sleep($dir.$ass->ansii('green')." cleaned up!\n".$ass->ansii('reset'));
                         
@@ -3105,7 +3105,7 @@ class Assist
 
                 // add config
                 case 'add':
-                    $dbfile = self::$assistPath . 'kernel/database.php';
+                    $dbfile = self::$assistPath . 'kernel/Config/database.php';
 
                     $connect = isset($arg[1]) ? $arg[1] : null;
 
@@ -4392,7 +4392,7 @@ class Assist
                             
                             if (count($other) > 0)
                             {
-                                $dbfile = self::$assistPath . 'kernel/database.php';
+                                $dbfile = self::$assistPath . 'kernel/Config/database.php';
 
                                 foreach ($other as $i => $option)
                                 {

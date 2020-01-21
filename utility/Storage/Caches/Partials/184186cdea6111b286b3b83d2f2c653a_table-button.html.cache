@@ -1,8 +1,0 @@
-<div class="item-action dropdown">
-    <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i class="fe fe-more-vertical"></i></a>
-    <div class="dropdown-menu dropdown-menu-right">
-      <?php foreach ($links as $link) { ?>
-        <a href="<?=$link['link']?>" class="dropdown-item"><i class="dropdown-icon fe <?=$link['icon']?>"></i> <?=ucwords($link['name'])?> </a>
-      <?php } ?>
-    </div>
-  </div>

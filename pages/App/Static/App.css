@@ -1,0 +1,9 @@
+.theme-footer-brand {opacity: 1;}
+.theme-footer-brand > img {width: 25%;}
+.theme-hero-text-subtitle {opacity: 1;}
+.mg-50{margin-bottom: 50px;}
+.theme-footer-brand-text {
+    color: #646161;font-size: 14px;
+}
+.theme-footer-section-list > li > a{opacity: 0.8 !important;}
+.theme-page-section-header-link {color: #616161;}

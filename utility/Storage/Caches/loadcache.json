@@ -1,138 +1,14 @@
 {
-    ".\/lab\/Cms\/MVC\/App\/Custom\/header.html": {
-        "hash": "f96fd396ca07f7265f73225572754062",
-        "path": "utility\/Storage\/Caches\/Headers\/cache.3975ae8afa7bf3e854d08ad740d5da0c.App.header.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/pages\/create.html": {
-        "hash": "9504171e257e9aa0c328aad8b60eab2b",
-        "path": "utility\/Storage\/Caches\/Views\/cache.8be09bbc3bf431826b1c3544f3911efc.App.create.html"
-    },
-    ".\/custom\/footer.html": {
-        "hash": "b457562442fdc85a972c2112a084d02c",
-        "path": "utility\/Storage\/Caches\/Footers\/cache.420f043b55cd0ea699bdd46745316f3d.App.footer.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/home.html": {
-        "hash": "37589857cef1fb0a64bf74d4f013ae20",
-        "path": "utility\/Storage\/Caches\/Views\/cache.f2ab3d983b1fc545a2f20f70faff5269.App.home.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/container.html": {
-        "hash": "1d27df9e0a159af9da8e540a75ea275a",
-        "path": "utility\/Storage\/Caches\/Views\/cache.66bd6557a60839d0dc2e7e9c648b33a6.App.container.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/pages.html": {
-        "hash": "8f6a6fb8ea43e225e1ac129150b0e2be",
-        "path": "utility\/Storage\/Caches\/Views\/cache.9726b73ee0a26cb6b8bf778bed3d270f.App.pages.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/configuration.html": {
-        "hash": "bcbd7e6261331b45043a4773acc495e2",
-        "path": "utility\/Storage\/Caches\/Views\/cache.e8af305df47dae940f38a6fa9cba7e8f.App.configuration.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/images.html": {
-        "hash": "c3b496c090af764b528c9679dde7dc56",
-        "path": "utility\/Storage\/Caches\/Views\/cache.2d9757c248d78a8cc4fd04bf5e4c1cc7.App.images.html"
-    },
-    ".\/custom\/header.html": {
-        "hash": "a54935ad0b15ac0f1febfc22cc8c80c4",
-        "path": "utility\/Storage\/Caches\/Headers\/cache.d29db69b1a9178a48f1d2ab32f72b35c.App.header.html"
-    },
-    ".\/pages\/App\/Views\/contact.html": {
-        "hash": "c3faf63c2240487d0636c04f52add132",
-        "path": "utility\/Storage\/Caches\/Views\/cache.d8f5f0e3df043fccca099fc2c5cad17a.App.contact.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/directives.html": {
-        "hash": "4c121431c28d79c5377ae7ea48ddd301",
-        "path": "utility\/Storage\/Caches\/Views\/cache.9aedecdd0c9d0b2d3cd42246bf4641bf.App.directives.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/login.html": {
-        "hash": "7ee6e14ed5a0a2c8ed0053ef199987ae",
-        "path": "utility\/Storage\/Caches\/Views\/cache.edb4d7398a6da9d9939912fdcb22565c.App.login.html"
+    ".\/pages\/App\/Custom\/header.html": {
+        "hash": "02d9aa21569df1a8808c4a992174b25e",
+        "path": "utility\/Storage\/Caches\/Headers\/cache.429d0c39bdea32321e7eaec3332389bb.App.header.html"
     },
     ".\/pages\/App\/Views\/home.html": {
-        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "hash": "275d9aec9ac7a087bb55ef78f3c252f7",
         "path": "utility\/Storage\/Caches\/Views\/cache.6ca59b1b5498ee214c0f2258b73815c5.App.home.html"
     },
-    ".\/pages\/App\/Views\/about.html": {
-        "hash": "d82abee9e28cc1aca715e1aea06a8903",
-        "path": "utility\/Storage\/Caches\/Views\/cache.4473d2dab24bebd27bf2406d78bcd028.App.about.html"
-    },
-    ".\/pages\/App\/Views\/focus.html": {
-        "hash": "58e0d82efbbc8ffeabfb8cc355324165",
-        "path": "utility\/Storage\/Caches\/Views\/cache.6250d26f2fd68a081c719946d60557bf.App.focus.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/pages\/edit-nav.html": {
-        "hash": "90e46c14f4fb80de298596a618c69865",
-        "path": "utility\/Storage\/Caches\/Views\/cache.4cec92192bac39b4e13e7f2af01a969a.App.edit-nav.html"
-    },
-    "public\/Helper\/noheader.php": {
-        "hash": "38e075b8a63d3bb6e140366c66ee712f",
-        "path": "utility\/Storage\/Caches\/Headers\/cache.4f70a72745cebbd1e80114086850d032.App.noheader.php"
-    },
-    "public\/Helper\/nofooter.php": {
-        "hash": "b7bb4bedf76dcf7492836f797feb4255",
-        "path": "utility\/Storage\/Caches\/Footers\/cache.e9fcdbf77a5a787d3299f2de1d1695b1.App.nofooter.php"
-    },
-    ".\/pages\/App\/Views\/events.html": {
-        "hash": "53072a1066072c0253d9684649774eb0",
-        "path": "utility\/Storage\/Caches\/Views\/cache.2ce7fff31b770ac40670b33442036e9a.App.events.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/edit-view.html": {
-        "hash": "667dbe3a39d77201603f555f80c61312",
-        "path": "utility\/Storage\/Caches\/Views\/cache.3e0106bb46297b7ecd0f9478a0a61a79.App.edit-view.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/pages\/edit-view.html": {
-        "hash": "382ef83fbd25e62736989a664d78d090",
-        "path": "utility\/Storage\/Caches\/Views\/cache.8ca860c7daf9c347e2fa17751d20a739.App.edit-view.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/container\/create.html": {
-        "hash": "b91dbb58ceaf719e3002d4b643fa1904",
-        "path": "utility\/Storage\/Caches\/Views\/cache.ecc15ec5723dfd18eac7d72a6f5934cd.App.create.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/container\/edit.html": {
-        "hash": "d78b9874ac7d889dae6691c538b1a573",
-        "path": "utility\/Storage\/Caches\/Views\/cache.96796625d9a06f1dd6eddcde6bfaa327.App.edit.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/images\/upload.html": {
-        "hash": "aeba2a43d388d999557bc09e3c164fa3",
-        "path": "utility\/Storage\/Caches\/Views\/cache.e3d1356714182eef67d54cfa0458d013.App.upload.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/images\/update.html": {
-        "hash": "9726f3e40f2dddf7063962d04c415647",
-        "path": "utility\/Storage\/Caches\/Views\/cache.c5fbefa919158061e2be247782157682.App.update.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/install.html": {
-        "hash": "bb0272676581a53de645412a8f31d10c",
-        "path": "utility\/Storage\/Caches\/Views\/cache.f585aa0aff8fad59bf06d981b3130511.App.install.html"
-    },
-    ".\/lab\/Cms\/MVC\/App\/Views\/plugins.html": {
-        "hash": "4f01f0d8a3d3156f17ada7221d7d5459",
-        "path": "utility\/Storage\/Caches\/Views\/cache.1dbe6948e536e32d71a0ace77d1b5b02.App.plugins.html"
-    },
-    ".\/lab\/Cms\/Installations\/Plugins\/Events\/Views\/home.html": {
-        "hash": "ecf2db88fe52e10d7f8730cac99284f3",
-        "path": "utility\/Storage\/Caches\/Views\/cache.82c5df96dfff7317ba45b47f0ea97fd7.App.home.html"
-    },
-    ".\/lab\/Cms\/Installations\/Plugins\/Events\/Views\/create.html": {
-        "hash": "ec2907663eb7e0779099c58aa2f0e80f",
-        "path": "utility\/Storage\/Caches\/Views\/cache.796898ca6d891942f575d65e282d5a50.App.create.html"
-    },
-    ".\/lab\/Cms\/Installations\/Plugins\/Events\/Views\/edit.html": {
-        "hash": "ef5c874c957cc75bce462982cdd7209d",
-        "path": "utility\/Storage\/Caches\/Views\/cache.f6284335a7b560fe10df6b5609a52a0d.App.edit.html"
-    },
-    ".\/pages\/App\/Views\/gallery.html": {
-        "hash": "ef19a7630e5ed46e687b1b368e4d0927",
-        "path": "utility\/Storage\/Caches\/Views\/cache.f9e123236d7c6ce2e16ed1f0b8141891.App.gallery.html"
-    },
-    ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Views\/home.html": {
-        "hash": "beefda166462e0d700049537cdce6795",
-        "path": "utility\/Storage\/Caches\/Views\/cache.9bcb2f9533233491dac14b7fe2982fca.App.home.html"
-    },
-    ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Views\/create.html": {
-        "hash": "1432b0fd870ae9b5802eb2902153deb2",
-        "path": "utility\/Storage\/Caches\/Views\/cache.9167b62dcdd32fcc0ee181f15a3f7a25.App.create.html"
-    },
-    ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Views\/edit.html": {
-        "hash": "543df43c12c3d30d9803337f292dc70d",
-        "path": "utility\/Storage\/Caches\/Views\/cache.483de3d088b3df829de12a4296642cea.App.edit.html"
+    ".\/pages\/App\/Custom\/footer.html": {
+        "hash": "1227adc0a92500d0f6ad1ba42a13d91e",
+        "path": "utility\/Storage\/Caches\/Footers\/cache.b951b83df995c40625ebe72aad5b5ab3.App.footer.html"
     }
 }

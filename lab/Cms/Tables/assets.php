@@ -42,37 +42,7 @@ class Assets
         if ($status == 'complete')
         {
             // do some cool stuffs.
-            $assets = [
-                [
-                    'path' => 'moorexa.css'
-                ],
-                [
-                    'path' => 'moorexa.min.js',
-                    'tag' => 'js'
-                ],
-                [
-                    'path' => 'theme/vendor.bundle.css?ver=141'
-                ],
-                [
-                    'path' => 'theme/style.css?ver=141'
-                ],
-                [
-                    'path' => 'theme/theme.css?ver=141'
-                ],
-                [
-                    'path' => 'theme/jquery.bundle.js?ver=141',
-                    'tag' => 'js'
-                ],
-                [
-                    'path' => 'theme/scripts.js?ver=141',
-                    'tag' => 'js'
-                ]
-            ];
-
-            foreach ($assets as $asset)
-            {
-                $db->insert($asset)->go();
-            }
+            
         }
     }
 }

@@ -47,59 +47,7 @@ class Navigation
         if ($status == 'complete')
         {
             // do some cool stuffs.
-            $pages = [
-                [
-                    'page_name' => 'Home',
-                    'page_link' => 'app/home',
-                    'navigationtypeid' => 1,
-                    'breadcum_title' => 'Welcome'
-                ],
-                [
-                    'page_name' => 'About',
-                    'page_link' => 'app/about',
-                    'navigationtypeid' => 1,
-                    'breadcum_title' => 'About us',
-                    'page_title' => 'About ABRDI',
-                    'keyword' => 'about abrdi, About ABRDI'
-                ],
-                [
-                    'page_name' => 'Focus',
-                    'page_link' => 'app/focus',
-                    'navigationtypeid' => 1,
-                    'breadcum_title' => 'Our Focus',
-                    'page_title' => 'ABRDI Focus',
-                    'keyword' => 'ABRDI focus, abrdi focus, our focus'
-                ],
-                [
-                    'page_name' => 'Gallery',
-                    'page_link' => 'app/gallery',
-                    'navigationtypeid' => 1,
-                    'breadcum_title' => 'Our Gallery',
-                    'page_title' => 'ABRDI Gallery',
-                    'keyword' => 'ABRDI Gallery, Gallery'
-                ],
-                [
-                    'page_name' => 'Project',
-                    'page_link' => 'app/project',
-                    'navigationtypeid' => 1,
-                    'breadcum_title' => 'Our Projects',
-                    'page_title' => 'ABRDI Projects',
-                    'keyword' => 'ABRDI Projects, ABRDI project'
-                ],
-                [
-                    'page_name' => 'Contact',
-                    'page_link' => 'app/contact',
-                    'navigationtypeid' => 1,
-                    'breadcum_title' => 'Contact us',
-                    'page_title' => 'Contact ABRDI',
-                    'keyword' => 'Contact ABRDI, contact abrdi'
-                ]
-            ];
-
-            foreach ($pages as $page)
-            {
-                $db->insert($page)->go();
-            }
+            
         }
     }
 }

@@ -31,18 +31,18 @@ $kernel->db([
 		],
 	],
 
-	'abrdi-app' => [
+	'centurion-app' => [
 		'dsn' 		=> '{driver}:host={host};dbname={dbname};charset={charset}',
 		'driver'    => 'mysql',
 		'host' 	    => 'localhost',
 		'user'      => 'root',
 		'password'  => 'root',
-		'dbname'    => 'abrdi-app',
+		'dbname'    => 'centurion-app',
 		'charset'   => 'utf8mb4',
 		'port'      => '',
 		'handler'   => 'pdo',
+		'prefix'    => 'Cent_',
 		'attributes'=> true,
-		'prefix'    => '',
 		'production'=> [
 			'driver'  =>   'mysql',
 			'host'    =>   '',
@@ -50,19 +50,13 @@ $kernel->db([
 			'password'  =>   '',
 			'dbname'    =>   '',
 		],
-		'testing'=> [
-			'driver'  =>   'mysql',
-			'host'    =>   'mysql5018.site4now.net',
-			'user'    =>   'a0c157_testing',
-			'password'  =>   'testing@2020',
-			'dbname'    =>   'db_a0c157_testing',
-		],
 		'options'   => [ PDO::ATTR_PERSISTENT => true ]
 	],
 
 
+
 // choose from any of your configuration for a default connection
 ])
-->default(['development' => 'abrdi-app', 'live' => ''])
-->domain('console.fregatelab.com', ['live' => 'abrdi-app@testing']);
+->default(['development' => 'centurion-app', 'live' => ''])
+->domain('console.fregatelab.com', ['live' => 'centurion-app@testing']);
 

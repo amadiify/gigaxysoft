@@ -16,7 +16,7 @@ class Cms
     private static $images = [];
 
     // set your site id
-    public $siteID = 'ABRDI';
+    public $siteID = 'Centurion';
 
     // create navigation
     private static $navigation = [

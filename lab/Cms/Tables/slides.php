@@ -42,13 +42,7 @@ class Slides
         if ($status == 'complete')
         {
             // do some cool stuffs.
-            $db->insert(
-                [
-                    'slide_title' => 'smart city',
-                    'slide_image' => 'Slides/slide1.jpg',
-                    'slide_btn' => 'app/home'
-                ]
-            )->go();
+            
         }
     }
 }
