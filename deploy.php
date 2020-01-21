@@ -18,7 +18,7 @@
  class DeployProject
  {
     // @var $remote_address (optional)
-    public $remote_address = 'http://console.fregatelab.com/workspace/abrdi/'; 
+    public $remote_address = 'http://console.fregatelab.com/workspace/centurion/'; 
 
     // @var $requestID 
     // set a unique requestID
