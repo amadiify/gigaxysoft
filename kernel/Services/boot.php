@@ -9,4 +9,4 @@ use utility\Classes\BootMgr\Manager as Boot;
  */
 
  // registered in /Config/aliases.php
- \Cms\Config::loadBoot();
+ // \Cms\Config::loadBoot();
