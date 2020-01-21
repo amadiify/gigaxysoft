@@ -69,3 +69,14 @@ All static files have been autoloaded in 'kernel/loadStatic.json'. Before produc
 ```
 
 All static files, general assets are cached in 'public/Assets/assets.paths.json' and served at zero seconds.
+
+# Landing page
+You can start the development server by running:
+
+```bash
+    php assist serve
+```
+
+See example landing screen.
+[Landing Page][https://github.com/amadiify/centurion/pages/App/Static/images/promo/First-preview.png]
+

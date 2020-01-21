@@ -107,5 +107,6 @@
     ".\/pages\/App\/Static\/images\/promo:city-sun-hot-child_350x260.jpg": ".\/pages\/App\/Static\/images\/promo\/city-sun-hot-child_350x260.jpg",
     ".\/pages\/App\/Static\/images\/promo:woman-hiker-outside-forest_730x435.jpg": ".\/pages\/App\/Static\/images\/promo\/woman-hiker-outside-forest_730x435.jpg",
     ".\/pages\/App\/Static\/images\/promo:man-wearing-black-and-red-checkered_350x435.jpeg": ".\/pages\/App\/Static\/images\/promo\/man-wearing-black-and-red-checkered_350x435.jpeg",
-    ".\/pages\/App\/Static\/images\/promo:lights_350x260.jpeg": ".\/pages\/App\/Static\/images\/promo\/lights_350x260.jpeg"
+    ".\/pages\/App\/Static\/images\/promo:lights_350x260.jpeg": ".\/pages\/App\/Static\/images\/promo\/lights_350x260.jpeg",
+    ".\/pages\/App\/Static:USA.png": ".\/pages\/App\/Static\/images\/promo\/USA.png"
 }
