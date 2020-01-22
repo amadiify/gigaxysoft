@@ -50,6 +50,13 @@ $kernel->db([
 			'password'  =>   '',
 			'dbname'    =>   '',
 		],
+		'testing'=> [
+			'driver'  =>   'mysql',
+			'host'    =>   'mysql5021.site4now.net',
+			'user'    =>   'a0c157_centurn',
+			'password'  =>   'demo@2020',
+			'dbname'    =>   'db_a0c157_centurn',
+		],
 		'options'   => [ PDO::ATTR_PERSISTENT => true ]
 	],
 
