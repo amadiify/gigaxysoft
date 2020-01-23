@@ -1,4 +1,20 @@
 {
     "utility\/Classes\/BootMgr:Manager.php:Manager.php:MANAGER.php:manager.php": "utility\/Classes\/BootMgr\/Manager.php",
-    ".\/lab\/\/SmartRow:Directives.php": ".\/lab\/SmartRow\/Directives.php"
+    ".\/lab\/\/SmartRow:Directives.php": ".\/lab\/SmartRow\/Directives.php",
+    ".\/lab\/:Cms.php": ".\/lab\/Cms\/Cms.php",
+    ".\/lab\/\/Cms\/Database:Query.php": ".\/lab\/Cms\/Database\/Query.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Events:Events.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Events.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Events:Directives.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Directives.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Gallery:Gallery.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Gallery.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Gallery:Directives.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Directives.php",
+    "utility\/Middlewares\/:System.php:System.php:system.php": "utility\/Middlewares\/System.php",
+    "utility\/Middlewares\/:csrfVerify.php:CsrfVerify.php:csrfVerify.php": "utility\/Middlewares\/csrfVerify.php",
+    ".\/lab\/\/Cms:Container.php": ".\/lab\/Cms\/Container.php",
+    "utility\/Middlewares\/:http.php:Http.php:http.php": "utility\/Middlewares\/http.php",
+    ".\/pages\/App\/Static\/:App.css:App.cxx.css:App.css": ".\/pages\/App\/Static\/App.css",
+    "public\/Assets\/Images\/:no-image-available.png": "public\/Assets\/Images\/Sys\/no-image-available.png",
+    ".\/utility\/\/Classes\/Hyphe:Compile.php": ".\/utility\/Classes\/Hyphe\/Compile.php",
+    ".\/utility\/Classes\/\/Hyphe:Compile.php": ".\/utility\/Classes\/Hyphe\/Compile.php",
+    "kernel\/Partials\/:meta-tags.md:Meta-tags.md": "kernel\/Partials\/meta-tags.md",
+    ".\/pages\/App\/Static\/:App.js:App.js": ".\/pages\/App\/Static\/App.js"
 }

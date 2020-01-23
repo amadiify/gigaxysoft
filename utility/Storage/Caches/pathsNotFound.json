@@ -10,5 +10,103 @@
     ".\/utility\/Classes\/:Directives.php": [
         ".\/utility\/Classes\/",
         "Directives.php"
+    ],
+    "CmsGlobal:Cms.php": [
+        "CmsGlobal",
+        "Cms.php"
+    ],
+    ".\/utility\/:Cms.php": [
+        ".\/utility\/",
+        "Cms.php"
+    ],
+    ".\/utility\/Classes\/:Cms.php": [
+        ".\/utility\/Classes\/",
+        "Cms.php"
+    ],
+    "Database:Query.php": [
+        "Database",
+        "Query.php"
+    ],
+    ".\/utility\/\/Exceptions\/Database:Query.php": [
+        ".\/utility\/\/Exceptions\/Database",
+        "Query.php"
+    ],
+    ".\/utility\/Classes\/:Query.php": [
+        ".\/utility\/Classes\/",
+        "Query.php"
+    ],
+    "Installations\/Plugins\/Events:Events.php": [
+        "Installations\/Plugins\/Events",
+        "Events.php"
+    ],
+    ".\/utility\/:Events.php": [
+        ".\/utility\/",
+        "Events.php"
+    ],
+    ".\/utility\/Classes\/:Events.php": [
+        ".\/utility\/Classes\/",
+        "Events.php"
+    ],
+    "Installations\/Plugins\/Events:Directives.php": [
+        "Installations\/Plugins\/Events",
+        "Directives.php"
+    ],
+    "Installations\/Plugins\/Gallery:Gallery.php": [
+        "Installations\/Plugins\/Gallery",
+        "Gallery.php"
+    ],
+    ".\/utility\/:Gallery.php": [
+        ".\/utility\/",
+        "Gallery.php"
+    ],
+    ".\/utility\/Classes\/:Gallery.php": [
+        ".\/utility\/Classes\/",
+        "Gallery.php"
+    ],
+    "Installations\/Plugins\/Gallery:Directives.php": [
+        "Installations\/Plugins\/Gallery",
+        "Directives.php"
+    ],
+    ".\/utility\/:Container.php": [
+        ".\/utility\/",
+        "Container.php"
+    ],
+    ".\/utility\/Classes\/:Container.php": [
+        ".\/utility\/Classes\/",
+        "Container.php"
+    ],
+    ".\/pages\/App\/Static\/:home.css:home.cxx.css:Home.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "home.css",
+            "home.cxx.css",
+            "Home.css"
+        ]
+    ],
+    "public\/Assets\/Images\/:icons.png": [
+        "public\/Assets\/Images\/",
+        "icons.png"
+    ],
+    "Hyphe:Compile.php": [
+        "Hyphe",
+        "Compile.php"
+    ],
+    ".\/lab\/:Compile.php": [
+        ".\/lab\/",
+        "Compile.php"
+    ],
+    ".\/pages\/App\/Partials\/:meta-tags.md:Meta-tags.md": [
+        ".\/pages\/App\/Partials\/",
+        [
+            "meta-tags.md",
+            "Meta-tags.md"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:home.js:Home.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "home.js",
+            "Home.js"
+        ]
     ]
 }

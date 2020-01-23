@@ -1,0 +1,14 @@
+{
+    ".\/custom\/header.html": {
+        "hash": "a54935ad0b15ac0f1febfc22cc8c80c4",
+        "path": "utility\/Storage\/Caches\/Headers\/cache.d29db69b1a9178a48f1d2ab32f72b35c.App.header.html"
+    },
+    ".\/pages\/App\/Views\/home.html": {
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "path": "utility\/Storage\/Caches\/Views\/cache.6ca59b1b5498ee214c0f2258b73815c5.App.home.html"
+    },
+    ".\/custom\/footer.html": {
+        "hash": "b457562442fdc85a972c2112a084d02c",
+        "path": "utility\/Storage\/Caches\/Footers\/cache.420f043b55cd0ea699bdd46745316f3d.App.footer.html"
+    }
+}

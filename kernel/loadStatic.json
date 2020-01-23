@@ -1,6 +1,9 @@
 {
     "stylesheet": [
-        "moorexa.css"
+        "moorexa.css",
+        "theme/vendor/vendor.min.css",
+        "theme/plugins/plugins.min.css",
+        "theme/style.min.css"
     ],
 
     "stylesheet@bundle" : [
@@ -8,7 +11,26 @@
     ],
     
     "scripts": [
-        "moorexa.min.js"
+        "moorexa.min.js",
+        "theme/vendor/modernizr-2.8.3.min.js",
+        "theme/vendor/jquery-3.3.1.min.js",
+        "theme/vendor/bootstrap.min.js",
+        "theme/plugins/swiper.min.js",
+        "theme/plugins/lightgallery.min.js",
+        "theme/plugins/waypoints.min.js",
+        "theme/plugins/countdown.min.js",
+        "theme/plugins/isotope.min.js",
+        "theme/plugins/masonry.min.js",
+        "theme/plugins/images-loaded.min.js",
+        "theme/plugins/wavify.js",
+        "theme/plugins/jquery.wavify.js",
+        "theme/plugins/circle-progress.min.js",
+        "theme/plugins/counterup.min.js",
+        "theme/plugins/wow.min.js",
+        "theme/plugins/animation-text.min.js",
+        "theme/plugins/vivus.min.js",
+        "theme/plugins/some-plugins.js",
+        "theme/main.js"
     ],
 
     "scripts@bundle" : [
