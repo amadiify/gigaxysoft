@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+                <th>Full Name</th>
+                <th>User Name</th>
+                <th>Permission</th>
+                <th>Permission Group</th>
+                <th>Action</th>
+            </thead>
+            
+            <tbody>
+                <?php
+$users = \Moorexa\DB::sql('SELECT * FROM '.(\Moorexa\DB::getTableName('users')).' ');if ($users->rows > 0){
+while ($user = $users->obj())
+{ ?>
+                    <tr>
+                        <?php $permission = $user->from('permission', 'permissionid')->get();?>
+
+                        <td><?=$user->fullname?></td>
+                        <td><?=$user->username?></td>
+                        <td><?=$permission->permission?></td>
+                        <td>
+                            <?php 
+ // PHP starts here 
+
+                                $tags = explode(',', $permission->permission_group);
+                                $colors = ['tag-blue', 'tag-azure', 'tag-indigo', 'tag-purple', 'tag-pink', 'tag-orange', 'tag-green'];
+
+                                ?>
+
+
+                                    <?php foreach ($tags as $index => $group) { ?>
+                                        <span class="tag <?=$colors[$index]?>"><?=$group?></span>
+                                    <?php } ?>
+
+                                <?php 
+ // PHP starts here 
+
+                            
+ // PHP ends here 
+ ?>
+                        </td>
+                        <td>
+                            <?=\Moorexa\Rexa::runDirective(true,'component','table-button', ['links' => CMS::loadButton(['edit', 'delete' => 'users/trigger-confirm/delete'], $user->userid)])?>
+                        </td>
+                    </tr>
+                <?php }} ?>
+            </tbody>
+        </table>
+    </div>
+</div>

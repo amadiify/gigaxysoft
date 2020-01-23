@@ -1,0 +1,96 @@
+<?php 
+ // PHP starts here 
+
+
+    $report = [];
+    $report[] = db('containers')->get()->rows;
+    $report[] = db('directives')->get()->rows;
+    $report[] = db('images')->get()->rows;
+    $report[] = db('navigation')->get()->rows;
+    $report[] = db('users')->get()->rows;
+    $report[] = 0;
+
+
+ // PHP ends here 
+ ?>
+
+<div class="row row-cards">
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="card">
+        <div class="card-body p-3 text-center">
+          <a href="<?=\Moorexa\Rexa::runDirective(true,'navigation','container')?>">
+            <div class="text-right text-green">
+              <i class="fe fe-chevron-up"></i>
+            </div>
+            <div class="h1 m-0"><?=$report[0]?></div>
+            <div class="text-muted mb-4">Containers</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="card">
+        <div class="card-body p-3 text-center">
+          <a href="<?=\Moorexa\Rexa::runDirective(true,'navigation','directives')?>">
+            <div class="text-right text-green">
+              
+              <i class="fe fe-chevron-up"></i>
+            </div>
+            <div class="h1 m-0"><?=$report[1]?></div>
+            <div class="text-muted mb-4">Directives</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="card">
+        <div class="card-body p-3 text-center">
+          <a href="<?=\Moorexa\Rexa::runDirective(true,'navigation','images')?>">
+            <div class="text-right text-green">
+              <i class="fe fe-chevron-up"></i>
+            </div>
+            <div class="h1 m-0"><?=$report[2]?></div>
+            <div class="text-muted mb-4">Images</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="card">
+        <div class="card-body p-3 text-center">
+          <a href="<?=\Moorexa\Rexa::runDirective(true,'navigation','pages')?>">
+            <div class="text-right text-green">
+              <i class="fe fe-chevron-up"></i>
+            </div>
+            <div class="h1 m-0"><?=$report[3]?></div>
+            <div class="text-muted mb-4">Pages</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="card">
+        <div class="card-body p-3 text-center">
+          <a href="<?=\Moorexa\Rexa::runDirective(true,'navigation','users')?>">
+            <div class="text-right text-green">
+              <i class="fe fe-chevron-down"></i>
+            </div>
+            <div class="h1 m-0"><?=$report[4]?></div>
+            <div class="text-muted mb-4">Users</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="card">
+        <div class="card-body p-3 text-center">
+          <div class="text-right text-red">
+            
+            <i class="fe fe-chevron-down"></i>
+          </div>
+          <div class="h1 m-0"><?=$report[5]?></div>
+          <div class="text-muted mb-4">Views</div>
+        </div>
+      </div>
+    </div>
+  </div>

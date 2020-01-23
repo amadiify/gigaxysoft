@@ -108,5 +108,176 @@
             "home.js",
             "Home.js"
         ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:home.css:home.cxx.css:Home.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "home.css",
+            "home.cxx.css",
+            "Home.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Partials\/:meta-tags.md:Meta-tags.md": [
+        ".\/lab\/Cms\/MVC\/App\/Partials\/",
+        [
+            "meta-tags.md",
+            "Meta-tags.md"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:home.js:Home.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "home.js",
+            "Home.js"
+        ]
+    ],
+    "Bootstrap:Alert.php": [
+        "Bootstrap",
+        "Alert.php"
+    ],
+    ".\/lab\/:Alert.php": [
+        ".\/lab\/",
+        "Alert.php"
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:login.css:login.cxx.css:Login.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "login.css",
+            "login.cxx.css",
+            "Login.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:login.js:Login.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "login.js",
+            "Login.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:container.css:container.cxx.css:Container.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "container.css",
+            "container.cxx.css",
+            "Container.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:create.css:Create.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "create.css",
+            "Create.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:create.js:Create.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "create.js",
+            "Create.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:edit.css:Edit.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "edit.css",
+            "Edit.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:edit.js:Edit.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "edit.js",
+            "Edit.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:pages.css:pages.cxx.css:Pages.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "pages.css",
+            "pages.cxx.css",
+            "Pages.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:pages.js:Pages.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "pages.js",
+            "Pages.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:directives.css:directives.cxx.css:Directives.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "directives.css",
+            "directives.cxx.css",
+            "Directives.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:directives.js:Directives.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "directives.js",
+            "Directives.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:configuration.css:configuration.cxx.css:Configuration.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "configuration.css",
+            "configuration.cxx.css",
+            "Configuration.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:configuration.js:Configuration.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "configuration.js",
+            "Configuration.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:users.css:users.cxx.css:Users.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "users.css",
+            "users.cxx.css",
+            "Users.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:users.js:Users.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "users.js",
+            "Users.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:install.css:install.cxx.css:Install.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "install.css",
+            "install.cxx.css",
+            "Install.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:install.js:Install.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "install.js",
+            "Install.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:plugins.css:plugins.cxx.css:Plugins.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "plugins.css",
+            "plugins.cxx.css",
+            "Plugins.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:plugins.js:Plugins.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "plugins.js",
+            "Plugins.js"
+        ]
     ]
 }

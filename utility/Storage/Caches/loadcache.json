@@ -1,6 +1,6 @@
 {
     ".\/custom\/header.html": {
-        "hash": "a54935ad0b15ac0f1febfc22cc8c80c4",
+        "hash": "5c4878049960b3f0126f41ad22e06039",
         "path": "utility\/Storage\/Caches\/Headers\/cache.d29db69b1a9178a48f1d2ab32f72b35c.App.header.html"
     },
     ".\/pages\/App\/Views\/home.html": {
@@ -10,5 +10,57 @@
     ".\/custom\/footer.html": {
         "hash": "b457562442fdc85a972c2112a084d02c",
         "path": "utility\/Storage\/Caches\/Footers\/cache.420f043b55cd0ea699bdd46745316f3d.App.footer.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Custom\/header.html": {
+        "hash": "f96fd396ca07f7265f73225572754062",
+        "path": "utility\/Storage\/Caches\/Headers\/cache.3975ae8afa7bf3e854d08ad740d5da0c.App.header.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/home.html": {
+        "hash": "37589857cef1fb0a64bf74d4f013ae20",
+        "path": "utility\/Storage\/Caches\/Views\/cache.f2ab3d983b1fc545a2f20f70faff5269.App.home.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/login.html": {
+        "hash": "7ee6e14ed5a0a2c8ed0053ef199987ae",
+        "path": "utility\/Storage\/Caches\/Views\/cache.edb4d7398a6da9d9939912fdcb22565c.App.login.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/container.html": {
+        "hash": "1d27df9e0a159af9da8e540a75ea275a",
+        "path": "utility\/Storage\/Caches\/Views\/cache.66bd6557a60839d0dc2e7e9c648b33a6.App.container.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/container\/create.html": {
+        "hash": "b91dbb58ceaf719e3002d4b643fa1904",
+        "path": "utility\/Storage\/Caches\/Views\/cache.ecc15ec5723dfd18eac7d72a6f5934cd.App.create.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/container\/edit.html": {
+        "hash": "d78b9874ac7d889dae6691c538b1a573",
+        "path": "utility\/Storage\/Caches\/Views\/cache.96796625d9a06f1dd6eddcde6bfaa327.App.edit.html"
+    },
+    "pages": {
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "path": "utility\/Storage\/Caches\/Views\/cache.b3b32a2d422265cd25c3323ed0157f81.App.pages"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/directives.html": {
+        "hash": "4c121431c28d79c5377ae7ea48ddd301",
+        "path": "utility\/Storage\/Caches\/Views\/cache.9aedecdd0c9d0b2d3cd42246bf4641bf.App.directives.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/configuration.html": {
+        "hash": "bcbd7e6261331b45043a4773acc495e2",
+        "path": "utility\/Storage\/Caches\/Views\/cache.e8af305df47dae940f38a6fa9cba7e8f.App.configuration.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/users.html": {
+        "hash": "b761e71b24881ba55a730d9e658b4c24",
+        "path": "utility\/Storage\/Caches\/Views\/cache.36fdbd151751a963b4df1af74544ecde.App.users.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/install.html": {
+        "hash": "bb0272676581a53de645412a8f31d10c",
+        "path": "utility\/Storage\/Caches\/Views\/cache.f585aa0aff8fad59bf06d981b3130511.App.install.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/plugins.html": {
+        "hash": "4f01f0d8a3d3156f17ada7221d7d5459",
+        "path": "utility\/Storage\/Caches\/Views\/cache.1dbe6948e536e32d71a0ace77d1b5b02.App.plugins.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/pages.html": {
+        "hash": "8f6a6fb8ea43e225e1ac129150b0e2be",
+        "path": "utility\/Storage\/Caches\/Views\/cache.9726b73ee0a26cb6b8bf778bed3d270f.App.pages.html"
     }
 }

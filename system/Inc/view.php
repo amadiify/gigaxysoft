@@ -765,7 +765,8 @@ class View extends Bootloader
 				$directory = env('bootstrap', 'controller.basepath') . '/' . $folder . '/Views';
 				// set path
 				$viewpath = $directory . $subpath . '/' . $filename . $extension;
-				if (file_exists($render))
+				// check if render is a file and for existance.
+				if (is_file($render) && file_exists($render))
 				{
 					$viewpath = $render;
 				}

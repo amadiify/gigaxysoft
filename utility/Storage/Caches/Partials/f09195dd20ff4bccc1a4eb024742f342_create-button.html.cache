@@ -1,0 +1,5 @@
+<?php if(isset($button[0])) { ?>
+    <?php $getButton = $button[0];?>
+    <!-- create button -->
+    <a href="<?=$getButton['link']?>" class="btn btn-success"><i class="fe <?=$getButton['icon']?>"></i> <?=ucwords($getButton['name'])?></a>
+<?php } ?>

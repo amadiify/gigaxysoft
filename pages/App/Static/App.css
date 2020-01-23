@@ -1,0 +1,3 @@
+.header-top-info-inner .info-item .info-icon {color: #5ebed7;}
+.navigation-menu > ul > li > a::before {background-color: #127EBF;}
+.navigation-menu > ul > li:hover > a span, .navigation-menu > ul > li.active > a span {color: #127EBF;}

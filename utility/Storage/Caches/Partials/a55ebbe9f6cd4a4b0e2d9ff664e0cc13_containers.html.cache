@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+                <th>Container Name</th>
+                <th>Container Body</th>
+                <th>Action</th>
+            </thead>
+            
+            <tbody>
+                <?php $containers = Query::getContainers();?>
+                <?php
+$containers = $containers;if ($containers->rows > 0){
+while ($container = $containers->obj())
+{ ?>
+                    <tr class="tr-row">
+                        <td><?=$container->container_name?></td>
+                        <td><?=substr(strip_tags($container->container_body), 0, 100)?></td>
+                        <td>
+                            <?=\Moorexa\Rexa::runDirective(true,'component','table-button', ['links' => CMS::loadButton(['edit', 'delete' => 'container/delete'], $container->containerid)])?>
+                        </td>
+                    </tr>
+                <?php }} ?>
+            </tbody>
+        </table>
+    </div>
+</div>

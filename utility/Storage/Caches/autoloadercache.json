@@ -39,5 +39,8 @@
     "Moorexa\/Linker": "system\/Inc\/linker.php",
     "Moorexa\/Template": "system\/Inc\/templates.php",
     "Hyphe\/Compile": ".\/utility\/Classes\/Hyphe\/Compile.php",
-    "Moorexa\/File": "system\/Inc\/files.php"
+    "Moorexa\/File": "system\/Inc\/files.php",
+    "Bootstrap\/Alert": ".\/utility\/Classes\/Bootstrap\/Alert.php",
+    "Moorexa\/DB\/FetchRow": "system\/DB\/fetch_db.php",
+    "Moorexa\/HttpGet": "system\/Lib\/Http\/httpGet.php"
 }

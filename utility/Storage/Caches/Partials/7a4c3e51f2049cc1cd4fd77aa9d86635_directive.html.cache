@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+                <th>Directive</th>
+                <th>Directive Class</th>
+                <th>Directive Method</th>
+                <th>Action</th>
+            </thead>
+
+            <tbody>
+                <?php $directives = Query::getAllDirectives();?>
+                <?php
+$directives = $directives;if ($directives->rows > 0){
+while ($directive = $directives->obj())
+{ ?>
+                    <tr class="tr-row">
+                        <td><?=$directive->directive?></td>
+                        <td><?=$directive->directive_class?></td>
+                        <td><?=$directive->directive_method?></td>
+                        <td><?=\Moorexa\Rexa::runDirective(true,'component','table-button', ['links' => CMS::loadButton(['edit', 'delete' => 'directives/trigger-confirm/delete'], $directive->directiveid)])?></td>
+                    </tr>
+                <?php }} ?>
+            </tbody>
+        </table>
+    </div>
+</div>
