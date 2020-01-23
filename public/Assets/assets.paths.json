@@ -69,5 +69,20 @@
     "theme\/plugins\/vivus.min.js": "public\/Assets\/Js\/theme\/plugins\/vivus.min.js",
     "theme\/plugins\/some-plugins.js": "public\/Assets\/Js\/theme\/plugins\/some-plugins.js",
     "theme\/main.js": "public\/Assets\/Js\/theme\/main.js",
-    "theme\/logo\/gigaxy-logo.jpg": "public\/Assets\/Images\/theme\/logo\/gigaxy-logo.jpg"
+    "theme\/logo\/gigaxy-logo.jpg": "public\/Assets\/Images\/theme\/logo\/gigaxy-logo.jpg",
+    "theme\/hero\/mitech-slider-cybersecurity-global-image.png": "public\/Assets\/Images\/theme\/hero\/mitech-slider-cybersecurity-global-image.png",
+    "theme\/hero\/slider-cybersecurity-slide-01-image-01.png": "public\/Assets\/Images\/theme\/hero\/slider-cybersecurity-slide-01-image-01.png",
+    "theme\/box-image\/blog-01-480x298.jpg": "public\/Assets\/Images\/theme\/box-image\/blog-01-480x298.jpg",
+    "theme\/box-image\/mitech-home-infotechno-box-large-image-03-480x298.jpg": "public\/Assets\/Images\/theme\/box-image\/mitech-home-infotechno-box-large-image-03-480x298.jpg",
+    "theme\/box-image\/mitech-home-infotechno-box-large-image-02-480x298.jpg": "public\/Assets\/Images\/theme\/box-image\/mitech-home-infotechno-box-large-image-02-480x298.jpg",
+    "theme\/features\/home-services-case-study-slide-image-01.png": "public\/Assets\/Images\/theme\/features\/home-services-case-study-slide-image-01.png",
+    "theme\/features\/home-services-case-study-slide-image-02.png": "public\/Assets\/Images\/theme\/features\/home-services-case-study-slide-image-02.png",
+    "theme\/other\/mitech-slider-client-logos-logo-02.png": "public\/Assets\/Images\/theme\/other\/mitech-slider-client-logos-logo-02.png",
+    "theme\/other\/mitech-slider-client-logos-logo-03.png": "public\/Assets\/Images\/theme\/other\/mitech-slider-client-logos-logo-03.png",
+    "theme\/other\/mitech-slider-client-logos-logo-04.png": "public\/Assets\/Images\/theme\/other\/mitech-slider-client-logos-logo-04.png",
+    "theme\/other\/mitech-slider-client-logos-logo-05.png": "public\/Assets\/Images\/theme\/other\/mitech-slider-client-logos-logo-05.png",
+    "theme\/other\/mitech-slider-client-logos-logo-01.png": "public\/Assets\/Images\/theme\/other\/mitech-slider-client-logos-logo-01.png",
+    "theme\/other\/mitech-slider-client-logos-logo-06.png": "public\/Assets\/Images\/theme\/other\/mitech-slider-client-logos-logo-06.png",
+    "theme\/other\/mitech-slider-client-logos-logo-07.png": "public\/Assets\/Images\/theme\/other\/mitech-slider-client-logos-logo-07.png",
+    "theme\/banners\/home-cybersecurity-contact-bg-image.png": "public\/Assets\/Images\/theme\/banners\/home-cybersecurity-contact-bg-image.png"
 }

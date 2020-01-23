@@ -684,6 +684,11 @@ class Assist
     // private storage
     private static $storage = [];
 
+    // set paths
+    protected static $tablePath = 'lab/Tables/'; // table base path
+    protected static $apiPath = 'api/'; // api base path
+    protected static $directivePath = 'directives/'; // directives base path
+
 
     // ansii codes
     private $ansii = [
@@ -1728,7 +1733,7 @@ class Assist
                 break;
 
                 case 'hy':
-                    $dir = self::$assistPath . 'directives/';
+                    $dir = self::$assistPath . self::$directivePath;
 
                     $exp = explode(',', $arg[1]);
 
@@ -1777,7 +1782,7 @@ class Assist
                             if (!preg_match('/(directives)/', $dir))
                             {
                                 $dir = ltrim($dir, '/');
-                                $dir = 'directives/'.$dir;
+                                $dir = self::$directivePath . $dir;
                             }
 
                             @mkdir($dir);
@@ -1786,13 +1791,13 @@ class Assist
                         
                         if (is_dir($dir))
                         {
-                            if ($dir != self::$assistPath . 'directives/')
+                            if ($dir != self::$assistPath . self::$directivePath)
                             {
                                 $dir = trim($dir);
                                 $dir = preg_replace('/(directives\/|directives)$/','', $dir);
                                 if (strpos($dir, 'directives') === false)
                                 {
-                                    $dir = rtrim($dir, '/') . '/directives/';
+                                    $dir = rtrim($dir, '/') . '/' . self::$directivePath;
                                 }
                                 else 
                                 {
@@ -2237,7 +2242,7 @@ class Assist
                         $break = explode('/', $path);
                         $handler = $break[0];
 
-                        $main = self::$assistPath . 'api/'. ucfirst($handler) . '/main.php';
+                        $main = self::$assistPath . self::$apiPath . ucfirst($handler) . '/main.php';
 
                         // check if controller exists
                         if (is_file($main))
@@ -2250,7 +2255,7 @@ class Assist
                             {
                                 $providerName = trim(preg_replace("/[^a-zA-Z0-9\s_-]/",'', $providerName));
                                 $providerName = preg_replace('/\s{1,}/','',ucwords(preg_replace('/[-]/',' ', $providerName)));
-                                $providerPath = self::$assistPath . 'api/' . ucfirst($handler) . '/Providers/' . lcfirst($providerName) . '.php';
+                                $providerPath = self::$assistPath . self::$apiPath . ucfirst($handler) . '/Providers/' . lcfirst($providerName) . '.php';
 
                                 $continue = false;
 
@@ -2336,7 +2341,7 @@ class Assist
                         $break = explode('/', $path);
                         $handler = $break[0];
 
-                        $main = self::$assistPath . 'api/'. ucfirst($handler) . '/main.php';
+                        $main = self::$assistPath . self::$apiPath . ucfirst($handler) . '/main.php';
 
                         // check if handler exists
                         if (is_file($main))
@@ -2346,7 +2351,7 @@ class Assist
                             $modelName = $break[1];
                             $modelName = trim(preg_replace("/[^a-zA-Z0-9\s_-]/",'', $modelName));
                             $modelName = preg_replace('/\s{1,}/','',ucwords(preg_replace('/[-]/',' ', $modelName)));
-                            $modelPath = self::$assistPath . 'api/' . ucfirst($handler) . '/Models/' . lcfirst($modelName) . '.php';
+                            $modelPath = self::$assistPath . self::$apiPath . ucfirst($handler) . '/Models/' . lcfirst($modelName) . '.php';
 
                             $continue = false;
 
@@ -2636,7 +2641,7 @@ class Assist
                         $request = ucwords($request);
                         $request = preg_replace('/[\s]/','',$request);
 
-                        $dir = self::$assistPath .'api/'. $request;
+                        $dir = self::$assistPath . self::$apiPath . $request;
 
                         
                         if (!is_dir($dir))
@@ -2830,7 +2835,7 @@ class Assist
 
                 case 'table':
                     
-                    $dir = self::$assistPath . 'lab/Tables/';
+                    $dir = self::$assistPath . self::$tablePath;
 
                     $exp = explode(',', $arg[1]);
 

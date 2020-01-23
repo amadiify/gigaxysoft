@@ -331,7 +331,7 @@ class App extends Controller
         $pageid = intval($pageid);
 
          // get navigation info
-         if (is_int($pageid))
+         if (is_int($pageid) && $pageid > 0)
          {
              // get info 
              $nav = Query::getNavigationById($pageid);
@@ -439,6 +439,19 @@ class App extends Controller
         }
 
 		$this->render($view);
+	}
+	/**
+    * App/tables wrapper. 
+    *
+    * See documention https://www.moorexa.com/doc/controller
+    *
+    * @param Any You can catch params sent through the $_GET request
+    * @return void
+    **/
+
+	public function tables()
+	{
+		$this->render('tables');
 	}
 }
 // END class

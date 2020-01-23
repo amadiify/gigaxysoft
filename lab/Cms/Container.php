@@ -38,6 +38,15 @@ class Container
         {
             $this->getContainer($container_name, $cacheContainer);
         });
+
+        // get directive and return text
+        Rexa::directive('getcontainer', function(string $container_name)
+        {
+            if (isset($this->containers[$container_name]))
+            {
+                return $this->containers[$container_name];
+            }
+        });
     }
 
     // get container

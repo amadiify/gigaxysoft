@@ -55,6 +55,10 @@ class Cms
         'plugins' => [
             'icon' => 'fe-cpu',
             'link' => 'zema/plugins'
+        ],
+        'tables' => [
+            'icon' => 'fe-layout',
+            'link' => 'zema/tables'
         ]
     ];
 

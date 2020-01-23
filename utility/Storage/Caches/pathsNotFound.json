@@ -279,5 +279,64 @@
             "plugins.js",
             "Plugins.js"
         ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:204.css:204.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "204.css",
+            "204.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:204.js:204.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "204.js",
+            "204.js"
+        ]
+    ],
+    "Component:loops.php": [
+        "Component",
+        "loops.php"
+    ],
+    ".\/lab\/:loops.php": [
+        ".\/lab\/",
+        "loops.php"
+    ],
+    ".\/utility\/Classes\/:loops.php": [
+        ".\/utility\/Classes\/",
+        "loops.php"
+    ],
+    "utility\/Components\/:app.php:App.php:APP.php:app.php": [
+        "utility\/Components\/",
+        [
+            "app.php",
+            "App.php",
+            "APP.php",
+            "app.php"
+        ]
+    ],
+    "utility\/Exceptions\/:app.php:App.php:APP.php:app.php": [
+        "utility\/Exceptions\/",
+        [
+            "app.php",
+            "App.php",
+            "APP.php",
+            "app.php"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:tables.css:tables.cxx.css:Tables.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "tables.css",
+            "tables.cxx.css",
+            "Tables.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:tables.js:Tables.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "tables.js",
+            "Tables.js"
+        ]
     ]
 }

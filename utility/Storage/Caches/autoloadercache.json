@@ -42,5 +42,7 @@
     "Moorexa\/File": "system\/Inc\/files.php",
     "Bootstrap\/Alert": ".\/utility\/Classes\/Bootstrap\/Alert.php",
     "Moorexa\/DB\/FetchRow": "system\/DB\/fetch_db.php",
-    "Moorexa\/HttpGet": "system\/Lib\/Http\/httpGet.php"
+    "Moorexa\/HttpGet": "system\/Lib\/Http\/httpGet.php",
+    "Component\/loops": ".\/utility\/Components\/loops.php",
+    "Moorexa\/Tag": "system\/Inc\/tags.php"
 }

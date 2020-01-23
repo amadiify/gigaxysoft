@@ -706,4 +706,44 @@ class DBPromise
 
         return $this;
     }
+
+    // get values
+    public function val(int $index = null)
+    {
+        $row = $this->row();
+
+        // convert $row to array
+        $row = toArray($row);
+
+        // get values
+        $values = array_values($row);
+
+        // return index 
+        if ($index >= 0)
+        {
+            return $values[$index];
+        }
+
+        return $values;
+    }
+
+    // get keys
+    public function key(int $index = null)
+    {
+        $row = $this->row();
+
+        // convert $row to array
+        $row = toArray($row);
+
+        // get keys
+        $keys = array_keys($row);
+
+        // return index 
+        if ($index >= 0)
+        {
+            return $keys[$index];
+        }
+
+        return $keys;
+    }
 }

@@ -116,3 +116,10 @@ CREATE TABLE IF NOT EXISTS `Zema_PhotoBoot` (
 	publish VARCHAR(255) , 
 	siteid VARCHAR(255)
 );
+CREATE TABLE IF NOT EXISTS `Zema_tables` (
+	tableid BIGINT(20) auto_increment primary key, 
+	table_identifier VARCHAR(255) , 
+	table_linker VARCHAR(255) , 
+	table_json TEXT , 
+	siteid VARCHAR(255)
+);

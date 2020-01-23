@@ -46,5 +46,8 @@
     ".\/lab\/Cms\/Theme\/Tabler\/components\/:link-button.html:Link-button.html": ".\/lab\/Cms\/Theme\/Tabler\/components\/link-button.html",
     ".\/lab\/Cms\/MVC\/App\/Partials\/:all-users.html:All-users.html": ".\/lab\/Cms\/MVC\/App\/Partials\/all-users.html",
     ".\/lab\/Cms\/MVC\/App\/Partials\/:navigation.html:Navigation.html": ".\/lab\/Cms\/MVC\/App\/Partials\/navigation.html",
-    ".\/lab\/Cms\/Theme\/Tabler\/components\/:app-views.html:App-views.html": ".\/lab\/Cms\/Theme\/Tabler\/components\/app-views.html"
+    ".\/lab\/Cms\/Theme\/Tabler\/components\/:app-views.html:App-views.html": ".\/lab\/Cms\/Theme\/Tabler\/components\/app-views.html",
+    ".\/utility\/:loops.php": ".\/utility\/Components\/loops.php",
+    "public\/Assets\/Js\/:moorexa.js": "public\/Assets\/Js\/Rexajs\/moorexa.js",
+    "public\/Assets\/Images\/:smiling2.png": "public\/Assets\/Images\/Sys\/smiling2.png"
 }

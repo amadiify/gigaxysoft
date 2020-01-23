@@ -2,7 +2,7 @@
 return array (
   '47d6d4a10560fd293bac64f916ac4f74_meta-tags.md' => 'd15b83281d0aea4dd1d9d4a404cd194f',
   '2aaf68ead0c680bf299f1dc0430bc200_meta-tags.html' => '34dfe395e27acb0049657c85fbb29e6b',
-  'c17cd17024242bc6199011ece40052db_header.html' => 'db6b173fdc8bae4371e764b12dc859a8',
+  'c17cd17024242bc6199011ece40052db_header.html' => 'e60307b65f97dc4f5d10ff67f720c1b5',
   'caf5f7e84216449922d773293cc3414d_home-screen.html' => '08b6557479be11143dd5d70ba2c21c31',
   'a55ebbe9f6cd4a4b0e2d9ff664e0cc13_containers.html' => '083dd9aeca74415aecd6d6c93cede65d',
   '61e53856aa23821144c93f83bc8259e0_footer.html' => 'c6b15c72e0d73fedab31ad92b76624b6',

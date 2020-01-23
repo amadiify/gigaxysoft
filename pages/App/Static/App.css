@@ -1,3 +1,14 @@
-.header-top-info-inner .info-item .info-icon {color: #5ebed7;}
+.header-top-info-inner .info-item .info-icon {color: #40a2cf;}
 .navigation-menu > ul > li > a::before {background-color: #127EBF;}
 .navigation-menu > ul > li:hover > a span, .navigation-menu > ul > li.active > a span {color: #127EBF;}
+.text-color-primary {color: #40a2cf;}
+.ht-btn{background:#117CC0;}
+.btn-text {color: #117CC0;}
+.ht-large-box-images.style-03 .content .box-images-arrow::before { background-color:#117CC0;}
+.ht-large-box-images.style-03 .content .box-images-arrow{color: #117CC0;}
+.ht-large-box-images.style-03:hover .content .heading {color: #117CC0;}
+.modern-number-01 span.mark-text{color: #117cc0;}
+.bg-theme-default{background:#117CC0;}
+.ht-box-icon.style-02 .feature-btn a{color: #117cc0;}
+.contact-info.style-two .contact-list-item .content .main-content .text{color: #117CC0; font-size: 30px;}
+.contact-info.style-two .contact-list-item .content .icon {color: #40a2cf;}

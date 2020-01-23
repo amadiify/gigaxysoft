@@ -4,7 +4,7 @@
         "path": "utility\/Storage\/Caches\/Headers\/cache.d29db69b1a9178a48f1d2ab32f72b35c.App.header.html"
     },
     ".\/pages\/App\/Views\/home.html": {
-        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "hash": "7571eb8818bee1101b2cae0212e05363",
         "path": "utility\/Storage\/Caches\/Views\/cache.6ca59b1b5498ee214c0f2258b73815c5.App.home.html"
     },
     ".\/custom\/footer.html": {
@@ -62,5 +62,21 @@
     ".\/lab\/Cms\/MVC\/App\/Views\/pages.html": {
         "hash": "8f6a6fb8ea43e225e1ac129150b0e2be",
         "path": "utility\/Storage\/Caches\/Views\/cache.9726b73ee0a26cb6b8bf778bed3d270f.App.pages.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/pages\/create.html": {
+        "hash": "9504171e257e9aa0c328aad8b60eab2b",
+        "path": "utility\/Storage\/Caches\/Views\/cache.8be09bbc3bf431826b1c3544f3911efc.App.create.html"
+    },
+    "public\/Helper\/noheader.php": {
+        "hash": "38e075b8a63d3bb6e140366c66ee712f",
+        "path": "utility\/Storage\/Caches\/Headers\/cache.4f70a72745cebbd1e80114086850d032.App.noheader.php"
+    },
+    "public\/Helper\/nofooter.php": {
+        "hash": "b7bb4bedf76dcf7492836f797feb4255",
+        "path": "utility\/Storage\/Caches\/Footers\/cache.e9fcdbf77a5a787d3299f2de1d1695b1.App.nofooter.php"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/tables.html": {
+        "hash": "c20578b46f3389313780e0fc2af50a3c",
+        "path": "utility\/Storage\/Caches\/Views\/cache.e8618b33883b745b2b8ce7f594f70edf.App.tables.html"
     }
 }

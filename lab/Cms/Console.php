@@ -37,6 +37,9 @@ class Console extends Assist
         // change controller base path
         parent::$controllerBasePath = HOME . 'lab/Cms/MVC';
 
+        // change table base path
+        parent::$tablePath = 'Tables/';
+
         // ok call parent new method now
         parent::_new($arg);
     }
