@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <app id="app.yoursite.com" version="1.0">
-	<title>Hi Moorexa</title>
+	<title>Welcome to Gigaxysoft Nigeria Limited</title>
 	<router>
 		<default>
 			<controller>App</controller>
@@ -17,7 +17,7 @@
 	</versioning>
 	<public>
 		<support email="hello@moorexa.com"/>
-		<author>www.wekiwork.com wekiwork inc.</author>
+		<author>www.fregatelab.com fregatelab inc.</author>
 		<icon>icons.png@90:90</icon>
 		<keywords>SEO keywords here</keywords>
 		<description>SEO description here</description>

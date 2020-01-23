@@ -31,39 +31,39 @@ $kernel->db([
 		],
 	],
 
-	'centurion-app' => [
+	'gigaxy-app' => [
 		'dsn' 		=> '{driver}:host={host};dbname={dbname};charset={charset}',
 		'driver'    => 'mysql',
 		'host' 	    => 'localhost',
 		'user'      => 'root',
 		'password'  => 'root',
-		'dbname'    => 'centurion-app',
+		'dbname'    => 'gigaxy-app',
 		'charset'   => 'utf8mb4',
 		'port'      => '',
 		'handler'   => 'pdo',
-		'prefix'    => 'Cent_',
+		'prefix'    => 'Gigaxy_',
 		'attributes'=> true,
 		'production'=> [
-			'driver'  =>   'mysql',
-			'host'    =>   '',
-			'user'    =>   '',
+			'driver'  	=>   'mysql',
+			'host'    	=>   '',
+			'user'    	=>   '',
 			'password'  =>   '',
 			'dbname'    =>   '',
 		],
 		'testing'=> [
-			'driver'  =>   'mysql',
-			'host'    =>   'mysql5021.site4now.net',
-			'user'    =>   'a0c157_centurn',
+			'driver'  	=>   'mysql',
+			'host'    	=>   'mysql5021.site4now.net',
+			'user'    	=>   'a0c157_centurn',
 			'password'  =>   'demo@2020',
 			'dbname'    =>   'db_a0c157_centurn',
 		],
-		'options'   => [ PDO::ATTR_PERSISTENT => true ]
+		'options' => [ PDO::ATTR_PERSISTENT => true ]
 	],
 
 
 
 // choose from any of your configuration for a default connection
 ])
-->default(['development' => 'centurion-app', 'live' => ''])
-->domain('console.fregatelab.com', ['live' => 'centurion-app@testing']);
+->default(['development' => 'gigaxy-app', 'live' => ''])
+->domain('console.fregatelab.com', ['live' => 'gigaxy-app@testing']);
 

@@ -61,9 +61,7 @@ $alias = [
 * info: enables fluid communication with the database tables. Also provides aliases for tables
 */
 $tables = [
-	'demoserver' => [
-		'Tracker'
-	]
+	
 ];
 
 

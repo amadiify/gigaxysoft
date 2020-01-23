@@ -163,9 +163,8 @@ class Assist
         'cache' => [
             'info' => 'Cleans the cache system. Removes all cached files.',
             'usage' => [
-                'php assist cache clear',
-                'php assist cache clear views',
-                'php assist cache clear chs'
+                'php assist cache clean',
+                'php assist cache clean views'
             ]
         ],
         'new page' => [
@@ -9310,22 +9309,19 @@ class Assist
 
         switch ($command)
         {
-            case 'clear':
-                $files = getAllFiles(self::$assistPath . 'utility/storage/caches'.$dir);
-
-                foreach ($files as $index => $path)
+            case 'clean':
+                $files = getAllFiles(self::$assistPath . PATH_TO_STORAGE . 'Caches/'. $dir);
+                $reduce = reduce_array($files);
+                
+                
+                foreach ($reduce as $index => $path)
                 {
-                    if (basename($path) == 'view.cache.php')
-                    {
-                        $cacheArray = [];
-                        ob_start();
-                        var_export($cacheArray);
-                        $arr = '<?php'."\n";
-                        $arr .= 'return '. ob_get_contents() . ';'."\n";
-                        $arr .= '?>';
-                        ob_clean();
+                    $extension = extension($path);
 
-                        Moorexa\File::write($arr, $path);
+                    if ($extension == 'json' || $extension == 'php')
+                    {
+                        // empty file
+                        file_put_contents($path, '');
                     }
                     else
                     {

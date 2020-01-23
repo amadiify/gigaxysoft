@@ -1,11 +1,6 @@
 {
     "stylesheet": [
-        "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700",
-        "https://fonts.googleapis.com/css?family=Roboto:300,400,700",
-        "moorexa.css",
-        "fontawesome.min.css",
-        "theme/bootstrap.css",
-        "theme/styles.css"
+        "moorexa.css"
     ],
 
     "stylesheet@bundle" : [
@@ -13,27 +8,7 @@
     ],
     
     "scripts": [
-        "moorexa.min.js",
-        "theme/jquery.js",
-        "theme/moment.js",
-        "theme/bootstrap.js",
-        "theme/owl-carousel.js",
-        "theme/blur-area.js",
-        "theme/icheck.js",
-        "theme/gmap.js",
-        "theme/magnific-popup.js",
-        "theme/ion-range-slider.js",
-        "theme/sticky-kit.js",
-        "theme/smooth-scroll.js",
-        "theme/fotorama.js",
-        "theme/bs-datepicker.js",
-        "theme/typeahead.js",
-        "theme/quantity-selector.js",
-        "theme/countdown.js",
-        "theme/window-scroll-action.js",
-        "theme/fitvid.js",
-        "theme/youtube-bg.js",
-        "theme/custom.js"
+        "moorexa.min.js"
     ],
 
     "scripts@bundle" : [

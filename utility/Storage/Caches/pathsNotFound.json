@@ -1,57 +1,14 @@
 {
-    ".\/pages\/App\/Static\/:home.css:home.cxx.css:Home.css": [
-        ".\/pages\/App\/Static\/",
-        [
-            "home.css",
-            "home.cxx.css",
-            "Home.css"
-        ]
+    "SmartRow:Directives.php": [
+        "SmartRow",
+        "Directives.php"
     ],
-    "public\/Assets\/Images\/:icons.png": [
-        "public\/Assets\/Images\/",
-        "icons.png"
+    ".\/utility\/:Directives.php": [
+        ".\/utility\/",
+        "Directives.php"
     ],
-    ".\/pages\/App\/Partials\/:meta-tags.md:Meta-tags.md": [
-        ".\/pages\/App\/Partials\/",
-        [
-            "meta-tags.md",
-            "Meta-tags.md"
-        ]
-    ],
-    ".\/pages\/App\/Static\/:home.js:Home.js": [
-        ".\/pages\/App\/Static\/",
-        [
-            "home.js",
-            "Home.js"
-        ]
-    ],
-    ".\/lab\/Cms\/MVC\/App\/Static\/:create.css:Create.css": [
-        ".\/lab\/Cms\/MVC\/App\/Static\/",
-        [
-            "create.css",
-            "Create.css"
-        ]
-    ],
-    ".\/lab\/Cms\/MVC\/App\/Static\/:create.js:Create.js": [
-        ".\/lab\/Cms\/MVC\/App\/Static\/",
-        [
-            "create.js",
-            "Create.js"
-        ]
-    ],
-    ".\/lab\/Cms\/MVC\/App\/Static\/:container.css:container.cxx.css:Container.css": [
-        ".\/lab\/Cms\/MVC\/App\/Static\/",
-        [
-            "container.css",
-            "container.cxx.css",
-            "Container.css"
-        ]
-    ],
-    ".\/lab\/Cms\/MVC\/App\/Partials\/:meta-tags.md:Meta-tags.md": [
-        ".\/lab\/Cms\/MVC\/App\/Partials\/",
-        [
-            "meta-tags.md",
-            "Meta-tags.md"
-        ]
+    ".\/utility\/Classes\/:Directives.php": [
+        ".\/utility\/Classes\/",
+        "Directives.php"
     ]
 }
