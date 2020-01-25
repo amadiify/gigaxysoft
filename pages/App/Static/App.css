@@ -1,3 +1,4 @@
+a:hover { text-decoration: none; color: #40a2cf;}
 .header-top-info-inner .info-item .info-icon {color: #40a2cf;}
 .navigation-menu > ul > li > a::before {background-color: #127EBF;}
 .navigation-menu > ul > li:hover > a span, .navigation-menu > ul > li.active > a span {color: #127EBF;}
@@ -9,6 +10,14 @@
 .ht-large-box-images.style-03:hover .content .heading {color: #117CC0;}
 .modern-number-01 span.mark-text{color: #117cc0;}
 .bg-theme-default{background:#117CC0;}
-.ht-box-icon.style-02 .feature-btn a{color: #117cc0;}
+.ht-box-icon.style-02 .feature-btn a, .ht-timeline.style-01 .timeline-col .inner .year{color: #117cc0;}
 .contact-info.style-two .contact-list-item .content .main-content .text{color: #117CC0; font-size: 30px;}
-.contact-info.style-two .contact-list-item .content .icon {color: #40a2cf;}
+.contact-info.style-two .contact-list-item .content .icon{color: #40a2cf;}
+.breadcrumb-list li.active { color:#40a2cf;}
+.navigation-menu > ul > li:hover > a span, .navigation-menu > ul > li.active > a span{color: #40a2cf;}
+.navigation-menu > ul > li:hover > a::after, .navigation-menu > ul > li.active > a::after {color: #40a2cf;}
+.navigation-menu > ul > li > a::before, .submenu > li > a > span::after {background-color: #40a2cf;}
+.submenu > li.has-children.active > a, .submenu > li > a:hover {color:#40a2cf;}
+.conact-us-wrap-one .heading::before {background-color: #d2a98e;}
+.ht-timeline.style-01 .line{border-left: 2px solid #40a2cf;}
+.ht-timeline.style-01 .dots{color:#40a2cf;}

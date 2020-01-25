@@ -45,5 +45,6 @@
     "Moorexa\/HttpGet": "system\/Lib\/Http\/httpGet.php",
     "Component\/loops": ".\/utility\/Components\/loops.php",
     "Moorexa\/Tag": "system\/Inc\/tags.php",
-    "Moorexa\/Table": ".\/utility\/Console\/Table.php"
+    "Moorexa\/Table": ".\/utility\/Console\/Table.php",
+    "Exceptions\/Autoloader\/AutoloaderException": ".\/utility\/Exceptions\/Autoloader\/AutoloaderException.php"
 }

@@ -389,5 +389,92 @@
             "upload.js",
             "Upload.js"
         ]
+    ],
+    "utility\/Components\/:CmsGlobalCms.php:CmsGlobalCms.php:CMSGLOBALCMS.php:cmsglobalcms.php": [
+        "utility\/Components\/",
+        [
+            "CmsGlobalCms.php",
+            "CmsGlobalCms.php",
+            "CMSGLOBALCMS.php",
+            "cmsglobalcms.php"
+        ]
+    ],
+    "utility\/Exceptions\/:CmsGlobalCms.php:CmsGlobalCms.php:CMSGLOBALCMS.php:cmsglobalcms.php": [
+        "utility\/Exceptions\/",
+        [
+            "CmsGlobalCms.php",
+            "CmsGlobalCms.php",
+            "CMSGLOBALCMS.php",
+            "cmsglobalcms.php"
+        ]
+    ],
+    "Exceptions\/Autoloader:AutoloaderException.php": [
+        "Exceptions\/Autoloader",
+        "AutoloaderException.php"
+    ],
+    ".\/lab\/:AutoloaderException.php": [
+        ".\/lab\/",
+        "AutoloaderException.php"
+    ],
+    ".\/utility\/Classes\/:AutoloaderException.php": [
+        ".\/utility\/Classes\/",
+        "AutoloaderException.php"
+    ],
+    ".\/pages\/About-us\/Static\/:404.css:404.css": [
+        ".\/pages\/About-us\/Static\/",
+        [
+            "404.css",
+            "404.css"
+        ]
+    ],
+    ".\/pages\/About-us\/Static\/:404.js:404.js": [
+        ".\/pages\/About-us\/Static\/",
+        [
+            "404.js",
+            "404.js"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:aboutus.css:Aboutus.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "aboutus.css",
+            "Aboutus.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:aboutus.js:Aboutus.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "aboutus.js",
+            "Aboutus.js"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:aboutUs.css:aboutUs.cxx.css:AboutUs.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "aboutUs.css",
+            "aboutUs.cxx.css",
+            "AboutUs.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:aboutUs.js:AboutUs.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "aboutUs.js",
+            "AboutUs.js"
+        ]
+    ],
+    ".\/pages\/App\/Partials\/:contact-us.html:Contact-us.html": [
+        ".\/pages\/App\/Partials\/",
+        [
+            "contact-us.html",
+            "Contact-us.html"
+        ]
+    ],
+    "kernel\/Partials\/:contact-us.html:Contact-us.html": [
+        "kernel\/Partials\/",
+        [
+            "contact-us.html",
+            "Contact-us.html"
+        ]
     ]
 }

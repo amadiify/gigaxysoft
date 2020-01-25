@@ -1,10 +1,10 @@
 {
     ".\/custom\/header.html": {
-        "hash": "5c4878049960b3f0126f41ad22e06039",
+        "hash": "3d041abf6958ce6deaa2e4694995e03c",
         "path": "utility\/Storage\/Caches\/Headers\/cache.d29db69b1a9178a48f1d2ab32f72b35c.App.header.html"
     },
     ".\/pages\/App\/Views\/home.html": {
-        "hash": "ff436fe91e07a67985f1634d5a4813c8",
+        "hash": "1644b35537f7289273f273c4b9653890",
         "path": "utility\/Storage\/Caches\/Views\/cache.6ca59b1b5498ee214c0f2258b73815c5.App.home.html"
     },
     ".\/custom\/footer.html": {
@@ -106,5 +106,9 @@
     ".\/lab\/Cms\/MVC\/App\/Views\/directives\/edit.html": {
         "hash": "a30d1048b6a283727b0fed3e94b937eb",
         "path": "utility\/Storage\/Caches\/Views\/cache.a561a4ad7f7583de131aeaebd1146886.App.edit.html"
+    },
+    ".\/pages\/App\/Views\/aboutus.html": {
+        "hash": "d2830ad2d2e75115684e0b42970cc6ec",
+        "path": "utility\/Storage\/Caches\/Views\/cache.cccf335a1784b058ed16b884807672eb.App.aboutus.html"
     }
 }

@@ -149,6 +149,32 @@ This combination of business and technical acumen, along with in depth local kno
           'siteid0' => 'Centurion',
         ),
       ),
+      'caaa57d18bdee9f4ddb1a3337cc32bf3ba8ac546426000dfdb8510df273d89eb654f8939' => 
+      array (
+        'query' => 'INSERT INTO Zema_containers (container_name,container_body,siteid) VALUES (:container_name0,:container_body0,:siteid0)',
+        'bind' => 
+        array (
+          'container_name0' => 'our-specialty-text',
+          'container_body0' => 'Gigaxysoft specializes in <span class="text-color-primary"> technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc. ',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+      'be97aab38f9d9890c71ebf787ca19976aee144bb08270eec349bb91dbc7528ec78fcc999' => 
+      array (
+        'query' => 'UPDATE Zema_containers SET container_name = :container_name , container_body = :container_body  WHERE containerid=:containerid ',
+        'bind' => 
+        array (
+          'container_name' => 'about-us',
+          'container_body' => '@container(&#039;about-short&#039;);
+<br><br>
+Established in 2012, GNL has successfully delivered projects & services on time, within budget and to the required quality, while maintaining focus on continuous improvement on internationally accepted standards. Today, GNL delivers top-notch services across board and in all sectors in business cadre, with absolute guarantee on value for money for every service delivered. 
+Also, GNL maintains partnership with leading manufacturers of engineering materials as well as equipment manufacturers and infrastructure providers.
+<br><br>
+Recognizing a worldwide need for ground breaking expertise in the ICT market, GNL has begun focusing its extensive engineering experience and resources on providing innovative and practical solutions to clients’ power consumption reduction. To this end, complete system management across all of the technologies deployed.
+',
+          'containerid' => '2',
+        ),
+      ),
     ),
     'Zema_users' => 
     array (
@@ -238,6 +264,26 @@ This combination of business and technical acumen, along with in depth local kno
         array (
           'image_path0' => './lab/Cms/MVC/App/Uploads/379a8aded36bd31e44cde732586b545aOBCDN70.jpg',
           'image_name0' => 'security-experts',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+      '9aea5e176467cc4c7dee6f23ad82e9321f9bddca77511a532d4c4f32337a4a6096ce2232' => 
+      array (
+        'query' => 'INSERT INTO Zema_images (image_path,image_name,siteid) VALUES (:image_path0,:image_name0,:siteid0)',
+        'bind' => 
+        array (
+          'image_path0' => './lab/Cms/MVC/App/Uploads/08df943fa5e3728d41ec1ead2bbf003e4.jpg',
+          'image_name0' => 'vision-image',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+      '9aea5e176467cc4c7dee6f23ad82e93237f005192654f163cb11bc61e8250f99e7c11f2a' => 
+      array (
+        'query' => 'INSERT INTO Zema_images (image_path,image_name,siteid) VALUES (:image_path0,:image_name0,:siteid0)',
+        'bind' => 
+        array (
+          'image_path0' => './lab/Cms/MVC/App/Uploads/74cf8bc288a8e076102f5343922332703336478.jpg',
+          'image_name0' => 'mission-image',
           'siteid0' => 'Centurion',
         ),
       ),
