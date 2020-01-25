@@ -175,6 +175,27 @@ Recognizing a worldwide need for ground breaking expertise in the ICT market, GN
           'containerid' => '2',
         ),
       ),
+      'caaa57d18bdee9f4ddb1a3337cc32bf3bf4896c51e9d71101bc6b691ca9d79a492377dbd' => 
+      array (
+        'query' => 'INSERT INTO Zema_containers (container_name,container_body,siteid) VALUES (:container_name0,:container_body0,:siteid0)',
+        'bind' => 
+        array (
+          'container_name0' => 'mission-text',
+          'container_body0' => 'Aligning the group with the evolving turnkey innovative technology in all sectors on the African continent, to the mutual benefit of all stakeholders
+',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+      'caaa57d18bdee9f4ddb1a3337cc32bf33a0cd4c436da42503ad1e74b911630cbc2f6585b' => 
+      array (
+        'query' => 'INSERT INTO Zema_containers (container_name,container_body,siteid) VALUES (:container_name0,:container_body0,:siteid0)',
+        'bind' => 
+        array (
+          'container_name0' => 'vision-text',
+          'container_body0' => 'To become the partner of choice for our clients, and a company whose staff are proud to be an integral part of.',
+          'siteid0' => 'Centurion',
+        ),
+      ),
     ),
     'Zema_users' => 
     array (
