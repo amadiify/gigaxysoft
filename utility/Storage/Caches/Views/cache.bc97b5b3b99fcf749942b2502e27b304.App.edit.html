@@ -1,0 +1,57 @@
+<?=\Moorexa\Rexa::runDirective(true,'component',"header")?>
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
+
+<div class="card">
+	<div class="card-header">
+		Edit table
+	</div>
+
+	<div class="card-body">
+		<form action="" method="POST">
+			<?=\Moorexa\Rexa::runDirective(true,'csrf')?>
+			<table class="table">
+				<tr>
+					<td>Table Identifier</td>
+					<td>
+						<input name="table_identifier" value="<?=$model->table_identifier?>" class="form-control" placeholder="Enter your table identifier" required>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Table Linker</td>
+					<td>
+						<select name="table_linker" class="form-control" required>
+							<?php $tables = Moorexa\DB::sql('show tables');?>
+							<option value="">--Please select a table--</option>
+							<?php
+$tables = $tables;if ($tables->rows > 0){
+while ($table = $tables->obj())
+{ ?>
+								<?php $selected = ($table->val(0) == $model->table_linker) ? 'selected' : '';?>
+								<option value="<?=$table->val(0)?>" <?=$selected?>><?=$table->val(0)?></option>
+							<?php }} ?>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Table Json Command for columns</td>
+					<td>
+						<textarea name="table_json" class="form-control text-creat" rows="10" placeholder="Enter json command for table"><?=stripslashes($model->table_json)?></textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>
+						<button type="submit" class="btn btn-success">Update</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+
+<h3 class="card-title">All tables</h3>
+<?=\Moorexa\Rexa::runDirective(true,'partial','tables')?>
+<?=\Moorexa\Rexa::runDirective(true,'component',"footer")?>

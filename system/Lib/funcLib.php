@@ -4153,7 +4153,7 @@ function db($tablename='')
 		return $db;
 	}
 
-	return null;
+	return \Moorexa\DB::serve();
 }
 
 

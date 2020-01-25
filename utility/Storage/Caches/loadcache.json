@@ -76,7 +76,19 @@
         "path": "utility\/Storage\/Caches\/Footers\/cache.e9fcdbf77a5a787d3299f2de1d1695b1.App.nofooter.php"
     },
     ".\/lab\/Cms\/MVC\/App\/Views\/tables.html": {
-        "hash": "c20578b46f3389313780e0fc2af50a3c",
+        "hash": "17a9a996e2718d45de51a13ccdd92631",
         "path": "utility\/Storage\/Caches\/Views\/cache.e8618b33883b745b2b8ce7f594f70edf.App.tables.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/tables\/edit.html": {
+        "hash": "ff23d583eb3853f2d80750c91b5b25ce",
+        "path": "utility\/Storage\/Caches\/Views\/cache.bc97b5b3b99fcf749942b2502e27b304.App.edit.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/tables\/show.html": {
+        "hash": "2a9d2a18c80b95d53f95b3a3cddb636c",
+        "path": "utility\/Storage\/Caches\/Views\/cache.14bcdb6e5c7d002a219e7f64a858a416.App.show.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/images.html": {
+        "hash": "c3b496c090af764b528c9679dde7dc56",
+        "path": "utility\/Storage\/Caches\/Views\/cache.2d9757c248d78a8cc4fd04bf5e4c1cc7.App.images.html"
     }
 }

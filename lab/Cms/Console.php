@@ -52,6 +52,9 @@ class Console extends Assist
         // apply from
         array_push($arg, '-from='.HOME.'lab/Cms/Tables/', '-prefix=Zema_');
 
+        // add save query path
+        Moorexa\DB::$queryCachePath = HOME . 'lab/Cms/Database/QueryStatements.php';
+
         // call migrate method
         parent::migrate($arg);
     }

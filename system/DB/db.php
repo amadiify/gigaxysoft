@@ -24,6 +24,7 @@ class DB
    private        $drum = [];
    private        $sub = 0;
    public  static $bindExternal = [];
+   public         $cacheQuery = true;
    
    // pack all errors occured.
    private $errorpack = [];
@@ -133,6 +134,8 @@ class DB
    // insert data
    private $argumentPassed = [];
 
+   // get query cache path
+   public static $queryCachePath = null;
   
     // list of allowed chains
     private function getAllowed($val = [null], &$sql = "")
@@ -429,6 +432,21 @@ class DB
     // get table name
     public static function getTableName(string $table)
     {
+        $prefix = handler::$prefix;
+
+        if ($prefix != '')
+        {
+            // check if prefix exists in table name
+            $quote = preg_quote($prefix);
+
+            if (preg_match("/($quote)/", $table))
+            {
+                // stop here.
+                return $table;
+            }
+        }
+
+        // extend checking
         $prefix = self::getPrefix();
         $quote = preg_quote($prefix);
 
@@ -2619,6 +2637,7 @@ class DB
                                 case 'update':
                                 case 'delete':
                                     self::$transactionCode = 200;
+                                    $this->saveQueryStatement($query, $bind);
                                 break;
                             }
                         }
@@ -2677,7 +2696,6 @@ class DB
                                 $this->method == 'delete'
                             )
                             {
-                                //$instance->addMigration($query, $bind);
                                 $query = null;
                                 $bind = null;
                             }
@@ -2776,6 +2794,9 @@ class DB
 
             case 'apply':
                 return $createinstance()->callMethod('_apply', $data);
+
+            case 'pdo':
+                return $createinstance()->pdoInstance;
 
             default:
                 // set table name
@@ -2910,6 +2931,28 @@ class DB
                     }
 
                 }
+        }
+
+        return $this;
+    }
+
+    // run order by primary key
+    public function orderbyprimarykey($mode = 'asc')
+    {
+        // get table information
+        $table = DB::sql('DESCRIBE '.$this->table);
+
+        if ($table->rows > 0)
+        {   
+            // get primary key
+            while ($column = $table->obj())
+            {
+                if ($column->Key == 'PRI')
+                {
+                    $this->orderby($column->Field, $mode);
+                    break;
+                }
+            }
         }
 
         return $this;
@@ -3763,6 +3806,134 @@ class DB
 
         $this->callMethod($method, $this->argumentPassed);
     }
+
+    // get query path
+    private function getQuerySavePath(string $handler = '', string $driver = '')
+    {
+        // get handler
+        $handler = strlen($handler) == 0 ? Handler::$connectWith : $handler;
+
+        // get driver
+        $driver = strlen($driver) == 0 ? Handler::$driver : $driver;
+
+        // return query cache path
+        if (!is_null(self::$queryCachePath))
+        {
+            return self::$queryCachePath;
+        }
+
+        // create hash
+        $hash = md5($handler . $driver) . '.php';
+
+        // return base path
+        return HOME . 'lab/Sql/' . ucfirst($driver) . '/' . $hash;
+    }
+
+    // save query
+    private function saveQueryStatement(string $query, array $bind)
+    {
+        if (env('bootstrap', 'enable.db.caching') && $this->cacheQuery)
+        {
+            // get handler
+            $handler = Handler::$connectWith;
+
+            // get path
+            $path = $this->getQuerySavePath();
+
+            $line = [];
+            $line[] = '<?php';
+            $line[] = 'return [];';
+            $line[] = '?>';
+
+            if (!file_exists($path))
+            {
+                file_put_contents($path, implode("\n\n", $line));
+            }
+
+            // get data
+            $data = include($path);
+
+            if (!is_array($data))
+            {
+                $data = [];
+            }
+
+            // build index 
+            $index = md5($query) . sha1(implode('', $bind));
+
+            // remove slashes
+            foreach ($bind as $key => $value) 
+            {
+                $bind[$key] = stripslashes($value);
+            }
+
+            // add data
+            $data[$handler][$this->table][$index]['query'] = $query;
+            $data[$handler][$this->table][$index]['bind'] = $bind;
+
+            // export
+            ob_start();
+            var_export($data);
+            $data = ob_get_contents();
+            ob_clean();
+
+            // add to line
+            $line[1] = 'return '.$data.';';
+
+            // save now
+            file_put_contents($path, implode("\n\n", $line));
+        }
+    }
+
+    // run migration for cached tables
+    public function runSaveCacheStatements(string $tableName, string $driver, string $handler)
+    {
+        // save data;
+        static $data;
+
+        // get path
+        $path = $this->getQuerySavePath($handler, $driver);
+
+
+        if (file_exists($path))
+        {
+            // get data
+            if (is_null($data))
+            {
+                $data = include_once($path);
+            }
+
+            if (isset($data[$handler]))
+            {
+                $dataHandler = $data[$handler];
+
+                // check for table
+                if (isset($dataHandler[$tableName]))
+                {
+                    // get queries
+                    $queries = array_values($dataHandler[$tableName]);
+
+                    // set table
+                    $this->table = $tableName;
+                    $this->method = 'sql-migration';
+                    $this->cacheQuery = false;
+
+                    // run queries
+                    foreach ($queries as $key => $data)
+                    {
+                        $this->query = $data['query'];
+                        $this->bind = $data['bind'];
+
+                        // prepare statement
+                        $smt = $this->___prepare($data['query']);
+                        // execute query
+                        $execute = $this->___execute($smt);
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // ends here.

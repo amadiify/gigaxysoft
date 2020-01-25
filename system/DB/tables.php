@@ -15,7 +15,7 @@ class Table
 	// @param string
 	public static function exists($table)
 	{
-		$table = DB::getPrefix() . $table;
+		$table = DB::getTableName($table);
 
 		// serve db
 		$db = DB::pdo();
@@ -54,7 +54,7 @@ class Table
 	{
 		if (is_callable($callback))
 		{
-			$tablename = DB::getPrefix() . $tablename;
+			$tablename = DB::getTableName($tablename);
 
 			$default = \Moorexa\DatabaseHandler::$default;
 			$struct = new Structure();
@@ -168,7 +168,7 @@ class Table
 	{
 		if (self::exists($tablename))
 		{
-			$tablename = DB::getPrefix() . $tablename;
+			$tablename = DB::getTableName($tablename);
 
 			// get structure
 			$struct = new Structure();
@@ -233,7 +233,7 @@ class Table
 	{
 		if (self::exists($table))
 		{
-			$table = DB::getPrefix() . $table;
+			$table = DB::getTableName($table);
 			
 			$raw = DB::sql("show fields from $table");
 

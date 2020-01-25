@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+                <th>Identifier</th>
+                <th>Linked to</th>
+                <th>Action</th>
+            </thead>
+            
+            <tbody>
+                <?php $tables = Query::getTables();?>
+                <?php
+$tables = $tables;if ($tables->rows > 0){
+while ($table = $tables->obj())
+{ ?>
+                    <tr class="tr-row">
+                        <td><a href="<?=url("zema/tables/$table->table_linker")?>"><?=$table->table_identifier?></a></td>
+                        <td><?=$table->table_linker?></td>
+                        <td>
+                            <?=\Moorexa\Rexa::runDirective(true,'component','table-button', ['links' => CMS::loadButton(['edit', 'delete' => 'tables/delete'], $table->tableid)])?>
+                        </td>
+                    </tr>
+                <?php }} ?>
+            </tbody>
+        </table>
+    </div>
+</div>

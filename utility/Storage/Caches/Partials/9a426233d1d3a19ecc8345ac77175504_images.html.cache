@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+                <th>Image</th>
+                <th>Image Name</th>
+                <th>Image Path</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <?php
+$images = \Moorexa\DB::sql('SELECT * FROM '.(\Moorexa\DB::getTableName('images')).' ');if ($images->rows > 0){
+while ($image = $images->obj())
+{ ?>
+                    <tr class="tr-row">
+                        <td><img src="<?=image($image->image_path)?>" class="img-responsive table-image"/></td>
+                        <td><?=$image->image_name?></td>
+                        <td><?=$image->image_path?></td>
+                        <td><?=\Moorexa\Rexa::runDirective(true,'component','table-button', ['links' => CMS::loadButton(['update', 'delete' => 'images/delete'], $image->imageid)])?></td>
+                    </tr>
+                <?php }} ?>
+            </tbody>
+        </table>
+    </div>
+</div>

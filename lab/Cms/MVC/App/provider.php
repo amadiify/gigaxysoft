@@ -34,6 +34,9 @@ class AppProvider extends App
         'plugins' => [
             'create' => 'plugins/create',
             'edit' => 'plugins/edit'
+        ],
+        'tables' => [
+            'edit' => 'tables/edit'
         ]
     ];
 

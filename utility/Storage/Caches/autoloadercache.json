@@ -44,5 +44,6 @@
     "Moorexa\/DB\/FetchRow": "system\/DB\/fetch_db.php",
     "Moorexa\/HttpGet": "system\/Lib\/Http\/httpGet.php",
     "Component\/loops": ".\/utility\/Components\/loops.php",
-    "Moorexa\/Tag": "system\/Inc\/tags.php"
+    "Moorexa\/Tag": "system\/Inc\/tags.php",
+    "Moorexa\/Table": ".\/utility\/Console\/Table.php"
 }

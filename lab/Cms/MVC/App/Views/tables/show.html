@@ -1,0 +1,45 @@
+@component('header');
+<p>Showing records for table. @component('create-button', ['button' => CMS::loadButton(['create' => 'tables/' . $action . '/create'])]);</p>
+@component('alert-confirm', ['type' => 'danger', 'title' => 'Delete Row', 'message' => 'This would delete row completely without recovery. Click "Okay" to proceed']);
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+			{$columns = db()->sql('describe '.$action);}
+			@php
+				// get json configuration
+				$config = toArray(json_decode($tableInfo->table_json));
+				$headers = [];
+			@endphp
+            <thead>
+				<tr>
+					@fetch($columns, 'column')
+						@if (isset($config['rename'][$column->Field]))
+							<th>{ucwords($config['rename'][$column->Field])}</th>
+							{$headers[] = $column->Field;}
+						@else
+							@if (!isset($config['hide'][$column->Field]))
+								<th>{ucwords($column->Field)}</th>
+								{$headers[] = $column->Field;}
+							@endif
+						@endif
+					@endfetch
+					<th>Action</th>
+				</tr>
+            </thead>
+            
+            <tbody>
+				{$rows = Query::getTableRows($tableInfo->table_linker);}
+				@fetch ($rows, 'row')
+					<tr>
+						@foreach ($headers as $header)
+							<td>{$row->val($header)}</td>
+						@endforeach
+						{$link = 'tables/'.$tableInfo->table_linker;}
+						<td>@component('table-button', ['links' => CMS::loadButton(['edit' => $link.'/edit', 'delete' => $link.'/trigger-confirm/delete'], $row->primary())]);</td>
+					</tr>
+				@endfetch
+            </tbody>
+        </table>
+    </div>
+</div>
+@component('footer');

@@ -1,0 +1,55 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<p>Showing records for table. <?=\Moorexa\Rexa::runDirective(true,'component','create-button', ['button' => CMS::loadButton(['create' => 'tables/' . $action . '/create'])])?></p>
+<?=\Moorexa\Rexa::runDirective(true,'component','alert-confirm', ['type' => 'danger', 'title' => 'Delete Row', 'message' => 'This would delete row completely without recovery. Click "Okay" to proceed'])?>
+<div class="card">
+    <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+			<?php $columns = db()->sql('describe '.$action);?>
+			<?php 
+ // PHP starts here 
+
+				// get json configuration
+				$config = toArray(json_decode($tableInfo->table_json));
+				$headers = [];
+			
+ // PHP ends here 
+ ?>
+            <thead>
+				<tr>
+					<?php
+$columns = $columns;if ($columns->rows > 0){
+while ($column = $columns->obj())
+{ ?>
+						<?php if(isset($config['rename'][$column->Field])) { ?>
+							<th><?=ucwords($config['rename'][$column->Field])?></th>
+							<?php $headers[] = $column->Field;?>
+						<?php } else { ?>
+							<?php if(!isset($config['hide'][$column->Field])) { ?>
+								<th><?=ucwords($column->Field)?></th>
+								<?php $headers[] = $column->Field;?>
+							<?php } ?>
+						<?php } ?>
+					<?php }} ?>
+					<th>Action</th>
+				</tr>
+            </thead>
+            
+            <tbody>
+				<?php $rows = Query::getTableRows($tableInfo->table_linker);?>
+				<?php
+$rows = $rows;if ($rows->rows > 0){
+while ($row = $rows->obj())
+{ ?>
+					<tr>
+						<?php foreach ($headers as $header) { ?>
+							<td><?=$row->val($header)?></td>
+						<?php } ?>
+						<?php $link = 'tables/'.$tableInfo->table_linker;?>
+						<td><?=\Moorexa\Rexa::runDirective(true,'component','table-button', ['links' => CMS::loadButton(['edit' => $link.'/edit', 'delete' => $link.'/trigger-confirm/delete'], $row->primary())])?></td>
+					</tr>
+				<?php }} ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

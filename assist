@@ -5792,18 +5792,20 @@ class Assist
                     $now = 0;
 
                     $table = lcfirst($tableName);
-                    $table = Moorexa\DB::getPrefix() . $table;
-                    $tableName = $table;
 
                     if (!is_null($connectwith) && strlen($connectwith) > 1)
                     {
+                        $dbInstance = Moorexa\DB::apply($connectwith);
+                        $tableName = Moorexa\DB::getTableName($table);
+                        $table = $tableName;
+
                         $struct = new Moorexa\Structure();
                         $struct->databaseSource = $connectwith;
                         $struct->driver = Moorexa\DatabaseHandler::connectionConfig($connectwith, 'driver');
                         
                         $migration = self::$assistPath."lab/Sql/".ucfirst($struct->driver)."/".$struct->databaseSource.'.sql';
 
-                        $struct->tableName = $table;
+                        $struct->tableName = $tableName;
 
                         $struct->buildQuery = [];
                         $struct->queryInfo = [];
@@ -5868,7 +5870,7 @@ class Assist
                                 call_user_func_array([$ins, 'up'], $const);
 
                                 $struct = $const[0];
-                                $struct->tableName = $table;
+                                $struct->tableName = $tableName;
 
                                 if (count($struct->buildQuery) > 0 || $struct->sqlString != "")
                                 {
@@ -5894,11 +5896,8 @@ class Assist
                             }
                         }
 
-
                         try
                         {
-                            Moorexa\DB::apply($connectwith);
-
                             if (\Moorexa\DatabaseHandler::$forceProductionMode || self::$migrateOption)
                             {
                                 array_unshift($struct->sqljob, $struct->createSQL);
@@ -6003,7 +6002,7 @@ class Assist
                             }
 
                             // push migration for insert, update, delete
-                            self::pushMigration($struct->driver, $table, $success);
+                            self::pushMigration($dbInstance, $struct->driver, $tableName, $success);
 
                             if ($now > 0 || $rows > 0 || $success > 0 || Moorexa\DB::$transactionCode == 200)
                             {
@@ -6028,8 +6027,6 @@ class Assist
 
                                 usleep(100000);
                             }
-
-                            
                         }
                         catch(Exception $e)
                         {
@@ -6250,203 +6247,15 @@ class Assist
 
     }
 
+
     // push migration
-    private static function pushMigration($driver, $table, &$success=0)
+    private static function pushMigration($dbInstance, $driver, $table, &$success=0)
     {
-        $path = self::$assistPath . 'lab/Sql/'.ucfirst($driver).'/'.Moorexa\DatabaseHandler::$connectWith.'.sql';
-        $content = file_get_contents($path);
+        // get handler
+        $handler = Moorexa\DatabaseHandler::$connectWith;
 
-        $pdo = Moorexa\DB::pdo();
-
-        if (method_exists($pdo, 'inTransaction') && $pdo->inTransaction() === false)
-        {
-            if (method_exists($pdo, 'beginTransaction'))
-            {
-                $pdo->beginTransaction();
-            }
-        }
-
-        $usePDO = Moorexa\DatabaseHandler::usePDO(Moorexa\DatabaseHandler::$connectWith);
-
-        if (stripos($content, '--- [BEGIN-'.$table.']') !== false)
-        {
-            $start = preg_quote('--- [BEGIN-'.$table.']');
-            $end = preg_quote('--- [END-'.$table.']');
-
-            // GET ALL
-            preg_match_all("/($start\s*([\s\S]*?)$end)/i", $content, $matches);
-            if (count($matches) > 0 && count($matches[0]) > 0)
-            {
-                foreach($matches[0] as $i => $sql)
-                {
-                    // get sql
-                    $getSQL = stristr($sql, '--- SQL ---');
-                    $getSQL = substr($getSQL, 0, strpos($getSQL, '--- ENDSQL ---'));
-                    $getSQL = trim(ltrim($getSQL, '--- SQL ---'));
-                    $getSQL = preg_replace('/^([-]+\s*?[^a-zA-Z])/','',$getSQL);
-
-                    // get binds
-                    $getBinds = [];
-                    if (stripos($sql, '--- BINDS ---') !== false)
-                    {
-                        $getBinds = stristr($sql, '--- BINDS ---');
-                        $getBinds = substr($getBinds, 0, strpos($getBinds, '--- ENDBINDS ---'));
-                        $getBinds = trim(ltrim($getBinds, '--- BINDS ---'));
-                        $getBinds = preg_replace('/^([-]+\s*?[^a-zA-Z|\{])/','',$getBinds);
-                        $getBinds = rtrim($getBinds, '---');
-                        $getBinds = (array) json_decode($getBinds);
-                    }
-                
-                    // check if record doesn't exist for insert migration
-                    if (stripos($getSQL, 'insert') === 0)
-                    {
-                        // get columns
-                        $column = substr($getSQL, strpos($getSQL, '(')+1);
-                        $column = substr($column, 0, strpos($column, ')'));
-
-                        // convert to an array
-                        $array = explode(',', $column);
-
-                        $bind = $getBinds;
-
-                        if ($usePDO)
-                        {
-                            $bind = array_splice($bind, 0, count($array));
-                            $bindKeys = array_keys($bind);
-
-                            $where = [];
-
-                            foreach ($array as $index => $key)
-                            {
-                                $where[] = $key .' = :'.$bindKeys[$index];
-                            }
-
-                            $where = implode(" AND ", $where);
-
-                            $select = 'SELECT * FROM '.$table.' WHERE '.$where;
-                            $smt = $pdo->prepare($select);
-                            $run = $smt->execute($bind);
-
-                            if ($smt->rowCount() == 0)
-                            {
-                                // insert
-                                $smt = $pdo->prepare($getSQL);
-                                if ($smt->execute($getBinds))
-                                {
-                                    $success++;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            $types = str_split($bind[0]);
-                            array_shift($bind);
-                            $keys = count($array);
-
-                            $where = [];
-                            
-                            $select = 'SELECT * FROM '.$table.' WHERE ';
-
-                            foreach ($array as $index => $key)
-                            {
-                                $where[] = $key .' = ?';
-                            }
-
-                            $where = implode(" AND ", $where);
-
-                            $select .= $where;
-
-                            // group
-                            $query_group = [];
-                            $start = 0;
-                            $end = 0;
-
-                            $total = count($bind);
-
-                            for ($i=$start; $i<$total; $i++)
-                            {
-                                $copy = $types;
-                                $type = implode('', array_splice($copy, $start, $keys));
-
-                                $bindCopy = $bind;
-                                $data = array_splice($bindCopy, $start, $keys);
-
-                                array_unshift($data, $type);
-                                $query_group[] = ['bind' => $data];
-
-                                if ($start < ($total - $keys))
-                                {
-                                    $start += $keys;
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-
-                            // run query
-                            $sel = $pdo->prepare($select);
-
-                            $query = $getSQL;
-                            $newBind = [];
-                            $updateQuery = false;
-                            $values = [];
-
-                            foreach ($query_group as $index => $record)
-                            {
-                                $bind = $record['bind'];
-                                $type = $bind[0];
-                                $other = array_splice($bind, 1);
-                                $sel->bind_param($bind[0], ...$other);
-                                $sel->execute();
-                                $sel->store_result();
-
-                                $keybinds = isset($record['keys']) ? $record['keys'] : null;
-
-                                if ($sel->num_rows == 0)
-                                {
-                                    $success++;
-
-                                    $value = [];
-
-                                    if (!is_null($keybinds))
-                                    {
-                                        foreach ($keybinds as $i => $k)
-                                        {
-                                            $newBind[$k] = $instance->getBinds[$k];
-                                            $value[] = ':'.$k;
-                                        }
-
-                                        $values[] = '('.implode(',', $value).')';
-                                    }
-                                }
-                                else
-                                {
-                                    $updateQuery = true;
-                                }
-                            }
-                            
-                        }
-                    }
-                    else
-                    {
-                        $smt = $pdo->prepare($getSQL);
-                        if ($smt->execute($getBinds))
-                        {
-                            $success++;
-                        }
-
-                    }
-                }
-            }
-
-            // commit transaction
-            if (method_exists($pdo, 'commit'))
-            {
-                $pdo->commit();
-            }
-        }
-
+        // run query
+        $dbInstance->runSaveCacheStatements($table, $driver, $handler);
     }
 
     // migration

@@ -23,7 +23,8 @@ class App extends Model
         'users' => ['create' => 'post:addAUser', 'edit' => 'post:updateUser', 'delete' => 'get:deleteUser'],
         'pages' => ['edit-view' => 'post:updateView', 'edit-nav' => 'post:updateNavigation', 
                     'create' => 'post:createNavigation', 'delete' => 'get:deleteNav'],
-        'plugins' => ['create' => 'callPluginMethods', 'edit' => 'callPluginMethods', 'delete' => 'callPluginMethods']
+        'plugins' => ['create' => 'callPluginMethods', 'edit' => 'callPluginMethods', 'delete' => 'callPluginMethods'],
+        'tables' => ['create' => 'post:addTableConfig', 'edit' => 'editTableConfig']
     ];
 
     // argument indexing
@@ -334,5 +335,58 @@ class App extends Model
                 unlink($temp);
             }
         }
+    }
+
+    // add table configuration
+    public function addTableConfig(Post $post)
+    {
+        // get identifier
+        $identifier = $post->table_identifier;
+
+        // add to table
+        $success = false;
+
+        foreach ($identifier as $index => $identifierName)
+        {
+            // insert to database
+            $insert = [
+                'table_identifier' => $identifierName,
+                'table_linker' => $post->table_linker[$index],
+                'table_json' => $post->table_json[$index]
+            ];
+
+            // add to table
+            if (db('tables')->insert($insert)->ok)
+            {
+                $success = true;
+            }
+        }
+
+        if ($success)
+        {
+            Alert::success('Table'.(count($identifier) > 1 ? 's' : '').' added successfully.' );
+        }
+    }
+
+    // edit table
+    public function editTableConfig($tableid, Post $post)
+    {
+        $model = createModelRule(function($body){ $body->allow_form_input(); });
+
+        // get table information
+        $tableInfo = db('tables')->get('tableid = ?', $tableid);
+
+        if ($tableInfo->rows > 0)
+        {
+            $model->pushObject($tableInfo);
+        }
+
+        if ($post->has('table_identifier'))
+        {
+            $tableInfo->update($post->data());
+            Alert::success('Table updated successfully.');
+        }   
+
+        dropbox('model', $model);
     }
 }

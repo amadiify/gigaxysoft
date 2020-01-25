@@ -1,12 +1,12 @@
 <?=\Moorexa\Rexa::runDirective(true,'component','header')?>
-
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
 <div class="card">
 	<div class="card-header">
 		Add a table for management
 	</div>
 
 	<div class="card-body">
-		<form action="<?=url('zema/tables')?>" method="POST">
+		<form action="<?=url('zema/tables/create')?>" method="POST">
 			<?=\Moorexa\Rexa::runDirective(true,'csrf')?>
 			<table class="table">
 				<tr class="table-row">
@@ -46,8 +46,7 @@ while ($table = $tables->obj())
 									]
 								],
 								'rename' => [],
-								'hide' => [],
-								'primary_key' => ''
+								'hide' => []
 							], JSON_PRETTY_PRINT);
 						
  // PHP ends here 
@@ -70,5 +69,5 @@ while ($table = $tables->obj())
 		</form>
 	</div>
 </div>
-
+<?=\Moorexa\Rexa::runDirective(true,'partial','tables')?>
 <?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

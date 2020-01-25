@@ -221,4 +221,22 @@ class Query
     {
         return db('installations')->get('installation_type=?', 'Plugins');
     }
+
+    // get all tables
+    public static function getTables()
+    {
+        return db('tables')->get();
+    }
+
+    // get table from linker
+    public static function getTableByLinker(string $tableName)
+    {
+        return db('tables')->get('table_linker = ?', $tableName);
+    }
+
+    // get table row
+    public static function getTableRows(string $tableName)
+    {
+        return db($tableName)->get()->orderbyprimarykey('desc');
+    }
 }

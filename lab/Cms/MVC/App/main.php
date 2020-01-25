@@ -449,9 +449,31 @@ class App extends Controller
     * @return void
     **/
 
-	public function tables()
+	public function tables($action)
 	{
-		$this->render('tables');
+        $view = $this->provider->getActionView('tables', $action);
+
+        // check if table requested
+        if (!is_null($action))
+        {
+            if (Moorexa\DB\Table::exists($action))
+            {
+                $linker = Query::getTableByLinker($action);
+
+                if ($linker->rows > 0)
+                {
+                    // set page title
+                    dropbox('pageTitle', 'Tables/' . $linker->table_identifier);
+                    dropbox('tableInfo', $linker);
+
+                    // set view
+                    $view = 'tables/show';
+                }
+            }
+        }
+
+
+		$this->render($view);
 	}
 }
 // END class

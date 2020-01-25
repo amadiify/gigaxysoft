@@ -9,6 +9,7 @@ use utility\Classes\BootMgr\Manager as Boot;
 
 class Config
 {
+    // save query path
     public function __construct()
     {
         // get configuration
@@ -152,10 +153,13 @@ class Config
         {
             // add prefix
             DB::prefix('Zema_');
-            
+
             // load queries
             Boot::singleton_as('Query', 'Database\Query');
             Boot::singleton_as('CMS', 'CmsGlobal\Cms')->loadDirectives();
+
+            // add save query path
+            DB::$queryCachePath = CMS_ROOT . 'Database/QueryStatements.php';
         
             // load cms config
             Boot::singleton_as('Config', 'Cms\Config')->loadStatic();

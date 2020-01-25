@@ -1,12 +1,12 @@
 @component('header');
-
+@alert;
 <div class="card">
 	<div class="card-header">
 		Add a table for management
 	</div>
 
 	<div class="card-body">
-		<form action="{url('zema/tables')}" method="POST">
+		<form action="{url('zema/tables/create')}" method="POST">
 			@csrf;
 			<table class="table">
 				<tr class="table-row">
@@ -41,8 +41,7 @@
 									]
 								],
 								'rename' => [],
-								'hide' => [],
-								'primary_key' => ''
+								'hide' => []
 							], JSON_PRETTY_PRINT);
 						@endphp;</textarea>
 					</td>
@@ -63,5 +62,5 @@
 		</form>
 	</div>
 </div>
-
+@partial('tables');
 @component('footer');

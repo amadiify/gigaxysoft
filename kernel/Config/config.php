@@ -48,6 +48,16 @@ $kernel->bootstrap ([
 	*/
 	"enable.caching" => true,
 
+
+	/*
+	 ***************************
+	 * 
+	 * @config.enable.db.caching (default = true) 
+	 * info: enable caching for db update, insert, delete queries
+	 * This cached sql queries would be ran during migration 
+	*/
+	"enable.db.caching" => true,
+
 	
 	/*
 	 ***************************

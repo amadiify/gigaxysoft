@@ -49,5 +49,9 @@
     ".\/lab\/Cms\/Theme\/Tabler\/components\/:app-views.html:App-views.html": ".\/lab\/Cms\/Theme\/Tabler\/components\/app-views.html",
     ".\/utility\/:loops.php": ".\/utility\/Components\/loops.php",
     "public\/Assets\/Js\/:moorexa.js": "public\/Assets\/Js\/Rexajs\/moorexa.js",
-    "public\/Assets\/Images\/:smiling2.png": "public\/Assets\/Images\/Sys\/smiling2.png"
+    "public\/Assets\/Images\/:smiling2.png": "public\/Assets\/Images\/Sys\/smiling2.png",
+    ".\/lab\/Cms\/MVC\/App\/Partials\/:tables.html:Tables.html": ".\/lab\/Cms\/MVC\/App\/Partials\/tables.html",
+    ".\/utility\/:Table.php": ".\/utility\/Console\/Table.php",
+    ".\/lab\/Cms\/MVC\/App\/Models\/:images.php:Images.php": ".\/lab\/Cms\/MVC\/App\/Models\/Images.php",
+    ".\/lab\/Cms\/MVC\/App\/Partials\/:images.html:Images.html": ".\/lab\/Cms\/MVC\/App\/Partials\/images.html"
 }

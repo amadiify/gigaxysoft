@@ -338,5 +338,42 @@
             "tables.js",
             "Tables.js"
         ]
+    ],
+    ".\/lab\/:Table.php": [
+        ".\/lab\/",
+        "Table.php"
+    ],
+    ".\/utility\/Classes\/:Table.php": [
+        ".\/utility\/Classes\/",
+        "Table.php"
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:show.css:Show.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "show.css",
+            "Show.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:show.js:Show.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "show.js",
+            "Show.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:images.css:images.cxx.css:Images.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "images.css",
+            "images.cxx.css",
+            "Images.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:images.js:Images.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "images.js",
+            "Images.js"
+        ]
     ]
 }

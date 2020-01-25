@@ -16,5 +16,7 @@ return array (
   'b82be9196c36825393bec20a2dc4f099_all-users.html' => 'dcc14fb7aeebbe048e5316e7cf3a065d',
   '90a5c2bde4bc2a7a48611bdab3fd1bde_navigation.html' => '24a324912205427b07fa13d288253209',
   '98d584cdcfa6e7391b7c0644f3ea6c9e_app-views.html' => 'd3fd477ae76fcf796e4d3b7f3dc29694',
+  '04917863cd9a1597960bd00ecc731dc2_tables.html' => '5d67bd67fcb0cf9a4426bffe2b73e43c',
+  '9a426233d1d3a19ecc8345ac77175504_images.html' => 'f5445ee33f7b7a6b9714597cb636d6c9',
 );
 ?>

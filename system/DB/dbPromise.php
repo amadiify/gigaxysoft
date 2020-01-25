@@ -708,7 +708,7 @@ class DBPromise
     }
 
     // get values
-    public function val(int $index = null)
+    public function val($index)
     {
         $row = $this->row();
 
@@ -718,17 +718,25 @@ class DBPromise
         // get values
         $values = array_values($row);
 
-        // return index 
-        if ($index >= 0)
+        if (is_int($index))
         {
-            return $values[$index];
+            // return index 
+            if ($index >= 0)
+            {
+                return $values[$index];
+            }
+        }
+
+        if (isset($row[$index]))
+        {
+            return $row[$index];
         }
 
         return $values;
     }
 
     // get keys
-    public function key(int $index = null)
+    public function key($index)
     {
         $row = $this->row();
 
@@ -737,13 +745,49 @@ class DBPromise
 
         // get keys
         $keys = array_keys($row);
-
-        // return index 
-        if ($index >= 0)
+        
+        if (is_int($index))
         {
-            return $keys[$index];
+            // return index 
+            if ($index >= 0)
+            {
+                return $keys[$index];
+            }
+        }
+
+        if (isset($row[$index]))
+        {
+            return $row[$index];
         }
 
         return $keys;
+    }
+
+    // get primary id
+    public function primary()
+    {
+        static $tableInfo;
+        
+        if (!isset($tableInfo[$this->table]))
+        {
+            $tableInfo = [];
+
+            // get primary key
+            $this->getTableInfo($primary);
+
+            // set primary key
+            $tableInfo[$this->table] = $primary;
+        }
+
+        // return primary key
+        if (isset($tableInfo[$this->table]))
+        {
+            $primary = $tableInfo[$this->table];
+            
+            // return primary key
+            return $this->{$primary};
+        }
+
+        return null;
     }
 }
