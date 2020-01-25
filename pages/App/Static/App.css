@@ -9,7 +9,7 @@ a:hover { text-decoration: none; color: #40a2cf;}
 .ht-large-box-images.style-03 .content .box-images-arrow{color: #117CC0;}
 .ht-large-box-images.style-03:hover .content .heading {color: #117CC0;}
 .modern-number-01 span.mark-text{color: #117cc0;}
-.bg-theme-default{background:#117CC0;}
+.bg-theme-default, .contact-info-one .btn--secondary:hover, .contact-info-two .btn--secondary:hover, .contact-info-three .btn--secondary:hover{background:#117CC0;}
 .ht-box-icon.style-02 .feature-btn a, .ht-timeline.style-01 .timeline-col .inner .year{color: #117cc0;}
 .contact-info.style-two .contact-list-item .content .main-content .text{color: #117CC0; font-size: 30px;}
 .contact-info.style-two .contact-list-item .content .icon{color: #40a2cf;}
@@ -17,7 +17,7 @@ a:hover { text-decoration: none; color: #40a2cf;}
 .navigation-menu > ul > li:hover > a span, .navigation-menu > ul > li.active > a span{color: #40a2cf;}
 .navigation-menu > ul > li:hover > a::after, .navigation-menu > ul > li.active > a::after {color: #40a2cf;}
 .navigation-menu > ul > li > a::before, .submenu > li > a > span::after, .scroll-top {background-color: #40a2cf;}
-.submenu > li.has-children.active > a, .submenu > li > a:hover {color:#40a2cf;}
+.submenu > li.has-children.active > a, .submenu > li > a:hover, .contact-info-one .call-us a:hover, .contact-info-two .call-us a:hover, .contact-info-three .call-us a:hover, .contact-info-one .call-us, .contact-info-two .call-us, .contact-info-three .call-us, .contact-info-one .icon, .contact-info-two .icon, .contact-info-three .icon {color:#40a2cf;}
 .conact-us-wrap-one .heading::before {background-color: #d2a98e;}
 .ht-timeline.style-01 .line{border-left: 2px solid #40a2cf;}
 .ht-timeline.style-01 .dots{color:#40a2cf;}

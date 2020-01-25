@@ -327,6 +327,26 @@ Recognizing a worldwide need for ground breaking expertise in the ICT market, GN
           'siteid0' => 'Centurion',
         ),
       ),
+      'a286f9b576f80783bc57ae12c5289bbc23ca134479ab546de7b6afca4e131a5a2a05f639' => 
+      array (
+        'query' => 'UPDATE Zema_images SET image_path = :image_path , image_name = :image_name  WHERE imageid=:imageid ',
+        'bind' => 
+        array (
+          'image_path' => './lab/Cms/MVC/App/Uploads/08df943fa5e3728d41ec1ead2bbf003e2285.jpg',
+          'image_name' => 'vision-image',
+          'imageid' => '4',
+        ),
+      ),
+      'a286f9b576f80783bc57ae12c5289bbc1f3180db7ee68833efc74e1a9630d98dab011b02' => 
+      array (
+        'query' => 'UPDATE Zema_images SET image_path = :image_path , image_name = :image_name  WHERE imageid=:imageid ',
+        'bind' => 
+        array (
+          'image_path' => './lab/Cms/MVC/App/Uploads/74cf8bc288a8e076102f53439223327020470.jpg',
+          'image_name' => 'mission-image',
+          'imageid' => '5',
+        ),
+      ),
     ),
     'Zema_directives' => 
     array (

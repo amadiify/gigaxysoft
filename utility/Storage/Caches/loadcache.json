@@ -4,11 +4,11 @@
         "path": "utility\/Storage\/Caches\/Headers\/cache.d29db69b1a9178a48f1d2ab32f72b35c.App.header.html"
     },
     ".\/pages\/App\/Views\/home.html": {
-        "hash": "1644b35537f7289273f273c4b9653890",
+        "hash": "f85a645748588ae2378a419b46dd3d6e",
         "path": "utility\/Storage\/Caches\/Views\/cache.6ca59b1b5498ee214c0f2258b73815c5.App.home.html"
     },
     ".\/custom\/footer.html": {
-        "hash": "aa4d4544b7bafb8a80e690f9ec531cc0",
+        "hash": "b4a7e439de578d9d96609cc9577574c6",
         "path": "utility\/Storage\/Caches\/Footers\/cache.420f043b55cd0ea699bdd46745316f3d.App.footer.html"
     },
     ".\/lab\/Cms\/MVC\/App\/Custom\/header.html": {
@@ -108,11 +108,15 @@
         "path": "utility\/Storage\/Caches\/Views\/cache.a561a4ad7f7583de131aeaebd1146886.App.edit.html"
     },
     ".\/pages\/App\/Views\/aboutus.html": {
-        "hash": "fb4a7c277856ad6b2fb0bff8b26e0718",
+        "hash": "928be998a41207e077348266f719476c",
         "path": "utility\/Storage\/Caches\/Views\/cache.cccf335a1784b058ed16b884807672eb.App.aboutus.html"
     },
     ".\/pages\/App\/Views\/contactus.html": {
         "hash": "c9bebbe2d8910131734e941a7b09a6b7",
         "path": "utility\/Storage\/Caches\/Views\/cache.60c69b00cfdc0f1059e82901f5cd5cb4.App.contactus.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/images\/update.html": {
+        "hash": "9726f3e40f2dddf7063962d04c415647",
+        "path": "utility\/Storage\/Caches\/Views\/cache.c5fbefa919158061e2be247782157682.App.update.html"
     }
 }

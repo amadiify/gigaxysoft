@@ -523,5 +523,23 @@
             "contactUs.js",
             "ContactUs.js"
         ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:update.css:Update.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "update.css",
+            "Update.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:update.js:Update.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "update.js",
+            "Update.js"
+        ]
+    ],
+    "public\/Assets\/Images\/:theme\/bg\/home-infotechno-contact-bg.jpg": [
+        "public\/Assets\/Images\/",
+        "theme\/bg\/home-infotechno-contact-bg.jpg"
     ]
 }
