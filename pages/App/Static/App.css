@@ -16,7 +16,7 @@ a:hover { text-decoration: none; color: #40a2cf;}
 .breadcrumb-list li.active { color:#40a2cf;}
 .navigation-menu > ul > li:hover > a span, .navigation-menu > ul > li.active > a span{color: #40a2cf;}
 .navigation-menu > ul > li:hover > a::after, .navigation-menu > ul > li.active > a::after {color: #40a2cf;}
-.navigation-menu > ul > li > a::before, .submenu > li > a > span::after {background-color: #40a2cf;}
+.navigation-menu > ul > li > a::before, .submenu > li > a > span::after, .scroll-top {background-color: #40a2cf;}
 .submenu > li.has-children.active > a, .submenu > li > a:hover {color:#40a2cf;}
 .conact-us-wrap-one .heading::before {background-color: #d2a98e;}
 .ht-timeline.style-01 .line{border-left: 2px solid #40a2cf;}

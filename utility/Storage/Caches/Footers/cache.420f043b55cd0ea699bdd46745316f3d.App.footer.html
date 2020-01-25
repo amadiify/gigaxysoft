@@ -5,13 +5,13 @@
             <div class="row footer-widget-wrapper">
                 <div class="col-lg-4 col-md-6 col-sm-6 footer-widget">
                     <div class="footer-widget__logo mb-30">
-                        <img src="assets/images/logo/dark-logo-160x48.png" class="img-fluid" alt="">
+                        <img src="<?=$assets->image("theme/logo/gigaxy-logo-small.jpg")?>" class="img-fluid" alt="">
                     </div>
                     <ul class="footer-widget__list">
-                        <li>58 Howard Street #2 San Francisco, CA 941</li>
-                        <li><a href="mailto:contact@aeroland.com" class="hover-style-link">contact@aeroland.com</a></li>
-                        <li><a href="tel:123344556" class="hover-style-link text-black font-weight--bold">(+68)1221 09876</a></li>
-                        <li><a href="https://hasthemes.com/" class="hover-style-link text-color-primary">www.mitech.xperts.com</a></li>
+                        <li><?=\Moorexa\Rexa::runDirective(true,'getcontainer','our-address')?></li>
+                        <li><a href="mailto:<?=\Moorexa\Rexa::runDirective(true,'getcontainer','email-address')?>" class="hover-style-link"><?=\Moorexa\Rexa::runDirective(true,'getcontainer','email-address')?></a></li>
+                        <li><a href="tel:<?=\Moorexa\Rexa::runDirective(true,'getcontainer','phone-line')?>" class="hover-style-link text-black font-weight--bold"><?=\Moorexa\Rexa::runDirective(true,'getcontainer','phone-line')?></a></li>
+                        <li><a href="https://hasthemes.com/" class="hover-style-link text-color-primary">www.gigaxysoft.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">

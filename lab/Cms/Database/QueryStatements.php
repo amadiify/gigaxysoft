@@ -196,6 +196,16 @@ Recognizing a worldwide need for ground breaking expertise in the ICT market, GN
           'siteid0' => 'Centurion',
         ),
       ),
+      'caaa57d18bdee9f4ddb1a3337cc32bf3ac5dd9891928793d173080d1adeabbca8c169269' => 
+      array (
+        'query' => 'INSERT INTO Zema_containers (container_name,container_body,siteid) VALUES (:container_name0,:container_body0,:siteid0)',
+        'bind' => 
+        array (
+          'container_name0' => 'our-address',
+          'container_body0' => '3rd Floor, Ebene House Abuja, Nigeria',
+          'siteid0' => 'Centurion',
+        ),
+      ),
     ),
     'Zema_users' => 
     array (
@@ -226,6 +236,15 @@ Recognizing a worldwide need for ground breaking expertise in the ICT market, GN
         'bind' => 
         array (
           'loggedinToken' => '7dbb7a3ec6e06192c89e1d4e6afed875',
+          'userid' => '1',
+        ),
+      ),
+      '248f71412349f00ac171168756aa9b57115435097a9894e027335618c89590311e7899c2' => 
+      array (
+        'query' => 'UPDATE Zema_users SET loggedinToken = :loggedinToken  WHERE userid = :userid ',
+        'bind' => 
+        array (
+          'loggedinToken' => '73f3745d3ea24fed55bada36549e510a',
           'userid' => '1',
         ),
       ),

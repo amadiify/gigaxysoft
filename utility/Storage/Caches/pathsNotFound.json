@@ -476,5 +476,52 @@
             "contact-us.html",
             "Contact-us.html"
         ]
+    ],
+    "utility\/Components\/:CmsGlobal.php:CmsGlobal.php:CMSGLOBAL.php:cmsglobal.php": [
+        "utility\/Components\/",
+        [
+            "CmsGlobal.php",
+            "CmsGlobal.php",
+            "CMSGLOBAL.php",
+            "cmsglobal.php"
+        ]
+    ],
+    "utility\/Exceptions\/:CmsGlobal.php:CmsGlobal.php:CMSGLOBAL.php:cmsglobal.php": [
+        "utility\/Exceptions\/",
+        [
+            "CmsGlobal.php",
+            "CmsGlobal.php",
+            "CMSGLOBAL.php",
+            "cmsglobal.php"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:contactus.css:Contactus.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "contactus.css",
+            "Contactus.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:contactus.js:Contactus.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "contactus.js",
+            "Contactus.js"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:contactUs.css:contactUs.cxx.css:ContactUs.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "contactUs.css",
+            "contactUs.cxx.css",
+            "ContactUs.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:contactUs.js:ContactUs.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "contactUs.js",
+            "ContactUs.js"
+        ]
     ]
 }
