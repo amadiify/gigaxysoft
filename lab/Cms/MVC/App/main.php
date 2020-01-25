@@ -148,8 +148,11 @@ class App extends Controller
         // get action view
         $view = $this->provider->getActionView('directives', $action);
 
-        if ($directiveid != null && is_int($directiveid))
+        $directiveid = intval($directiveid);
+
+        if ($directiveid > 0)
         {
+            
             // get directives 
             $directives = Query::getSingleDirective($directiveid);
 

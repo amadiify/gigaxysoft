@@ -375,5 +375,19 @@
             "images.js",
             "Images.js"
         ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:upload.css:Upload.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "upload.css",
+            "Upload.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:upload.js:Upload.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "upload.js",
+            "Upload.js"
+        ]
     ]
 }

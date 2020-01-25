@@ -1,0 +1,55 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
+
+<div class="card">
+	<!-- create container -->
+	<div class="card-header">
+		<div class="card-title">Create a Directive</div>
+	</div>
+
+	<div class="card-body">
+		<div class="table-responsive">
+			<form action="" method="POST">
+				<?=\Moorexa\Rexa::runDirective(true,'csrf')?>
+				<table class="table">
+					<tr class="table-row">
+						<td>Directive Name</td>
+						<td>
+							<input name="directive[]" value="" class="form-control" placeholder="Enter a Directive Name">
+						</td>
+					</tr>
+
+					<tr class="table-row">
+						<td>Directive Class</td>
+						<td>
+							<input name="directive_class[]" value="" class="form-control" placeholder="Enter a Directive Class">
+						</td>
+					</tr>
+
+					<tr class="table-row">
+						<td>Directive Method</td>
+						<td>
+							<input name="directive_method[]" value="" class="form-control" placeholder="Enter a Directive Method">
+						</td>
+					</tr>
+
+					<tbody id="rows">
+
+					</tbody>
+
+					<tr>
+						<td></td>
+						<td>
+							<button name="create" type="submit" class="btn btn-success">Create</button>
+							<button type="button" id="addtablerow" class="btn btn-info"><i class="fa fa-plus"></i> Add Row</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h3 class="card-title">Your directives.</h3>
+<?=\Moorexa\Rexa::runDirective(true,'partial','directive')?>
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

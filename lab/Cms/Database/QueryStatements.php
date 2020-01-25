@@ -150,6 +150,114 @@ This combination of business and technical acumen, along with in depth local kno
         ),
       ),
     ),
+    'Zema_users' => 
+    array (
+      '248f71412349f00ac171168756aa9b57e1a3345e6bdc282251d4f63353d4ec699dfd403a' => 
+      array (
+        'query' => 'UPDATE Zema_users SET loggedinToken = :loggedinToken  WHERE userid = :userid ',
+        'bind' => 
+        array (
+          'loggedinToken' => 'e803043e13b2ba29e85066da25f3d24d',
+          'userid' => '1',
+        ),
+      ),
+      'a82b8119e783c563ef3ecd05d6a87beea423fe943863723a3a8c6e0dadfc3fa52f495f10' => 
+      array (
+        'query' => 'UPDATE Zema_users SET username = :username , fullname = :fullname , password = :password , permissionid = :permissionid  WHERE userid=:userid ',
+        'bind' => 
+        array (
+          'username' => 'admin',
+          'fullname' => 'Amadi Ifeanyi',
+          'password' => '$2y$10$rZ6bEKVDRfUC7TVNygxDCeOHR66Lzqu.M28rgKYBSVkYw1R83GzE.',
+          'permissionid' => '4',
+          'userid' => '1',
+        ),
+      ),
+    ),
+    'Zema_tables' => 
+    array (
+      '75b9abef106426c03ae4a2c483be48027f39a7655b844f79e1546b6238682e3db925c3c2' => 
+      array (
+        'query' => 'INSERT INTO Zema_tables (table_identifier,table_linker,table_json,siteid) VALUES (:table_identifier0,:table_linker0,:table_json0,:siteid0)',
+        'bind' => 
+        array (
+          'table_identifier0' => 'Our Services',
+          'table_linker0' => 'Gigaxy_services',
+          'table_json0' => '{
+    "foreign_keys": {
+        "-column": {
+            "table": "-table-name",
+            "column": "-column-name-as-identifier"
+        }
+    },
+    "rename": {
+"service_title" : "Service Title",
+"service_body" : "Service Body"
+},
+    "hide": ["serviceid"]
+}',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+    ),
+    'Zema_images' => 
+    array (
+      '9aea5e176467cc4c7dee6f23ad82e932dc7e148b27cc7b1ff65a9d4442041b8293a8b32d' => 
+      array (
+        'query' => 'INSERT INTO Zema_images (image_path,image_name,siteid) VALUES (:image_path0,:image_name0,:siteid0)',
+        'bind' => 
+        array (
+          'image_path0' => './lab/Cms/MVC/App/Uploads/c77bc0b9307eb8711c0b85d72ac9ffda9492.jpg',
+          'image_name0' => 'quality-assurance',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+      '9aea5e176467cc4c7dee6f23ad82e932ee68a4f26cfd1aa07fa719e9808da2e3ed35958d' => 
+      array (
+        'query' => 'INSERT INTO Zema_images (image_path,image_name,siteid) VALUES (:image_path0,:image_name0,:siteid0)',
+        'bind' => 
+        array (
+          'image_path0' => './lab/Cms/MVC/App/Uploads/27ade1b64f9515dbb776cc3cc5bc337720199.jpg',
+          'image_name0' => 'professional',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+      '9aea5e176467cc4c7dee6f23ad82e932257e2cd2959911dd19c7dd4343b663e3d53b9974' => 
+      array (
+        'query' => 'INSERT INTO Zema_images (image_path,image_name,siteid) VALUES (:image_path0,:image_name0,:siteid0)',
+        'bind' => 
+        array (
+          'image_path0' => './lab/Cms/MVC/App/Uploads/379a8aded36bd31e44cde732586b545aOBCDN70.jpg',
+          'image_name0' => 'security-experts',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+    ),
+    'Zema_directives' => 
+    array (
+      '50bfb5d6654e91a8390b713122d3afb9171b67c0f268ba747132b8495930e82d5e8e81ec' => 
+      array (
+        'query' => 'INSERT INTO Zema_directives (directive,directive_class,directive_method,siteid) VALUES (:directive0,:directive_class0,:directive_method0,:siteid0)',
+        'bind' => 
+        array (
+          'directive0' => 'getImage',
+          'directive_class0' => 'CmsGlobal',
+          'directive_method0' => '',
+          'siteid0' => 'Centurion',
+        ),
+      ),
+      'b79bd57947321a552f3eb0d19ca7be896e5324e3834895ca21637fd953ffc6b528735ddb' => 
+      array (
+        'query' => 'UPDATE Zema_directives SET directive = :directive , directive_class = :directive_class , directive_method = :directive_method  WHERE directiveid=:directiveid ',
+        'bind' => 
+        array (
+          'directive' => 'getImage',
+          'directive_class' => 'CmsGlobalCms',
+          'directive_method' => 'loadImages',
+          'directiveid' => '4',
+        ),
+      ),
+    ),
   ),
 );
 
