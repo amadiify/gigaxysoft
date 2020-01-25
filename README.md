@@ -35,5 +35,3 @@ You can start the development server by running:
 ```bash
     php assist serve
 ```
-
-watch this : THIS MESSAGE WILL CHANGE WHAT YOU THINK ABOUT RECEIVING SPIRITUAL MANTLES | APOSTLE JOSHUA SELMAN

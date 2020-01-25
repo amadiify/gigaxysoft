@@ -136,6 +136,9 @@ class DB
 
    // get query cache path
    public static $queryCachePath = null;
+
+   // cached data array for migration
+   private static $cacheQueryData = [];
   
     // list of allowed chains
     private function getAllowed($val = [null], &$sql = "")
@@ -3888,25 +3891,24 @@ class DB
     // run migration for cached tables
     public function runSaveCacheStatements(string $tableName, string $driver, string $handler)
     {
-        // save data;
-        static $data;
-
         // get path
         $path = $this->getQuerySavePath($handler, $driver);
 
-
         if (file_exists($path))
         {
-            // get data
-            if (is_null($data))
+            if (count(self::$cacheQueryData) == 0)
             {
-                $data = include_once($path);
+                // set data
+                self::$cacheQueryData = include_once($path);
             }
+
+            // get data
+            $data = self::$cacheQueryData;
 
             if (isset($data[$handler]))
             {
                 $dataHandler = $data[$handler];
-
+                
                 // check for table
                 if (isset($dataHandler[$tableName]))
                 {

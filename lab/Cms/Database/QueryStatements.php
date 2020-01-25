@@ -173,6 +173,15 @@ This combination of business and technical acumen, along with in depth local kno
           'userid' => '1',
         ),
       ),
+      '248f71412349f00ac171168756aa9b57efc76416c2e6953ceadf5608442608343a5f9236' => 
+      array (
+        'query' => 'UPDATE Zema_users SET loggedinToken = :loggedinToken  WHERE userid = :userid ',
+        'bind' => 
+        array (
+          'loggedinToken' => '7dbb7a3ec6e06192c89e1d4e6afed875',
+          'userid' => '1',
+        ),
+      ),
     ),
     'Zema_tables' => 
     array (
