@@ -248,6 +248,15 @@ Recognizing a worldwide need for ground breaking expertise in the ICT market, GN
           'userid' => '1',
         ),
       ),
+      '248f71412349f00ac171168756aa9b579189b217d6f6771bf0b0a797728de699b09a54fc' => 
+      array (
+        'query' => 'UPDATE Zema_users SET loggedinToken = :loggedinToken  WHERE userid = :userid ',
+        'bind' => 
+        array (
+          'loggedinToken' => '4acaeaacb1419b19375c6b999193b22d',
+          'userid' => '1',
+        ),
+      ),
     ),
     'Zema_tables' => 
     array (
@@ -389,6 +398,17 @@ Recognizing a worldwide need for ground breaking expertise in the ICT market, GN
           'directive_class0' => 'CmsGlobalCms',
           'directive_method0' => 'loadImages',
           'siteid0' => 'Centurion',
+        ),
+      ),
+      'b79bd57947321a552f3eb0d19ca7be895bb8f20a266d0016fb293e58ac2cbe36709b8919' => 
+      array (
+        'query' => 'UPDATE Zema_directives SET directive = :directive , directive_class = :directive_class , directive_method = :directive_method  WHERE directiveid=:directiveid ',
+        'bind' => 
+        array (
+          'directive' => 'getImage',
+          'directive_class' => 'CmsGlobalCms',
+          'directive_method' => 'loadImages',
+          'directiveid' => '6',
         ),
       ),
     ),
