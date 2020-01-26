@@ -350,6 +350,17 @@ Recognizing a worldwide need for ground breaking expertise in the ICT market, GN
     ),
     'Zema_directives' => 
     array (
+      'b79bd57947321a552f3eb0d19ca7be896e5324e3834895ca21637fd953ffc6b528735ddb' => 
+      array (
+        'query' => 'UPDATE Zema_directives SET directive = :directive , directive_class = :directive_class , directive_method = :directive_method  WHERE directiveid=:directiveid ',
+        'bind' => 
+        array (
+          'directive' => 'getImage',
+          'directive_class' => 'CmsGlobalCms',
+          'directive_method' => 'loadImages',
+          'directiveid' => '4',
+        ),
+      ),
       '50bfb5d6654e91a8390b713122d3afb9171b67c0f268ba747132b8495930e82d5e8e81ec' => 
       array (
         'query' => 'INSERT INTO Zema_directives (directive,directive_class,directive_method,siteid) VALUES (:directive0,:directive_class0,:directive_method0,:siteid0)',
@@ -361,15 +372,23 @@ Recognizing a worldwide need for ground breaking expertise in the ICT market, GN
           'siteid0' => 'Centurion',
         ),
       ),
-      'b79bd57947321a552f3eb0d19ca7be896e5324e3834895ca21637fd953ffc6b528735ddb' => 
+      '88688907b69935a552efa8e052cac08d1b6453892473a467d07372d45eb05abc2031647a' => 
       array (
-        'query' => 'UPDATE Zema_directives SET directive = :directive , directive_class = :directive_class , directive_method = :directive_method  WHERE directiveid=:directiveid ',
+        'query' => 'DELETE FROM Zema_directives WHERE directiveid = :directiveid ',
         'bind' => 
         array (
-          'directive' => 'getImage',
-          'directive_class' => 'CmsGlobalCms',
-          'directive_method' => 'loadImages',
           'directiveid' => '4',
+        ),
+      ),
+      '50bfb5d6654e91a8390b713122d3afb9d70b1c05b6d1a5fd6ffc8cc9d6b7bcfcfefd0d9d' => 
+      array (
+        'query' => 'INSERT INTO Zema_directives (directive,directive_class,directive_method,siteid) VALUES (:directive0,:directive_class0,:directive_method0,:siteid0)',
+        'bind' => 
+        array (
+          'directive0' => 'getImage',
+          'directive_class0' => 'CmsGlobalCms',
+          'directive_method0' => 'loadImages',
+          'siteid0' => 'Centurion',
         ),
       ),
     ),

@@ -861,12 +861,20 @@ class Model extends Controller
 
 				$build = ucwords(rtrim($build, ' '));
 				$build = preg_replace("/\s*/", '',$build);
+				$build = preg_replace('/[-]/', '', $build);
 
 				// get all middleware waiting.
 				$waiting = Middleware::$waiting;
 
 				// get argument.
 				$argument = isset($requests[1]) ? $requests[1] : null;
+
+				// remove - from argument
+				if (strpos($argument, '-') !== false)
+				{
+					$argument = ucwords(str_replace('-',' ', $argument));
+					$argument = lcfirst(str_replace(' ','', $argument));
+				}
 
 				// get third argument.
 				$args = function($bind=null) use (&$method, &$argument)
@@ -980,7 +988,7 @@ class Model extends Controller
 							if (is_array($trigger))
 							{
 								$paths = uri()->paths();
-								$paths = array_flip(array_splice($paths, 2));
+								$paths = array_flip(array_splice($paths, 2, 1));
 
 								if (count($paths) > 0)
 								{
@@ -1084,7 +1092,6 @@ class Model extends Controller
 										}
 									}
 								}
-
 								
 								// load model
 								if ($canContinue)

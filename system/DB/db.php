@@ -2982,228 +2982,86 @@ class DB
                 // convert to an array
                 $array = explode(',', $column);
 
-                $bind = $instance->bind;
+                $binds = $instance->bind;
 
                 $where = [];
 
-                if ($instance->getSql != '')
+                if ($instance->query != '')
                 {
-                    if ($usePDO)
+                    // get the columns
+                    preg_match('/([(].*?[)])/', $instance->query, $column);
+
+                    if (isset($column[0]))
                     {
-                        $keys = count(explode(',', $instance->insertKeys));
-                        $bind = array_splice($bind, 0, count($array));
-                        $bindKeys = array_keys($bind);
+                        // remove bracket
+                        $column = preg_replace('/[)|(]/','', $column[0]);
 
-                        foreach ($array as $index => $key)
+                        // build whare statement
+                        $columnArray = explode(',', $column);
+
+                        // where
+                        foreach ($columnArray as $column)
                         {
-                            $where[] = $key .' = ?';
+                            $where[] = $column . ' = ?';
                         }
-                        
+                    }
 
-                        $where = implode(" AND ", $where);
-                        $select = 'SELECT * FROM '.$instance->table.' WHERE '.$where;
+                    // now start from values
+                    $values = stristr($instance->query, 'values');
+                    $orginalValue = $values;
+                    // remove "VALUES"
+                    $values = ltrim($values, 'VALUES ');
 
-                        // group
-                        $query_group = [];
-                        $start = 0;
-                        $end = 0;
+                    // now get all values and check database or remove from where statement
+                    preg_match_all('/([(].*?[)])/', $values, $matches);
+                    $newBind = [];
+                    $newValues = [];
 
-                        $bind = $instance->bind;
+                    // get where
+                    $where = implode(' AND ', $where);
+                    $select = 'SELECT * FROM '.$instance->table.' WHERE '.$where;
 
-                        $total = count($bind);
+                    // run prepared statement
+                    $sel = $db->prepare($select);
 
-                        $keyBinds = array_keys($instance->getBinds);
-
-                        for ($i=$start; $i<$total; $i++)
+                    if (count($matches[0]) > 0)
+                    {
+                        foreach ($matches[0] as $value)
                         {
-                            $bindCopy = $bind;
-                            $data = array_splice($bindCopy, $start, $keys);
+                            $orginal = $value;
+                            // remove bracket
+                            $value = preg_replace('/[)|(|:]/','', $value);
+                            $valueArray = explode(',', $value);
 
-                            $keyBindCopy = $keyBinds;
-                            $kb = array_splice($keyBindCopy, $start, $keys);
+                            // bind
+                            $bind = [];
 
-                            $query_group[] = ['bind' => $data, 'keys' => $kb];
-
-                            if ($start < ($total - $keys))
+                            foreach($valueArray as $bindKey)
                             {
-                                $start += $keys;
+                                $bind[] = $instance->bind[$bindKey];
                             }
-                            else
-                            {
-                                break;
-                            }
-                        }
 
-                        $success = 0;
-
-                        $query = $instance->getSql;
-                        $newBind = [];
-                        $updateQuery = false;
-                        $values = [];
-
-                        $sel = $db->prepare($select);
-
-                        foreach ($query_group as $index => $record)
-                        {
-                            $bind = $record['bind'];
-
-                            // run query
-                            $exec = $sel->execute(array_values($bind));
-
-                            $keybinds = $record['keys'];
+                            $execute = $sel->execute($bind);
 
                             if ($sel->rowCount() == 0)
                             {
-                                $success++;
+                                $newValues[] = $orginal;
 
-                                $value = [];
-                                foreach ($keybinds as $i => $k)
+                                foreach ($valueArray as $bindKey)
                                 {
-                                    $newBind[$k] = $instance->getBinds[$k];
-                                    $value[] = ':'.$k;
+                                    $newBind[$bindKey] = $instance->bind[$bindKey];
                                 }
-
-                                $values[] = '('.implode(',', $value).')';
-                            }
-                            else
-                            {
-                                $updateQuery = true;
                             }
                         }
+                    }
 
-                        if ($success > 0)
-                        {
-                            if ($updateQuery)
-                            {
-                                // build new query
-                                $query = $instance->query;
-                                $stop = strpos($query, 'VALUES');
-                                $query = substr($query, 0, $stop);
+                    if (count($newValues) > 0)
+                    {
+                        $values = implode(', ', $newValues);
+                        $instance->bind = $newBind;
 
-                                $query .= 'VALUES '.implode(',', $values);
-
-                                $instance->bind = $newBind;
-                                $instance->query = $query;
-
-                                $instance->allowedQueryCalled = true;
-
-                                $con = $this->___prepare($query);
-                            }
-
-                            return true;
-                        }
+                        $instance->query = str_replace($orginalValue, 'VALUES '.$values, $instance->query);
                         
-                        return false;
-
-                    }
-                    
-                    $types = str_split($bind[0]);
-                    array_shift($bind);
-                    $keys = count(explode(',', $instance->insertKeys));
-                    
-                    $select = 'SELECT * FROM '.$instance->table.' WHERE ';
-
-                    foreach ($array as $index => $key)
-                    {
-                        $where[] = $key .' = ?';
-                    }
-
-                    $where = implode(" AND ", $where);
-
-                    $select .= $where;
-
-                    // group
-                    $query_group = [];
-                    $start = 0;
-                    $end = 0;
-
-                    $total = count($bind);
-
-                    $keyBinds = array_keys($instance->getBinds);
-
-                    for ($i=$start; $i<$total; $i++)
-                    {
-                        $copy = $types;
-                        $type = implode('', array_splice($copy, $start, $keys));
-
-                        $bindCopy = $bind;
-                        $data = array_splice($bindCopy, $start, $keys);
-
-                        $keyBindCopy = $keyBinds;
-                        $kb = array_splice($keyBindCopy, $start, $keys);
-
-                        array_unshift($data, $type);
-                        $query_group[] = ['bind' => $data, 'keys' => $kb];
-
-                        if ($start < ($total - $keys))
-                        {
-                            $start += $keys;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-
-                    $success = 0;
-
-                    // run query
-                    $sel = $db->prepare($select);
-
-                    $query = $instance->getSql;
-                    $newBind = [];
-                    $updateQuery = false;
-                    $values = [];
-
-                    foreach ($query_group as $index => $record)
-                    {
-                        $bind = $record['bind'];
-                        $type = $bind[0];
-                        $other = array_splice($bind, 1);
-                        $sel->bind_param($bind[0], ...$other);
-                        $sel->execute();
-                        $sel->store_result();
-
-                        $keybinds = $record['keys'];
-
-                        if ($sel->num_rows == 0)
-                        {
-                            $success++;
-
-                            $value = [];
-                            foreach ($keybinds as $i => $k)
-                            {
-                                $newBind[$k] = $instance->getBinds[$k];
-                                $value[] = ':'.$k;
-                            }
-
-                            $values[] = '('.implode(',', $value).')';
-                        }
-                        else
-                        {
-                            $updateQuery = true;
-                        }
-                    }
-
-                    if ($success > 0)
-                    {
-                        if ($updateQuery)
-                        {
-                            // build new query
-                            $query = $instance->query;
-                            $stop = strpos($query, 'VALUES');
-                            $query = substr($query, 0, $stop);
-
-                            $query .= 'VALUES '.implode(',', $values);
-
-                            $instance->bind = $newBind;
-                            $instance->query = $query;
-
-                            $instance->allowedQueryCalled = true;
-
-                            $con = $instance->___prepare($query);
-                        }
-
                         return true;
                     }
 
@@ -3917,7 +3775,6 @@ class DB
 
                     // set table
                     $this->table = $tableName;
-                    $this->method = 'sql-migration';
                     $this->cacheQuery = false;
 
                     // run queries
@@ -3926,8 +3783,18 @@ class DB
                         $this->query = $data['query'];
                         $this->bind = $data['bind'];
 
+                        // get query
+                        preg_match('/^(update|insert|delete|select)/i', trim($this->query), $match);
+
+                        if (isset($match[0]))
+                        {
+                            // add method
+                            $this->method = strtolower($match[0]);
+                        }
+
                         // prepare statement
                         $smt = $this->___prepare($data['query']);
+                        
                         // execute query
                         $execute = $this->___execute($smt);
                     }

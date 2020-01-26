@@ -28,6 +28,7 @@ class Directives extends Model
         'createDirectives' => 'POST',
     ];
 
+
     // define directive rule
     public function setDirectiveRule($body)
     {
