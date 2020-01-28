@@ -9,7 +9,7 @@
 						<h6>figure plans out </h6>
 						<h3 class="font-weight--reguler mb-30">Get insights into the <span class="text-color-primary">mechanism</span> & <span class="text-color-primary">prospects</span> of cyber security technology</h3>
 						<div class="hero-button mt-30">
-							<a href="#" class="ht-btn ht-btn-md">Dig deeper now </a>
+							<a href="<?=url("about-us")?>" class="ht-btn ht-btn-md">Dig deeper now </a>
 						</div>
 					</div>
 				</div>
@@ -77,7 +77,7 @@
 
 						<div class="col-lg-4 col-md-6 wow move-up">
 							<!-- ht-box-icon Start -->
-							<a href="<?=url("about/expertise")?>" class="ht-large-box-images style-03">
+							<a href="<?=url("about-us")?>" class="ht-large-box-images style-03">
 								<div class="large-image-box">
 									<div class="box-image">
 										<div class="default-image">
@@ -100,7 +100,7 @@
 						</div>
 						<div class="col-lg-4 col-md-6 wow move-up">
 							<!-- ht-box-icon Start -->
-							<a href="#" class="ht-large-box-images style-03">
+							<a href="<?=url("about-us")?>" class="ht-large-box-images style-03">
 								<div class="large-image-box">
 									<div class="box-image">
 										<div class="default-image">
@@ -122,7 +122,7 @@
 						</div>
 						<div class="col-lg-4 col-md-6 wow move-up">
 							<!-- ht-box-icon Start -->
-							<a href="#" class="ht-large-box-images style-03">
+							<a href="<?=url("about-us")?>" class="ht-large-box-images style-03">
 								<div class="large-image-box">
 									<div class="box-image">
 										<div class="default-image">
@@ -166,20 +166,24 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="feature-list__two">
-						<div class="row">
+						<div class="row" style="row-gap: 20px;">
+							<?php $services = db('Gigaxy_services')->get()->rand()->limit(0,6);?>
+							<?php
+$services = $services;if ($services->rows > 0){
+while ($service = $services->obj())
+{ ?>
 							<div class="col-lg-4 col-md-6 wow move-up">
 								<div class="ht-box-icon style-02 single-svg-icon-box">
-									<div class="icon-box-wrap">
-										<div class="icon">
-											<div class="svg-icon" id="svg-1" data-svg-icon="assets/images/svg/linea-basic-heart.svg"></div>
-										</div>
+									<div class="icon-box-wrap active-box">
 										<div class="content">
-											<h5 class="heading">IT Design </h5>
-											<div class="text">We provide the most responsive and functional IT design for companies and businesses worldwide.
+											<h5 class="heading"><?=$service->service_title?></h5>
+											<div class="text">
+												<?=xsubstr_replace($service->service_body, '..', 80)?>
 											</div>
 											<div class="feature-btn">
-												<a href="#">
-													<span class="button-text">Discover now</span>
+												<?php $group = $service->from('Gigaxy_serviceGroups', 'serviceGroupid')->get();?>
+												<a href="<?=url("service/$group->serviceGroup/$service->service_title",true)?>">
+													<span class="button-text"><?=ucwords($group->serviceShortName)?></span>
 													<i class="far fa-long-arrow-right"></i>
 												</a>
 											</div>
@@ -187,113 +191,12 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-6 wow move-up">
-								<div class="ht-box-icon style-02 single-svg-icon-box">
-									<div class="icon-box-wrap">
-										<div class="icon">
-											<div class="svg-icon" id="svg-2" data-svg-icon="assets/images/svg/linea-basic-case.svg"></div>
-										</div>
-										<div class="content">
-											<h5 class="heading">IT Management</h5>
-											<div class="text">It’s possible to simultaneously manage and transform information from one server to another.
-											</div>
-											<div class="feature-btn">
-												<a href="#">
-													<span class="button-text">Discover now</span>
-													<i class="far fa-long-arrow-right"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 wow move-up">
-								<div class="ht-box-icon style-02 single-svg-icon-box">
-									<!-- ht-box-icon Start -->
-									<div class="icon-box-wrap">
-										<div class="icon">
-											<div class="svg-icon" id="svg-3" data-svg-icon="assets/images/svg/linea-basic-alarm.svg"></div>
-										</div>
-										<div class="content">
-											<h5 class="heading">Data Security</h5>
-											<div class="text">We provide the most responsive and functional IT design for companies and businesses worldwide.
-											</div>
-											<div class="feature-btn">
-												<a href="#">
-													<span class="button-text">Discover now</span>
-													<i class="far fa-long-arrow-right"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-									<!-- ht-box-icon End -->
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 wow move-up">
-								<div class="ht-box-icon style-02 single-svg-icon-box">
-									<!-- ht-box-icon Start -->
-									<div class="icon-box-wrap">
-										<div class="icon">
-											<div class="svg-icon" id="svg-4" data-svg-icon="assets/images/svg/linea-basic-geolocalize-05.svg"></div>
-										</div>
-										<div class="content">
-											<h5 class="heading">Business Reform</h5>
-											<div class="text">We provide the most responsive and functional IT design for companies and businesses worldwide.
-											</div>
-											<div class="feature-btn">
-												<a href="#">
-													<span class="button-text">Discover now</span>
-													<i class="far fa-long-arrow-right"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-									<!-- ht-box-icon End -->
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 wow move-up">
-								<div class="ht-box-icon style-02 single-svg-icon-box">
-									<!-- ht-box-icon Start -->
-									<div class="icon-box-wrap">
-										<div class="icon">
-											<div class="svg-icon" id="svg-5" data-svg-icon="assets/images/svg/linea-ecommerce-money.svg"></div>
-										</div>
-										<div class="content">
-											<h5 class="heading">Infrastructure Plan</h5>
-											<div class="text">We provide the most responsive and functional IT design for companies and businesses worldwide.
-											</div>
-											<div class="feature-btn">
-												<a href="#">
-													<span class="button-text">Discover now</span>
-													<i class="far fa-long-arrow-right"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-									<!-- ht-box-icon End -->
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 wow move-up">
-								<div class="ht-box-icon style-02 single-svg-icon-box">
-									<!-- ht-box-icon Start -->
-									<div class="icon-box-wrap">
-										<div class="icon">
-											<div class="svg-icon" id="svg-6" data-svg-icon="assets/images/svg/linea-basic-spread-text-bookmark.svg"></div>
-										</div>
-										<div class="content">
-											<h5 class="heading">Firewall Advance</h5>
-											<div class="text">We provide the most responsive and functional IT design for companies and businesses worldwide.
-											</div>
-											<div class="feature-btn">
-												<a href="#">
-													<span class="button-text">Discover now</span>
-													<i class="far fa-long-arrow-right"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-									<!-- ht-box-icon End -->
-								</div>
+							<?php }} ?>	
+						</div>
+
+						<div class="row" style="justify-content: center; align-items: center;">
+							<div class="hero-button mt-30" style="align-self: center;">
+								<a href="<?=url("our-services")?>" class="ht-btn ht-btn-md">Explore Services</a>
 							</div>
 						</div>
 					</div>

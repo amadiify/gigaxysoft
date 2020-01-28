@@ -1,5 +1,6 @@
 <?=\Moorexa\Rexa::runDirective(true,'component','header')?>
 <p>Showing records for table. <?=\Moorexa\Rexa::runDirective(true,'component','create-button', ['button' => CMS::loadButton(['create' => 'tables/' . $action . '/create'])])?></p>
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
 <?=\Moorexa\Rexa::runDirective(true,'component','alert-confirm', ['type' => 'danger', 'title' => 'Delete Row', 'message' => 'This would delete row completely without recovery. Click "Okay" to proceed'])?>
 <div class="card">
     <div class="table-responsive">
@@ -11,6 +12,11 @@
 				// get json configuration
 				$config = toArray(json_decode($tableInfo->table_json));
 				$headers = [];
+
+				if (isset($config['hide'])) :
+					$config['hide'] = array_flip($config['hide']);
+				endif;
+
 			
  // PHP ends here 
  ?>
@@ -42,7 +48,15 @@ while ($row = $rows->obj())
 { ?>
 					<tr>
 						<?php foreach ($headers as $header) { ?>
-							<td><?=$row->val($header)?></td>
+
+							<?php $options = Query::getRowsFromForeignKey($header, $config);?>
+							<?php $val = $row->val($header);?>
+
+							<?php if(count($options) > 0 && isset($options[$val])) { ?>
+								<td><?=xsubstr_replace($options[$val], '...', 50)?></td>
+							<?php } else { ?>
+								<td><?=xsubstr_replace($val, '...', 50)?></td>
+							<?php } ?>
 						<?php } ?>
 						<?php $link = 'tables/'.$tableInfo->table_linker;?>
 						<td><?=\Moorexa\Rexa::runDirective(true,'component','table-button', ['links' => CMS::loadButton(['edit' => $link.'/edit', 'delete' => $link.'/trigger-confirm/delete'], $row->primary())])?></td>
@@ -52,4 +66,7 @@ while ($row = $rows->obj())
         </table>
     </div>
 </div>
+
+<h4 class="card-title">Showing tables</h4>
+<?=\Moorexa\Rexa::runDirective(true,'partial','tables')?>
 <?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

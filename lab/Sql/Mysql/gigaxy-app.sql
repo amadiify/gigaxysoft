@@ -128,3 +128,22 @@ CREATE TABLE IF NOT EXISTS `Zema_users` (
 	loggedinToken VARCHAR(255) , 
 	siteid VARCHAR(255)
 );
+CREATE TABLE IF NOT EXISTS `Gigaxy_contact` (
+	contactid BIGINT(20) auto_increment primary key, 
+	con_name VARCHAR(255) , 
+	con_email VARCHAR(255) , 
+	con_subject VARCHAR(255) , 
+	con_message TEXT
+);
+CREATE TABLE IF NOT EXISTS `Gigaxy_serviceGroups` (
+	serviceGroupid BIGINT(20) auto_increment primary key, 
+	serviceGroup VARCHAR(255) , 
+	serviceShortName VARCHAR(255)
+);
+ALTER TABLE `Gigaxy_services` ADD serviceGroupid BIGINT AFTER service_body;
+CREATE TABLE IF NOT EXISTS `Gigaxy_services` (
+	serviceid BIGINT(20) auto_increment primary key, 
+	service_title VARCHAR(255) , 
+	service_body TEXT , 
+	serviceGroupid BIGINT
+);

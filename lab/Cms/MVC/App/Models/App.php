@@ -24,7 +24,7 @@ class App extends Model
         'pages' => ['edit-view' => 'post:updateView', 'edit-nav' => 'post:updateNavigation', 
                     'create' => 'post:createNavigation', 'delete' => 'get:deleteNav'],
         'plugins' => ['create' => 'callPluginMethods', 'edit' => 'callPluginMethods', 'delete' => 'callPluginMethods'],
-        'tables' => ['create' => 'post:addTableConfig', 'edit' => 'editTableConfig']
+        'tables' => ['create' => 'post:addTableConfig', 'edit' => 'editTableConfig', '/(getApp)(.*?)(Delete)/' => 'deleteTableRow']
     ];
 
     // argument indexing
@@ -388,5 +388,84 @@ class App extends Model
         }   
 
         dropbox('model', $model);
+    }
+
+    // create table record
+    public function createTableRecord($table, Post $post)
+    {
+        if (!$post->isEmpty())
+        {
+            // get data
+            $data = $post->data();
+
+            $insert = []; // fresh array
+
+            // run loop and extract column data
+            $columnIndex = 0;
+
+            foreach ($data as $column => $array)
+            {
+                foreach ($array as $index => $columnData)
+                {
+                    if ($columnData != '')
+                    {
+                        $insert[$index][$column] = $columnData;
+                    }
+                }
+            }
+
+            if (count($insert) > 0)
+            {
+                $db = db($table)->config([
+                    'allowSlashes' => true,
+                    'allowHTML' => true
+                ]);
+
+                $inserted = 0;
+
+                foreach ($insert as $data)
+                {
+                    if ($db->insert($data)->ok)
+                    {
+                        $inserted++;
+                    }
+                }
+
+                if ($inserted > 0)
+                {
+                    Alert::success('('.$inserted.') row'.(($inserted > 1) ? 's' : ''). ' inserted successfully.');
+                }
+            }
+        }
+    }
+
+    // update table record
+    public function updateTableRecord($table, Post $post, $action, $rowid)
+    {
+        if (!$post->isEmpty())
+        {
+            $db = db($table)->config([
+                'allowSlashes' => true,
+                'allowHTML' => true
+            ]);
+
+            // run update
+            if ($db->update($post->data())->primary($rowid)->ok)
+            {
+                Alert::success('1 Row updated successfully.');
+            }
+        }
+    }
+
+    // delete table row
+    public function deleteTableRow($table, $action, $rowid)
+    {
+        if ($table != null && $action == 'delete')
+        {
+            if (db($table)->delete()->primary($rowid)->ok)
+            {
+                Alert::success('1 Row deleted successfully.');
+            }
+        }
     }
 }

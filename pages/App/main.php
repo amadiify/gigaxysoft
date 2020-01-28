@@ -60,9 +60,35 @@ class App extends Controller
     * @return void
     **/
 
-	public function shop()
+	public function ourShop()
 	{
 		$this->render('shop');
+	}
+	/**
+    * App/service wrapper. 
+    *
+    * See documention https://www.moorexa.com/doc/controller
+    *
+    * @param Any You can catch params sent through the $_GET request
+    * @return void
+    **/
+
+	public function service($serviceGroup)
+	{
+		$this->render('service');
+	}
+	/**
+    * App/our-services wrapper. 
+    *
+    * See documention https://www.moorexa.com/doc/controller
+    *
+    * @param Any You can catch params sent through the $_GET request
+    * @return void
+    **/
+
+	public function ourServices()
+	{
+		$this->render('ourservices');
 	}
 }
 // END class

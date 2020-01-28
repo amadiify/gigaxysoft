@@ -54,5 +54,10 @@
     ".\/utility\/:Table.php": ".\/utility\/Console\/Table.php",
     ".\/lab\/Cms\/MVC\/App\/Models\/:images.php:Images.php": ".\/lab\/Cms\/MVC\/App\/Models\/Images.php",
     ".\/lab\/Cms\/MVC\/App\/Partials\/:images.html:Images.html": ".\/lab\/Cms\/MVC\/App\/Partials\/images.html",
-    ".\/utility\/\/Exceptions\/Autoloader:AutoloaderException.php": ".\/utility\/Exceptions\/Autoloader\/AutoloaderException.php"
+    ".\/utility\/\/Exceptions\/Autoloader:AutoloaderException.php": ".\/utility\/Exceptions\/Autoloader\/AutoloaderException.php",
+    ".\/pages\/App\/Models\/:App.php:App.php": ".\/pages\/App\/Models\/App.php",
+    ".\/utility\/:Alert.php": ".\/utility\/Classes\/Bootstrap\/Alert.php",
+    ".\/utility\/Classes\/:Alert.php": ".\/utility\/Classes\/Bootstrap\/Alert.php",
+    ".\/utility\/\/Exceptions\/Database:DatabaseException.php": ".\/utility\/Exceptions\/Database\/DatabaseException.php",
+    "public\/Assets\/Js\/:moorexa.min.js": "public\/Assets\/Js\/Rexajs\/moorexa.min.js"
 }

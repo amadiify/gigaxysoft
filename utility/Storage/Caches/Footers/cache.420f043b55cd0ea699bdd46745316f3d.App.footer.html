@@ -5,7 +5,7 @@
             <div class="row footer-widget-wrapper">
                 <div class="col-lg-4 col-md-6 col-sm-6 footer-widget">
                     <div class="footer-widget__logo mb-30">
-                        <img src="<?=$assets->image("theme/logo/gigaxy-logo-small.jpg")?>" class="img-fluid" alt="">
+                        <img src="<?=$assets->image("theme/logo/gigaxy-logo-small.png")?>" class="img-fluid" alt="">
                     </div>
                     <ul class="footer-widget__list">
                         <li><?=\Moorexa\Rexa::runDirective(true,'getcontainer','our-address')?></li>
@@ -15,32 +15,30 @@
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
-                    <h6 class="footer-widget__title mb-20">IT Services</h6>
+                    <h6 class="footer-widget__title mb-20">Services</h6>
                     <ul class="footer-widget__list">
-                        <li><a href="#" class="hover-style-link">Managed IT</a></li>
-                        <li><a href="#" class="hover-style-link">IT Support</a></li>
-                        <li><a href="#" class="hover-style-link">IT Consultancy</a></li>
-                        <li><a href="#" class="hover-style-link">Cloud Computing</a></li>
-                        <li><a href="#" class="hover-style-link">Cyber Security</a></li>
+                        <?php
+$serviceGroups = $serviceGroups;if ($serviceGroups->rows > 0){
+while ($service = $serviceGroups->obj())
+{ ?>
+                            <li><a href="<?=url("service/$service->serviceGroup",true)?>"><span><?=$service->serviceShortName?></span></a></li>
+                        <?php }} ?>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
                     <h6 class="footer-widget__title mb-20">Quick links</h6>
                     <ul class="footer-widget__list">
-                        <li><a href="#" class="hover-style-link">Pick up locations</a></li>
-                        <li><a href="#" class="hover-style-link">Terms of Payment</a></li>
-                        <li><a href="#" class="hover-style-link">Privacy Policy</a></li>
-                        <li><a href="#" class="hover-style-link">Where to Find Us</a></li>
+                        <li><a href="<?=url("")?>" class="hover-style-link">Home</a></li>
+                        <li><a href="<?=url("about-us")?>" class="hover-style-link">About</a></li>
+                        <li><a href="<?=url("our-shop")?>" class="hover-style-link">Shop</a></li>
+                        <li><a href="<?=url("contact-us")?>" class="hover-style-link">Where to Find Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
                     <h6 class="footer-widget__title mb-20">Support</h6>
                     <ul class="footer-widget__list">
-                        <li><a href="#" class="hover-style-link">Forum Support</a></li>
-                        <li><a href="#" class="hover-style-link">Help & FAQ</a></li>
-                        <li><a href="#" class="hover-style-link">Contact Us</a></li>
-                        <li><a href="#" class="hover-style-link">Pricing and plans</a></li>
-                        <li><a href="#" class="hover-style-link">Cookies Policy</a></li>
+                        <li><a href="" class="hover-style-link">Help & FAQ</a></li>
+                        <li><a href="<?=url("contact-us")?>" class="hover-style-link">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">

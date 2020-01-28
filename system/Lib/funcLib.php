@@ -5026,3 +5026,16 @@ function pagepath(string $directory,  $filepath = null)
 	};
 	
 }
+
+// just another substr_replace
+function xsubstr_replace(string $text, string $replace, int $start)
+{
+	$body = substr($text, 0, $start);
+
+	if (strlen($text) > $start)
+	{
+		$body .= $replace;
+	}
+
+	return $body;
+}

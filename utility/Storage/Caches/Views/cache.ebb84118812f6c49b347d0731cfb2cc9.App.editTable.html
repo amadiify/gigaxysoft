@@ -1,0 +1,122 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<p>Edit record for '<?=$action?>'. <a href="<?=url("zema/tables/$action")?>">Click here</a> to return.</p>
+<?=\Moorexa\Rexa::runDirective(true,'alert')?>
+<!-- create record -->
+<div class="card">
+	<div class="card-header">
+		<h3 class="card-title">Edit record</h3>
+	</div>
+	<div class="card-body">
+		<div class="table-responsive">
+			<form action="" method="POST" enctype="multipart/form-data">
+				<?=\Moorexa\Rexa::runDirective(true,'csrf')?>
+				<?=\Moorexa\Rexa::runDirective(true,'method','updateTableRecord')?>
+
+				<table class="table">
+
+					<?php $columns = db()->sql('describe '.$action);?>
+					<?php 
+ // PHP starts here 
+
+						// get json configuration
+						$config = toArray(json_decode($tableInfo->table_json));
+						$headers = [];
+						$form = [];
+						$value = '';
+						$record = Query::getTableRowByPrimary($action, $rowid);
+
+						if (isset($config['hide'])) :
+							$config['hide'] = array_flip($config['hide']);
+						endif;
+					
+ // PHP ends here 
+ ?>
+
+					<?php
+$columns = $columns;if ($columns->rows > 0){
+while ($column = $columns->obj())
+{ ?>
+						<?php if(isset($config['rename'][$column->Field])) { ?>
+							<?php $headers[$column->Field] = $config['rename'][$column->Field];?>
+						<?php } else { ?>
+							<?php if(!isset($config['hide'][$column->Field])) { ?>
+								<?php $headers[$column->Field] = $column->Field;?>
+							<?php } ?>
+						<?php } ?>
+
+						<?php if(isset($config['form']) and isset($config['form'][$column->Field])) { ?>
+							<?php $form[$column->Field] = $config['form'][$column->Field];?>
+						<?php } ?>
+					<?php }} ?>
+
+					<?php foreach ($headers as $field => $fieldName) { ?>
+					<tr class="table-row">
+						<td><?=ucwords($fieldName)?></td>
+						<td>
+							<?php $value = $record->val($field);?>
+							<?php $default = !isset($form[$field]) ? true : false;?>
+							<?php $attr = 'name="'.$field.'" value="'.$value.'" class="form-control" placeholder="Enter a '.strtolower($fieldName).'"';?>
+
+							<?php if($default) { ?>
+								<input <?=$attr?> type="text">
+							<?php } else { ?>
+								<?php 
+ // PHP starts here 
+
+
+									// using switch statement
+									switch (strtolower($form[$field])) :
+
+										case 'textarea':
+											?>
+
+												<textarea <?=$attr?>><?=$value?></textarea>
+											<?php 
+ // PHP starts here 
+
+										break;
+
+										case 'select':
+											$options = Query::getRowsFromForeignKey($field, $config);
+											?>
+
+												<select <?=$attr?>>
+													<option value="">--Please select a <?=strtolower($fieldName)?>--</option>
+													<?php foreach ($options as $primaryid => $columnName) { ?>
+														<?php $selected = '';?>
+														<?php if($primaryid == $value) { ?>
+															<?php $selected = 'selected';?>
+														<?php } ?>
+														<option value="<?=$primaryid?>" <?=$selected?>><?=$columnName?></option>
+													<?php } ?>
+												</select>
+											<?php 
+ // PHP starts here 
+
+										break;
+
+									endswitch;
+
+								
+ // PHP ends here 
+ ?>
+							<?php } ?>
+						</td>
+					</tr>
+					<?php } ?>
+
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-success">Update</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h4 class="card-title">Showing tables</h4>
+<?=\Moorexa\Rexa::runDirective(true,'partial','tables')?>
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

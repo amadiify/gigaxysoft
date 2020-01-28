@@ -3,7 +3,7 @@ a:hover { text-decoration: none; color: #40a2cf;}
 .navigation-menu > ul > li > a::before {background-color: #127EBF;}
 .navigation-menu > ul > li:hover > a span, .navigation-menu > ul > li.active > a span {color: #127EBF;}
 .text-color-primary {color: #40a2cf;}
-.ht-btn{background:#117CC0;}
+.ht-btn, .cta-button-group--two .btn-one{background:#117CC0;}
 .btn-text {color: #117CC0;}
 .ht-large-box-images.style-03 .content .box-images-arrow::before { background-color:#117CC0;}
 .ht-large-box-images.style-03 .content .box-images-arrow{color: #117CC0;}
@@ -13,7 +13,8 @@ a:hover { text-decoration: none; color: #40a2cf;}
 .ht-box-icon.style-02 .feature-btn a, .ht-timeline.style-01 .timeline-col .inner .year{color: #117cc0;}
 .contact-info.style-two .contact-list-item .content .main-content .text{color: #117CC0; font-size: 30px;}
 .contact-info.style-two .contact-list-item .content .icon{color: #40a2cf;}
-.breadcrumb-list li.active { color:#40a2cf;}
+.breadcrumb-list li.active, .submenu > li.active > a, .ht-box-icon.style-03 .icon-box-wrap .content-header .heading { color:#40a2cf;}
+.submenu{border-bottom: 3px solid #40a2cf;}
 .navigation-menu > ul > li:hover > a span, .navigation-menu > ul > li.active > a span{color: #40a2cf;}
 .navigation-menu > ul > li:hover > a::after, .navigation-menu > ul > li.active > a::after {color: #40a2cf;}
 .navigation-menu > ul > li > a::before, .submenu > li > a > span::after, .scroll-top {background-color: #40a2cf;}
@@ -21,3 +22,19 @@ a:hover { text-decoration: none; color: #40a2cf;}
 .conact-us-wrap-one .heading::before {background-color: #d2a98e;}
 .ht-timeline.style-01 .line{border-left: 2px solid #40a2cf;}
 .ht-timeline.style-01 .dots{color:#40a2cf;}
+.ht-social-networks.flat-round .social-link:hover, .ht-social-networks.solid-rounded-icon .social-link:hover{background:#117CC0;}
+[class*="hint--"]::after { background:#117CC0; }
+.hint--top::before {border-top-color:#117CC0;}
+.ht-tab-menu li a.active {color:#40A2CF;border-color:#40A2CF !important;}
+.ht-timeline.style-01 .timeline-info .text {line-height: 1.74;}
+.title-dec-text{font-size: 16px;}
+.active-box{
+border-color:#fff;
+background:#fff;
+}
+.ht-box-icon.style-02 .icon-box-wrap { padding: 30px 30px; }
+body{font-size: 16px;}
+.ht-box-images.style-02 .image-box-wrap{justify-content: flex-start;}
+.faq-two-wrapper .card-header h5 button[aria-expanded="true"] , .faq-two-wrapper .card-header h5 button:hover, .faq-two-wrapper .card-header h5 button:focus{color:#40A2CF;}
+.faq-two-wrapper .card-header h5 button{color: #c1c1c1;}
+.faq-two-wrapper .card-body ul{list-style: circle; line-height: 34px;}

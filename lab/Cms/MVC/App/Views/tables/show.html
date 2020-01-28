@@ -1,5 +1,6 @@
 @component('header');
 <p>Showing records for table. @component('create-button', ['button' => CMS::loadButton(['create' => 'tables/' . $action . '/create'])]);</p>
+@alert;
 @component('alert-confirm', ['type' => 'danger', 'title' => 'Delete Row', 'message' => 'This would delete row completely without recovery. Click "Okay" to proceed']);
 <div class="card">
     <div class="table-responsive">
@@ -9,6 +10,11 @@
 				// get json configuration
 				$config = toArray(json_decode($tableInfo->table_json));
 				$headers = [];
+
+				if (isset($config['hide'])) :
+					$config['hide'] = array_flip($config['hide']);
+				endif;
+
 			@endphp
             <thead>
 				<tr>
@@ -32,7 +38,15 @@
 				@fetch ($rows, 'row')
 					<tr>
 						@foreach ($headers as $header)
-							<td>{$row->val($header)}</td>
+
+							{$options = Query::getRowsFromForeignKey($header, $config);}
+							{$val = $row->val($header);}
+
+							@if (count($options) > 0 && isset($options[$val]))
+								<td>{xsubstr_replace($options[$val], '...', 50)}</td>
+							@else
+								<td>{xsubstr_replace($val, '...', 50)}</td>
+							@endif
 						@endforeach
 						{$link = 'tables/'.$tableInfo->table_linker;}
 						<td>@component('table-button', ['links' => CMS::loadButton(['edit' => $link.'/edit', 'delete' => $link.'/trigger-confirm/delete'], $row->primary())]);</td>
@@ -42,4 +56,7 @@
         </table>
     </div>
 </div>
+
+<h4 class="card-title">Showing tables</h4>
+@partial('tables');
 @component('footer');

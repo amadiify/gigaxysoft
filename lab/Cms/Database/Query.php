@@ -239,4 +239,44 @@ class Query
     {
         return db($tableName)->get()->orderbyprimarykey('desc');
     }
+
+    // get table row by primary key
+    public static function getTableRowByPrimary(string $tableName, int $primaryid)
+    {
+        return db($tableName)->get()->primary($primaryid);
+    }   
+
+    // get table rows from foreign key
+    public static function getRowsFromForeignKey(string $column, array $config) : array
+    {   
+        $rows = [];
+
+        if (isset($config['foreign_keys']))
+        {
+            $foreign_keys = $config['foreign_keys'];
+
+            // check for this column
+            if (isset($foreign_keys[$column]))
+            {
+                // get config
+                $config = $foreign_keys[$column];
+
+                // get table
+                $table = $config['table'];
+
+                // get column
+                $tableColumn = $config['column'];
+
+                // run query
+                $getRows = db($table)->get();
+
+                $getRows->obj(function($row) use (&$rows, $column, $tableColumn)
+                {
+                    $rows[$row->{$column}] = $row->{$tableColumn};
+                });
+            }
+        }
+
+        return $rows;
+    }
 }

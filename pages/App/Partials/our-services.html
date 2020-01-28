@@ -1,0 +1,41 @@
+<div class="feature-images-wrapper {isset($gray) ? 'bg-gray' : ''} section-space--ptb_100">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- section-title-wrap Start -->
+				<div class="section-title-wrap text-center section-space--mb_0">
+					<h3 class="heading">For your very specific industry, <br> we have <span class="text-color-primary"> highly-tailored IT solutions.</span></h3>
+				</div>
+				<!-- section-title-wrap Start -->
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="feature-images__two small-mt__10">
+					<div class="modern-grid-image-box row row--30">
+
+						@fetch ($serviceGroups, 'groups')
+						<div class="single-item wow move-up col-lg-6 col-md-6 section-space--mt_60 small-mt__40 animate" style="visibility: visible; opacity: 0;">
+							<!-- ht-box-icon Start -->
+							<a $shref="service/$groups->serviceGroup" class="ht-box-images style-02">
+								<div class="image-box-wrap">
+									<div class="box-image">
+										<img class="img-fulid" src="@getImage($groups->serviceShortName);" alt="">
+									</div>
+									<div class="content">
+										<h6 class="heading">{$groups->serviceGroup}</h6>
+									</div>
+								</div>
+							</a>
+							<!-- ht-box-icon End -->
+						</div>
+						@endfetch
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

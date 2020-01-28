@@ -452,7 +452,7 @@ class App extends Controller
     * @return void
     **/
 
-	public function tables($action)
+	public function tables($action, $tableAction, $rowid)
 	{
         $view = $this->provider->getActionView('tables', $action);
 
@@ -471,7 +471,21 @@ class App extends Controller
 
                     // set view
                     $view = 'tables/show';
+
+                    if ($tableAction != null)
+                    {
+                        $tableAction = $tableAction == 'edit' ? 'editTable' : $tableAction;
+
+                        if ($tableAction != 'delete' && $tableAction != 'trigger-confirm')
+                        {
+                            $view = 'tables/' . $tableAction;
+                        }
+                    }
                 }
+            }
+            else
+            {
+                $view = $view == 'tables/create' ? 'tables/createTable' : $view;
             }
         }
 

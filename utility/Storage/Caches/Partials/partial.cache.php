@@ -19,5 +19,7 @@ return array (
   '04917863cd9a1597960bd00ecc731dc2_tables.html' => '5d67bd67fcb0cf9a4426bffe2b73e43c',
   '9a426233d1d3a19ecc8345ac77175504_images.html' => 'f5445ee33f7b7a6b9714597cb636d6c9',
   '515f3190f04f397541f60fb5f23ee044_contact-us.html' => '31e4a610d21653115a7619c4bf792078',
+  '8eb04e1aeff8f2437f97d87ce26c6738_contact.html' => 'c99c5ec055f990c87de9f559cd6581d8',
+  'edb9825039ff74d516a7964999763fce_our-services.html' => '4fdd4c6a082d6d4ba69222b9c2f14195',
 );
 ?>

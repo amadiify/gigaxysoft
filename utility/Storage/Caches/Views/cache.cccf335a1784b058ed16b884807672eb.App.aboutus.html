@@ -31,9 +31,6 @@
 						<div class="text">
 							<?=\Moorexa\Rexa::runDirective(true,'container','about-us')?>
 						</div>
-						<div class="button-group-wrap">
-							<a href="<?=url("store")?>" class="ht-btn ht-btn-md mr-md-3 mb-20">Our Store</a>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -43,121 +40,140 @@
 </div>
 <!--===========  feature-large-images-wrapper  End =============-->
 
-<!--===========  feature-images-wrapper  Start =============-->
-<div class="feature-images-wrapper bg-gray section-space--ptb_100">
+<div class="tabs-wrapper bg-gray section-space--ptb_100">
 	<div class="container">
-
 		<div class="row">
 			<div class="col-lg-12">
-				<!-- section-title-wrap Start -->
-				<div class="section-title-wrap text-center section-space--mb_30">
-					<h3 class="heading">Reliable IT Services for <span class="text-color-primary"> Businesses</span></h3>
+				<div class="section-title-wrapper text-center section-space--mb_60 wow move-up animate" style="opacity: 0; visibility: visible;">
+					<h6 class="section-sub-title mb-20">discover our company</h6>
+					<h3 class="section-title">We’ve come a long way in <span class="text-color-primary"> 25 years</span> </h3>
 				</div>
-				<!-- section-title-wrap Start -->
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-12">
-				<div class="feature-images__four">
-					<div class=" row">
-						<div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
-							<!-- ht-box-icon Start -->
-							<a href="#" class="ht-box-images style-04">
-								<div class="image-box-wrap">
-									<div class="box-image">
-										<img class="img-fulid" src="<?=$assets->image("theme/icons/mitech-box-image-style-05-image-01-60x60.png")?>" alt="">
-									</div>
-									<div class="content">
-										<h5 class="heading">IT Design</h5>
-										<div class="text">We provide the most responsive and functional IT design for companies and businesses worldwide.</div>
-									</div>
-								</div>
-							</a>
-							<!-- ht-box-icon End -->
-						</div>
-						<div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
-							<!-- ht-box-icon Start -->
-							<a href="#" class="ht-box-images style-04">
-								<div class="image-box-wrap">
-									<div class="box-image">
-										<img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-02-60x60.png" alt="">
-									</div>
-									<div class="content">
-										<h5 class="heading">IT Management </h5>
-										<div class="text">It’s possible to simultaneously manage and transform information from one server to another.</div>
-									</div>
-								</div>
-							</a>
-							<!-- ht-box-icon End -->
-						</div>
-						<div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
-							<!-- ht-box-icon Start -->
-							<a href="#" class="ht-box-images style-04">
-								<div class="image-box-wrap">
-									<div class="box-image">
-										<img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-03-60x60.png" alt="">
-									</div>
-									<div class="content">
-										<h5 class="heading">Data Security</h5>
-										<div class="text">Back up your database, store in a safe and secure place while still maintaining its accessibility.</div>
+			<div class="col-lg-12 ht-tab-wrap">
+				<div class="text-center  ">
+					<ul class="nav justify-content-center ht-tab-menu ht-tab-menu_two" role="tablist">
+						<li class="tab__item nav-item active">
+							<a class="nav-link active" id="nav-tab1" data-toggle="tab" href="#tab_list_06" role="tab" aria-selected="true">Our coverage</a>
+						</li>
+						<li class="tab__item nav-item">
+							<a class="nav-link" id="nav-tab2" data-toggle="tab" href="#expertise" role="tab" aria-selected="false">Our expertise</a>
+						</li>
+						<li class="tab__item nav-item ">
+							<a class="nav-link" id="nav-tab3" data-toggle="tab" href="#tab_list_08" role="tab" aria-selected="false">Why choose us</a>
+						</li>
+						<li class="tab__item nav-item ">
+							<a class="nav-link" id="nav-tab5" data-toggle="tab" href="#tab_list_09" role="tab" aria-selected="false">How we stand out</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="tab-content ht-tab__content">
+
+					<div class="tab-pane fade active show" id="tab_list_06" role="tabpanel">
+						<div class="tab-history-wrap section-space--mt_40">
+							<div class="row">
+								<div class="col-lg-5">
+									<div class="tab-history-image video-popup mt-30">
+										<a href="" class="video-link">
+											<div class="single-popup-wrap">
+												<img class="img-fluid" src="<?=\Moorexa\Rexa::runDirective(true,'getImage','coverage-image')?>" alt="">
+											</div>
+										</a>
 									</div>
 								</div>
-							</a>
-							<!-- ht-box-icon End -->
-						</div>
-						<div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
-							<!-- ht-box-icon Start -->
-							<a href="#" class="ht-box-images style-04">
-								<div class="image-box-wrap">
-									<div class="box-image">
-										<img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-04-60x60.png" alt="">
-									</div>
-									<div class="content">
-										<h5 class="heading">Workforce Management</h5>
-										<div class="text">Suspe ndisse suscipit sagittis leo sit met condime ntum esti laiolainx bulum iscipit sagittis leo sit met con ndisse suscipit sagittis leo sit met cone su</div>
+								<div class="col-lg-6 offset-lg-1 ">
+									<div class="tab-content-inner  mt-30">
+										<div class="text mb-30">
+											<?=\Moorexa\Rexa::runDirective(true,'getcontainer','our-coverage')?>
+										</div>
+									
+										</div>
 									</div>
 								</div>
-							</a>
-							<!-- ht-box-icon End -->
+							</div>
 						</div>
-						<div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
-							<!-- ht-box-icon Start -->
-							<a href="#" class="ht-box-images style-04">
-								<div class="image-box-wrap">
-									<div class="box-image">
-										<img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-05-60x60.png" alt="">
+
+						<div class="tab-pane fade" id="expertise" role="tabpanel">
+							<div class="tab-history-wrap section-space--mt_40">
+								<div class="row">
+									
+									<div class="col-lg-6">
+										<div class="tab-content-inner  mt-30">
+											<div class="text mb-30">
+												<?=\Moorexa\Rexa::runDirective(true,'getcontainer','our-expertise')?>
+											</div>
+										</div>
 									</div>
-									<div class="content">
-										<h5 class="heading">Business Reform</h5>
-										<div class="text">We provide the most responsive and functional IT design for companies and businesses worldwide.</div>
+
+									<div class="col-lg-5 offset-lg-1">
+										<div class="tab-history-image video-popup mt-30">
+											<a href="" class="video-link">
+												<div class="single-popup-wrap">
+													<img class="img-fluid" src="<?=\Moorexa\Rexa::runDirective(true,'getImage','our-expertise')?>" alt="">
+												</div>
+											</a>
+										</div>
 									</div>
 								</div>
-							</a>
-							<!-- ht-box-icon End -->
+							</div>
 						</div>
-						<div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
-							<!-- ht-box-icon Start -->
-							<a href="#" class="ht-box-images style-04">
-								<div class="image-box-wrap">
-									<div class="box-image">
-										<img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-06-60x60.png" alt="">
+
+						<div class="tab-pane fade" id="tab_list_08" role="tabpanel">
+							<div class="tab-history-wrap section-space--mt_40">
+								<div class="row">
+									<div class="col-lg-5">
+										<div class="tab-history-image video-popup mt-30">
+											<a href="" class="video-link">
+												<div class="single-popup-wrap">
+													<img class="img-fluid" src="<?=\Moorexa\Rexa::runDirective(true,'getImage','why-choose-us')?>" alt="">
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="content">
-										<h5 class="heading">Infrastructure Plan</h5>
-										<div class="text">Mitech takes into account all conditions and budgets needed for building infrastructure plan..</div>
+									<div class="col-lg-6 offset-lg-1 ">
+										<div class="tab-content-inner  mt-30">
+											<div class="text mb-30">
+												<?=\Moorexa\Rexa::runDirective(true,'getcontainer','why-choose-us')?>
+											</div>
+										</div>
 									</div>
 								</div>
-							</a>
-							<!-- ht-box-icon End -->
+							</div>
 						</div>
+
+						<div class="tab-pane fade" id="tab_list_09" role="tabpanel">
+							<div class="tab-history-wrap section-space--mt_40">
+								<div class="row">
+									
+									<div class="col-lg-6  ">
+										<div class="tab-content-inner  mt-30">
+											<div class="text mb-30">
+												<?=\Moorexa\Rexa::runDirective(true,'getcontainer','how-we-stand-out')?>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-lg-5 offset-lg-1">
+										<div class="tab-history-image video-popup mt-30">
+											<a href="" class="video-link">
+												<div class="single-popup-wrap">
+													<img class="img-fluid" src="<?=\Moorexa\Rexa::runDirective(true,'getImage','how-we-stand-out')?>" alt="">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </div>
-<!--===========  feature-images-wrapper  End =============-->
 
 <div class="site-wrapper-reveal">
 	<!--===========  our history wrapper  Start =============-->
@@ -248,6 +264,7 @@
 	</div>
 	<!--===========  feature-large-images-wrapper  End =============-->
 </div>
+
 
 
 <?=\Moorexa\Rexa::runDirective(true,'partial','contact-us')?>

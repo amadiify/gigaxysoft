@@ -1020,7 +1020,7 @@ class Model extends Controller
 															$triggerFuncArray[$func] = true;
 
 															// push func to options
-															array_push($options, $func);
+															array_unshift($options, $func);
 															break;
 														}
 													}
@@ -1034,7 +1034,23 @@ class Model extends Controller
 													$triggerFuncArray[$func] = true;
 
 													// push func to options
-													array_push($options, $func);
+													array_unshift($options, $func);
+												}
+											}
+											else
+											{
+												if (preg_match('/^[\/]/', $key))
+												{
+													foreach($options as $option)
+													{
+														if (preg_match($key, $option))
+														{
+															// push func to options
+															array_unshift($options, $val);
+
+															break;
+														}
+													}
 												}
 											}
 										}
@@ -1048,7 +1064,7 @@ class Model extends Controller
 												$triggerFuncArray[$val] = true;
 
 												// push func to options
-												array_push($options, $val);
+												array_unshift($options, $val);
 											}
 										}
 									}

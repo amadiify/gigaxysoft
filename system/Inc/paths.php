@@ -18,7 +18,7 @@ SysPath::comp('components');
 SysPath::root('lab', 'lab');
 SysPath::kernel();
 SysPath::kernel([
-	'servicemanager' => '',
+	'servicemanager' => 'Service-Manager',
 	'config' => 'Config',
 	'extra' => 'Extra',
 	'partial' => 'Partials',

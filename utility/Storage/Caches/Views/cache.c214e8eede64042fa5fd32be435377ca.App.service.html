@@ -1,0 +1,92 @@
+<div class="breadcrumb-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="breadcrumb_box text-center">
+					<h2 class="breadcrumb-title">Our Services</h2>
+					<!-- breadcrumb-list start -->
+					<ul class="breadcrumb-list">
+						<li class="breadcrumb-item"><a href="<?=url("")?>">Home</a></li>
+						<li class="breadcrumb-item"><a href="<?=url("our-services")?>">Services</a></li>
+						<li class="breadcrumb-item active"><?=$serviceGroup?></li>
+					</ul>
+					<!-- breadcrumb-list end -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="feature-large-images-wrapper section-space--ptb_100">
+<div class="container">
+	<div class="cybersecurity-about-box">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="modern-number-01">
+					<h3 class="heading mt-30">Learn More About Our <span class="text-color-primary"> <?=$thisModel->addServices($serviceGroup)?> </span></h3>
+				</div>
+			</div>
+			<div class="col-lg-7 offset-lg-1">
+				<div class="conact-us-wrap-one managed-it">
+					<h5 class="heading ">We differentiate ourselves in the ICT service provider’s marketplace by <span class="text-color-primary"> providing outstanding <?=$serviceGroup != 'Other Services' ?$thisModel->addServices($serviceGroup) : 'technical services'?></span> that vow your success.</h5>
+					<div class="sub-heading">We’re available for 8 hours a day!<br>Contact to require a detailed analysis and assessment of your plan.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<?php $getServices = $thisModel->getServices($serviceGroup);?>
+<div class="accordion-wrapper section-space--pb_100">
+	<div class="container">
+		<div class="row ">
+			<div class="col-lg-6 pr-5">
+				<div class="faq-two-wrapper section-space--mt_40">
+					<div id="accordion_two">
+						<?php $id = 0;?>
+						<?php
+$getServices = $getServices;if ($getServices->rows > 0){
+while ($service = $getServices->obj())
+{ ?>
+						<div class="card">
+							<div class="card-header" id="heading__10">
+								<h5 class="mb-0 font-weight--bold">
+									<button class="btn-link collapsed" data-toggle="collapse" data-target="#tab<?=$service->serviceid?>" aria-expanded="<?=$id == 0 ? 'true' : 'false'?>" aria-controls="tab__10">
+										<?=$service->service_title?> <span>
+							<i class="far fa-caret-circle-down"></i>
+							<i class="far fa-caret-circle-right"></i> </span>
+									</button>
+								</h5>
+							</div>
+
+							<div id="tab<?=$service->serviceid?>" class="collapse <?=$id == 0 ? 'show' : ''?>" aria-labelledby="heading__10" data-parent="#accordion_two">
+								<div class="card-body">
+									<p><?=$service->service_body?></p>
+								</div>
+							</div>
+						</div>
+						<?php $id++;?>
+						<?php }} ?>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<!-- Start single-popup-wrap -->
+				<div class="video-interview section-space--mt_40 video-popup">
+					<a href="" class="video-link mt-30">
+						<div class="single-popup-wrap">
+							<img class="img-fluid border-radus-5" src="<?=\Moorexa\Rexa::runDirective(true,'getImage',$serviceGroup . ' bg')?>" alt="">
+						</div>
+					</a>
+				</div>
+				<!-- End single-popup-wrap -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<?=\Moorexa\Rexa::runDirective(true,'partial','our-services', ['serviceGroups' => $serviceGroups, 'gray' => true])?>
+<?=\Moorexa\Rexa::runDirective(true,'partial','contact-us')?>

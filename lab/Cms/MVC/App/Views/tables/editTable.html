@@ -1,0 +1,105 @@
+@component('header');
+<p>Edit record for '{$action}'. <a $href="zema/tables/$action">Click here</a> to return.</p>
+@alert;
+<!-- create record -->
+<div class="card">
+	<div class="card-header">
+		<h3 class="card-title">Edit record</h3>
+	</div>
+	<div class="card-body">
+		<div class="table-responsive">
+			<form action="" method="POST" enctype="multipart/form-data">
+				@csrf;
+				@method('updateTableRecord');
+
+				<table class="table">
+
+					{$columns = db()->sql('describe '.$action);}
+					@php
+						// get json configuration
+						$config = toArray(json_decode($tableInfo->table_json));
+						$headers = [];
+						$form = [];
+						$value = '';
+						$record = Query::getTableRowByPrimary($action, $rowid);
+
+						if (isset($config['hide'])) :
+							$config['hide'] = array_flip($config['hide']);
+						endif;
+					@endphp
+
+					@fetch($columns, 'column')
+						@if (isset($config['rename'][$column->Field]))
+							{$headers[$column->Field] = $config['rename'][$column->Field];}
+						@else
+							@if (!isset($config['hide'][$column->Field]))
+								{$headers[$column->Field] = $column->Field;}
+							@endif
+						@endif
+
+						@if (isset($config['form']) and isset($config['form'][$column->Field]))
+							{$form[$column->Field] = $config['form'][$column->Field];}
+						@endif
+					@endfetch
+
+					@foreach ($headers as $field => $fieldName)
+					<tr class="table-row">
+						<td>{ucwords($fieldName)}</td>
+						<td>
+							{$value = $record->val($field);}
+							{$default = !isset($form[$field]) ? true : false;}
+							{$attr = 'name="'.$field.'" value="'.$value.'" class="form-control" placeholder="Enter a '.strtolower($fieldName).'"';}
+
+							@if ($default)
+								<input {$attr} type="text">
+							@else
+								@php
+
+									// using switch statement
+									switch (strtolower($form[$field])) :
+
+										case 'textarea':
+											@html
+												<textarea {$attr}>{$value}</textarea>
+											@endhtml
+										break;
+
+										case 'select':
+											$options = Query::getRowsFromForeignKey($field, $config);
+											@html
+												<select {$attr}>
+													<option value="">--Please select a {strtolower($fieldName)}--</option>
+													@foreach ($options as $primaryid => $columnName)
+														{$selected = '';}
+														@if ($primaryid == $value)
+															{$selected = 'selected';}
+														@endif
+														<option value="{$primaryid}" {$selected}>{$columnName}</option>
+													@endforeach
+												</select>
+											@endhtml
+										break;
+
+									endswitch;
+
+								@endphp
+							@endif
+						</td>
+					</tr>
+					@endforeach
+
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-success">Update</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<h4 class="card-title">Showing tables</h4>
+@partial('tables');
+@component('footer');

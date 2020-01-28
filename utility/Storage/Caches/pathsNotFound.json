@@ -541,5 +541,192 @@
     "public\/Assets\/Images\/:theme\/bg\/home-infotechno-contact-bg.jpg": [
         "public\/Assets\/Images\/",
         "theme\/bg\/home-infotechno-contact-bg.jpg"
+    ],
+    "Boostrap:Alert.php": [
+        "Boostrap",
+        "Alert.php"
+    ],
+    "Exceptions\/Database:DatabaseException.php": [
+        "Exceptions\/Database",
+        "DatabaseException.php"
+    ],
+    ".\/lab\/:DatabaseException.php": [
+        ".\/lab\/",
+        "DatabaseException.php"
+    ],
+    ".\/utility\/Classes\/:DatabaseException.php": [
+        ".\/utility\/Classes\/",
+        "DatabaseException.php"
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:editTable.css:EditTable.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "editTable.css",
+            "EditTable.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:editTable.js:EditTable.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "editTable.js",
+            "EditTable.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:trigger-confirm.css:Trigger-confirm.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "trigger-confirm.css",
+            "Trigger-confirm.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:trigger-confirm.js:Trigger-confirm.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "trigger-confirm.js",
+            "Trigger-confirm.js"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:createTable.css:CreateTable.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "createTable.css",
+            "CreateTable.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:createTable.js:CreateTable.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "createTable.js",
+            "CreateTable.js"
+        ]
+    ],
+    ".\/pages\/Service\/Static\/:404.css:404.css": [
+        ".\/pages\/Service\/Static\/",
+        [
+            "404.css",
+            "404.css"
+        ]
+    ],
+    ".\/pages\/Service\/Static\/:404.js:404.js": [
+        ".\/pages\/Service\/Static\/",
+        [
+            "404.js",
+            "404.js"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:service.css:service.cxx.css:Service.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "service.css",
+            "service.cxx.css",
+            "Service.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:service.js:Service.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "service.js",
+            "Service.js"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:ourservices.css:Ourservices.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "ourservices.css",
+            "Ourservices.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:ourservices.js:Ourservices.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "ourservices.js",
+            "Ourservices.js"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:ourServices.css:ourServices.cxx.css:OurServices.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "ourServices.css",
+            "ourServices.cxx.css",
+            "OurServices.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:ourServices.js:OurServices.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "ourServices.js",
+            "OurServices.js"
+        ]
+    ],
+    ".\/pages\/App\/Partials\/:contact.html:Contact.html": [
+        ".\/pages\/App\/Partials\/",
+        [
+            "contact.html",
+            "Contact.html"
+        ]
+    ],
+    "kernel\/Partials\/:contact.html:Contact.html": [
+        "kernel\/Partials\/",
+        [
+            "contact.html",
+            "Contact.html"
+        ]
+    ],
+    ".\/pages\/App\/Partials\/:our-services.html:Our-services.html": [
+        ".\/pages\/App\/Partials\/",
+        [
+            "our-services.html",
+            "Our-services.html"
+        ]
+    ],
+    "kernel\/Partials\/:our-services.html:Our-services.html": [
+        "kernel\/Partials\/",
+        [
+            "our-services.html",
+            "Our-services.html"
+        ]
+    ],
+    ".\/pages\/Our-shop\/Static\/:404.css:404.css": [
+        ".\/pages\/Our-shop\/Static\/",
+        [
+            "404.css",
+            "404.css"
+        ]
+    ],
+    ".\/pages\/Our-shop\/Static\/:404.js:404.js": [
+        ".\/pages\/Our-shop\/Static\/",
+        [
+            "404.js",
+            "404.js"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:shop.css:Shop.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "shop.css",
+            "Shop.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:shop.js:Shop.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "shop.js",
+            "Shop.js"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:ourShop.css:ourShop.cxx.css:OurShop.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "ourShop.css",
+            "ourShop.cxx.css",
+            "OurShop.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:ourShop.js:OurShop.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "ourShop.js",
+            "OurShop.js"
+        ]
     ]
 }

@@ -13,6 +13,9 @@ class AppProvider extends App
      */
     public function boot($next)
     {
+       // preload alert
+       Moorexa\Rexa::preload('alert');
+
        // call route! Applies Globally.
        $next();
     }

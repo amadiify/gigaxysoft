@@ -14,6 +14,7 @@ class Services
         $schema->increment('serviceid');
         $schema->string('service_title');
         $schema->text('service_body');
+        $schema->bigint('serviceGroupid');
         // and more.. 
     }
 

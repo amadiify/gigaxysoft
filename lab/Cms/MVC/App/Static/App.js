@@ -31,7 +31,7 @@ if (addrowbutton != null)
             if (create != null)
             {
               new FroalaEditor('.text-create', {
-                height: 400,
+                height: 200,
                 toolbarSticky: false
               });
             }

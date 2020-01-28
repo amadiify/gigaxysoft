@@ -45,12 +45,14 @@ class Assets
 
 	public function image($file)
 	{
+		
 		if ($this->getFileIfCache($file, $cache, $json))
 		{
 			return $cache;
 		}
 		else
 		{
+
 			$cache = PATH_TO_PUBLIC . 'Assets/assets.paths.json';
 			$size = null;
 			$filecopy = $file;
@@ -123,6 +125,13 @@ class Assets
 
 						if ($scan == '')
 						{
+							// static url added ?
+							if (env('bootstrap', 'static_url') != '')
+							{
+								// return image path.
+								return  env('bootstrap', 'static_url') . preg_replace('/^(.\/)/', '', $fileNoUpdate);
+							}
+
 							return url(deepScan(PATH_TO_IMAGE, 'no-image-available.png'));
 						}
 						else
@@ -222,7 +231,8 @@ class Assets
 			$cont = isset(BootLoader::$helper['get_controller']) ? ucfirst(BootLoader::$helper['get_controller']) : ucfirst(config('router.default.controller'));
 
 			// get css path
-			$getCss = function($file) use ($filecopy, &$json, $fileNoUpdate, $queryInPath){
+			$getCss = function($file) use ($filecopy, &$json, $fileNoUpdate, $queryInPath)
+			{
 				$dir = $this->css_path;
 				$getPath = $dir . $file;
 				$parse = parse_url($filecopy);
@@ -234,6 +244,10 @@ class Assets
 				elseif (file_exists($getPath))
 				{
 					$scan = $getPath;
+				}
+				elseif (file_exists(PATH_TO_ASSETS . $file))
+				{
+					$scan = PATH_TO_ASSETS . $file;
 				}
 				else
 				{
@@ -340,6 +354,10 @@ class Assets
 				elseif (file_exists($getPath))
 				{
 					$scan = $getPath;
+				}
+				elseif (file_exists(PATH_TO_ASSETS . $file))
+				{
+					$scan = PATH_TO_ASSETS . $file;
 				}
 				else
 				{

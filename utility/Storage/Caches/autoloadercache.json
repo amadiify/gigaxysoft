@@ -46,5 +46,7 @@
     "Component\/loops": ".\/utility\/Components\/loops.php",
     "Moorexa\/Tag": "system\/Inc\/tags.php",
     "Moorexa\/Table": ".\/utility\/Console\/Table.php",
-    "Exceptions\/Autoloader\/AutoloaderException": ".\/utility\/Exceptions\/Autoloader\/AutoloaderException.php"
+    "Exceptions\/Autoloader\/AutoloaderException": ".\/utility\/Exceptions\/Autoloader\/AutoloaderException.php",
+    "Boostrap\/Alert": ".\/utility\/Classes\/Bootstrap\/Alert.php",
+    "Exceptions\/Database\/DatabaseException": ".\/utility\/Exceptions\/Database\/DatabaseException.php"
 }
