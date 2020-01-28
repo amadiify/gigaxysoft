@@ -276,6 +276,14 @@ class Engine
 			{
 				$get = (isset($_GET['__app_request__']) ? $_GET['__app_request__'] : (isset($_SERVER['REQUEST_QUERY_STRING']) ? $_SERVER['REQUEST_QUERY_STRING'] : null));
 
+				if (is_null($get))
+				{
+					if (isset($_GET['command']))
+					{
+						$get = $_GET['command'];
+					}
+				}
+
 				if (!is_null($get))
 				{
 					$get = urldecode($get);
