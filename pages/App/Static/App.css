@@ -38,3 +38,4 @@ body{font-size: 16px;}
 .faq-two-wrapper .card-header h5 button[aria-expanded="true"] , .faq-two-wrapper .card-header h5 button:hover, .faq-two-wrapper .card-header h5 button:focus{color:#40A2CF;}
 .faq-two-wrapper .card-header h5 button{color: #c1c1c1;}
 .faq-two-wrapper .card-body ul{list-style: circle; line-height: 34px;}
+.cybersecurity-hero-text{padding-left: 46px;}
